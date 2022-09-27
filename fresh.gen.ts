@@ -6,6 +6,18 @@ import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/[name].tsx";
 import * as $1 from "./routes/api/joke.ts";
 import * as $2 from "./routes/index.tsx";
+import * as $3 from "./routes/login.tsx";
+import * as $4 from "./routes/mypage/application-history.tsx";
+import * as $5 from "./routes/mypage/applying.tsx";
+import * as $6 from "./routes/mypage/browsing-history.tsx";
+import * as $7 from "./routes/mypage/favorite.tsx";
+import * as $8 from "./routes/mypage/index.tsx";
+import * as $9 from "./routes/mypage/under-contract.tsx";
+import * as $10 from "./routes/registration/completion.tsx";
+import * as $11 from "./routes/registration/confirmation-company.tsx";
+import * as $12 from "./routes/registration/confirmation.tsx";
+import * as $13 from "./routes/registration/input.tsx";
+
 import * as $$0 from "./islands/Counter.tsx";
 
 const manifest = {
@@ -13,6 +25,18 @@ const manifest = {
     "./routes/[name].tsx": $0,
     "./routes/api/joke.ts": $1,
     "./routes/index.tsx": $2,
+    "./routes/login.tsx": $3,
+    "./routes/mypage/application-history.tsx": $4,
+    "./routes/mypage/applying.tsx": $5,
+    "./routes/mypage/browsing-history.tsx": $6,
+    "./routes/mypage/favorite.tsx": $7,
+    "./routes/mypage/index.tsx": $8,
+    "./routes/mypage/under-contract.tsx": $9,
+    "./routes/registration/completion.tsx": $10,
+    "./routes/registration/confirmation-company.tsx": $11,
+    "./routes/registration/confirmation.tsx": $12,
+    "./routes/registration/input.tsx": $13,
+
   },
   islands: {
     "./islands/Counter.tsx": $$0,
