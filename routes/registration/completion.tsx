@@ -74,7 +74,6 @@ export default function Completion() {
         </div>
       </div>
       <SubFooter />
-      
     </>
   );
 }

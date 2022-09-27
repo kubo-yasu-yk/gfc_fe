@@ -14,8 +14,9 @@ import * as $7 from "./routes/mypage/favorite.tsx";
 import * as $8 from "./routes/mypage/index.tsx";
 import * as $9 from "./routes/mypage/under-contract.tsx";
 import * as $10 from "./routes/registration/completion.tsx";
-import * as $11 from "./routes/registration/confirmation.tsx";
-import * as $12 from "./routes/registration/input.tsx";
+import * as $11 from "./routes/registration/confirmation-company.tsx";
+import * as $12 from "./routes/registration/confirmation.tsx";
+import * as $13 from "./routes/registration/input.tsx";
 import * as $$0 from "./islands/Counter.tsx";
 
 const manifest = {
@@ -31,8 +32,9 @@ const manifest = {
     "./routes/mypage/index.tsx": $8,
     "./routes/mypage/under-contract.tsx": $9,
     "./routes/registration/completion.tsx": $10,
-    "./routes/registration/confirmation.tsx": $11,
-    "./routes/registration/input.tsx": $12,
+    "./routes/registration/confirmation-company.tsx": $11,
+    "./routes/registration/confirmation.tsx": $12,
+    "./routes/registration/input.tsx": $13,
   },
   islands: {
     "./islands/Counter.tsx": $$0,
