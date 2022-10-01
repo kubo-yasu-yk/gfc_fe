@@ -1,4 +1,4 @@
-import { MainHeader } from "../../components/MainHeader.tsx";
+import { MainHeader } from "../../components/common/MainHeader.tsx";
 import { Title } from "../../components/registration/Title.tsx";
 import { Step } from "../../components/registration/Step.tsx";
 import { ConfirmMsg } from "../../components/registration/ConfirmMsg.tsx";
