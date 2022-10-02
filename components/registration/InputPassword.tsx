@@ -1,6 +1,8 @@
 interface Props {
   placeholder: string;
   width: string;
+  value?: string;
+  onInput?: (e: Event) => void;
 }
 
 export function InputPassword(props: Props) {
@@ -9,6 +11,8 @@ export function InputPassword(props: Props) {
       class={`text-[11px] ml-6 mt-4 mb-4 pl-2 w-[${props.width}] h-10 rounded-[5px] border-[#C3C3C3] border-[1px]`}
       placeholder={props.placeholder}
       type="password"
+      value={props.value}
+      onKeyUp={(e) => console.log(e)}
     />
   );
 }
