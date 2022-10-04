@@ -8,21 +8,6 @@ import { RadioButton } from "../../components/registration/RadioButton.tsx";
 import Main from "../../islands/RegistrationInput.tsx";
 
 export default function Completion() {
-  const [classification, setClassification] = useState(true);
-  const Gender = () =>
-    classification
-      ? (
-        <>
-          <Leading title="性別" mandatory={true} />
-          <div class="flex flex-row">
-            <RadioButton name="gender" label="男性" />
-            <RadioButton name="gender" label="女性" />
-            <RadioButton name="gender" label="無回答" />
-          </div>
-        </>
-      )
-      : null;
-
   return (
     <>
       <MainHeader />
