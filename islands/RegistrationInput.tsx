@@ -16,7 +16,7 @@ import {
   PasswordDisplay2,
 } from "../components/registration/PassworDisplay.tsx";
 
-export default function Completion() {
+export default function islands() {
   const [classification, setClassification] = useState(true);
   const Individual = () =>
     classification

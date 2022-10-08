@@ -21,3 +21,23 @@ export function BrownButton(props: Props) {
     </div>
   );
 }
+
+//ちょい縦幅広めのボタン（TOPページで使用）
+export function BrownButton2(props: Props) {
+  return (
+    <div class="grid place-items-center">
+      <button class="flex flex-row content-center bg-[#947771] py-2.5 rounded-[5px] w-[18rem] h-12  text-[#ffffff] text-xs mb-8">
+        <p class="m-auto pl-5">{props.contents}</p>
+        {props.mandatory
+          ? (
+            <img
+              src="/icon/whiteRightArrow.png"
+              alt="白い右矢印"
+              class="h-3 w-3 my-auto mr-2 text-right"
+            />
+          )
+          : null}
+      </button>
+    </div>
+  );
+}
