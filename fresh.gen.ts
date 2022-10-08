@@ -17,7 +17,8 @@ import * as $10 from "./routes/registration/completion.tsx";
 import * as $11 from "./routes/registration/confirmation-company.tsx";
 import * as $12 from "./routes/registration/confirmation.tsx";
 import * as $13 from "./routes/registration/input.tsx";
-import * as $$0 from "./islands/RegistrationInput.tsx";
+import * as $$0 from "./islands/Login.tsx";
+import * as $$1 from "./islands/RegistrationInput.tsx";
 
 const manifest = {
   routes: {
@@ -37,7 +38,8 @@ const manifest = {
     "./routes/registration/input.tsx": $13,
   },
   islands: {
-    "./islands/RegistrationInput.tsx": $$0,
+    "./islands/Login.tsx": $$0,
+    "./islands/RegistrationInput.tsx": $$1,
   },
   baseUrl: import.meta.url,
   config,
