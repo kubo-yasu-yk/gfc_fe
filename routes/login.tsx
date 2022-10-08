@@ -1,15 +1,9 @@
 import { MainHeader } from "../components/common/MainHeader.tsx";
 import { Title } from "../components/registration/Title.tsx";
 import { SubFooter } from "../components/common/SubFooter.tsx";
-import * as L from "../islands/Login.tsx";
-import { useState } from "preact/hooks";
+import L from "../islands/Login.tsx";
 
 export default function Login() {
-  const [password, setPassword] = useState("");
-  const onInputPassword = (e: Event) => {
-    console.log(e.target);
-  };
-
   return (
     <>
       <MainHeader />

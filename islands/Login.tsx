@@ -1,28 +1,47 @@
-import { BrownButton } from "../components/common/BrownButton.tsx";
-import { Input } from "../components/registration/Input.tsx";
-import { InputPassword } from "../components/registration/InputPassword.tsx";
+import { Button } from "../components/login/Button.tsx";
+import { InputMail } from "../components/login/InputMail.tsx";
+import { InputPassword } from "../components/login/InputPassword.tsx";
 import { useState } from "preact/hooks";
 
 export default function Login() {
+  const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
+  const onInputMail = (e: Event) => {
+    // console.log((e.target as HTMLInputElement).value);
+    setMail((e.target as HTMLInputElement).value);
+  };
   const onInputPassword = (e: Event) => {
-    console.log(e.target);
+    // console.log((e.target as HTMLInputElement).value);
+    setPassword((e.target as HTMLInputElement).value);
+  };
+
+  const isDisabled = () => {
+    return !mail || !password;
   };
 
   return (
     <>
-      <p class="text-[12px] text-[#5F5F5F] text-left font-bold ml-4 mt-6">
+      <p class="text-[12px] text-[#5F5F5F] font-bold ml-6 mt-6">
         メールアドレス
       </p>
-      <p>メールアドレスが正しくありません。</p>
-      <Input placeholder="insyoku.franchise@insyoku.co.jp" width="20rem" />
+      <p class="text-[10px] text-[#FF0000] font-bold ml-6 mt-2">
+        {!mail ? "メールアドレスが入力されていません。" : null}
+      </p>
+      <InputMail
+        placeholder="insyoku.franchise@insyoku.co.jp"
+        width="20rem"
+        value={mail}
+        onInput={onInputMail}
+      />
 
-      <p class="text-[12px] text-[#5F5F5F] text-left font-bold ml-4 mt-3">
+      <p class="text-[12px] text-[#5F5F5F] font-bold ml-6 mt-3">
         パスワード
       </p>
-      <p>
-        パスワードが正しくありません。<br></br>8~20文字の半角英数字で入力してください。
+
+      <p class="text-[10px] text-[#FF0000] font-bold ml-6 mt-2">
+        {!password ? "パスワードが入力されていません。" : null}
       </p>
+
       <InputPassword
         placeholder="半角英数字の6~20文字"
         width="20rem"
@@ -34,7 +53,7 @@ export default function Login() {
         パスワードを表示する
       </p>
 
-      <BrownButton contents="ログイン" mandatory={false} />
+      <Button contents="ログイン" disabled={isDisabled()} onClick={(e) => console.log(e)} />
     </>
   );
 }
