@@ -1,0 +1,10 @@
+.hidden-scrollbar::-webkit-scrollbar {
+  -ms-overflow-style: none;
+  -moz-overflow-style: none;
+  scrollbar-width: none;
+  display: none;
+}
+
+.outline-hidden {
+  outline: none;
+}
