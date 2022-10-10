@@ -6,7 +6,7 @@ export function Icons() {
     { src: "/icon/contract.png", alt: "契約中アイコン", label: "契約中ブランド" },
   ];
   return (
-    <div class="mt-4 mb-6 flex flex-row place-content-around">
+    <div class="my-6 flex flex-row place-content-around">
       {icons.map((icon) => (
         <div class="text-[0.625rem] flex flex-col items-center w-[4.5rem]">
           <img

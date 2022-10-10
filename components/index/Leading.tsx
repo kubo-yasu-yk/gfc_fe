@@ -6,7 +6,7 @@ interface Props {
 
 export function Leading(props: Props) {
   return (
-    <div class="mx-5 mb-2 mt-6 flex flex-row items-center">
+    <div class="mx-5 mb-2 mt-8 flex flex-row items-center">
       <h3 class="text-sm font-medium">{props.title}</h3>
       <div class="flex-1" />
       {props.mandatory
