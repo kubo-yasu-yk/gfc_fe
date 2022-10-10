@@ -1,4 +1,5 @@
 interface Props {
+  src: string;
   rank: number;
   brandName: string;
   genre: string;
@@ -10,7 +11,7 @@ export function BrandRanking(props: Props) {
     <div>
       <div class="w-[16.5rem] h-20 ml-4 border rounded-[5px] flex">
         <img
-          src="/icon/brandLogo.png"
+          src={`${props.src}`}
           alt="ブランドロゴ"
           class="h-12 w-12 my-4 mx-3"
         />

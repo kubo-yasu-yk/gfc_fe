@@ -1,31 +1,59 @@
+import { Feature2 } from "../../components/index/Feature.tsx";
+import { useState } from "preact/hooks";
+
 export function FeatureContentsBar() {
+  const [tabNumber, setTabNumber] = useState(0);
+  const tabs = ["おすすめ", "新着", "事例紹介", "読みもの"];
+  const getClass = (i: number) =>
+    "list-none w-[25%] text-center cursor-pointer " +
+    (tabNumber === i
+      ? "border-b border-[#FF6B00]"
+      : "hover:border-b hover:border-blue-500");
+  const contents = [
+    <>
+      <Feature2 bgColor="#C18462" />
+      <Feature2 bgColor="#C18462" />
+      <Feature2 bgColor="#C18462" />
+    </>,
+
+    <>
+      <Feature2 bgColor="red" />
+      <Feature2 bgColor="red" />
+      <Feature2 bgColor="red" />
+    </>,
+
+    <>
+      <Feature2 bgColor="black" />
+      <Feature2 bgColor="black" />
+      <Feature2 bgColor="black" />
+    </>,
+
+    <>
+      <Feature2 bgColor="blue" />
+      <Feature2 bgColor="blue" />
+      <Feature2 bgColor="blue" />
+    </>,
+  ];
   return (
     <>
-      <div class="border-b mx-5 my-4 flex flex-row text-xs">
-        <input
-          id="recom"
-          class="hidden"
-          type="radio"
-          name="tab"
-          checked
-        />
-        <label
-          for="recom"
-          class="w-[25%] text-center label-checked:border-b label-checked:border-[#FF6B00]"
-        >
-          おすすめ
-        </label>
-        <input class="hidden" type="radio" name="tab">
-          <label class="w-[25%] checked:border-b checked:border-[#FF6B00] text-center">
-            新着
-          </label>
-        </input>
-        <input class="hidden" type="radio" name="tab">
-          <label class="w-[25%]  text-center">事例紹介</label>
-        </input>
-        <input class="hidden" type="radio" name="tab">
-          <label class="w-[25%]  text-center">読みもの</label>
-        </input>
+      <div>
+        <ul class="border-b mx-5 my-4 flex flex-row text-xs">
+          {tabs.map((tab, i) => (
+            <li
+              class={getClass(i)}
+              onClick={() => {
+                setTabNumber(i);
+              }}
+            >
+              <label class="cursor-pointer">
+                {tab}
+              </label>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="flex flex-row w-full overflow-x-auto pr-4 hidden-scrollbar">
+        {contents[tabNumber]}
       </div>
     </>
   );
