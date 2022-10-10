@@ -53,7 +53,11 @@ export default function Login() {
         パスワードを表示する
       </p>
 
-      <Button contents="ログイン" disabled={isDisabled()} onClick={(e) => console.log(e)} />
+      <Button
+        contents="ログイン"
+        disabled={isDisabled()}
+        onClick={(e) => console.log(e)}
+      />
     </>
   );
 }

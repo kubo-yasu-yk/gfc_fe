@@ -12,7 +12,6 @@ import Header from "../islands/Header.tsx";
 import BrandRanking from "../islands/BrandRanking.tsx";
 import Features from "../islands/Features.tsx";
 import FeatureContents from "../islands/FeatureContents.tsx";
-import { Header2 } from "../components/index/Header.tsx";
 
 export default function Index() {
   const allGenres = [
@@ -55,7 +54,7 @@ export default function Index() {
         <script src="/index.ts" defer></script>
       </Head>
 
-      <Header2 />
+      <Header />
       <Icons />
       <Features />
 
