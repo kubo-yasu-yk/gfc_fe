@@ -17,7 +17,7 @@ export default function islands() {
   //   }
   // }, 1000);
   return (
-    <div class="flex flex-row w-full overflow-x-auto pr-4 hidden-scrollbar"// ref={div}
+    <div class="flex flex-row w-full overflow-x-auto pr-4 hidden-scrollbar" // ref={div}
     >
       <Feature1 bgColor="red" />
       <Feature1 bgColor="blue" />
