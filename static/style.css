@@ -8,3 +8,68 @@
 .outline-hidden {
   outline: none;
 }
+
+.open{
+  animation:fadeIn .4s ease-in-out;
+  }
+
+@keyframes fadeIn{
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+.close{
+  animation:fadeOut .4s ease-in-out;
+    }
+
+@keyframes fadeOut{
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+
+.swiper-slide-prev,.swiper-slide-next {
+  opacity: 0.4;
+  overflow: hidden;
+  transform: scale(0.9);
+}
+.swiper-slide-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.swiper-pagination {
+  position: relative;
+  padding-top: 1rem;
+}
+.swiper-pagination-bullet {
+  background: #6B6B6B;
+}
+
+.swiper-pagination-bullet-active {
+  background: #947771;
+}
+
+
+
+/* .scroll-left{
+  animation: scroll-left 30s linear infinite both;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+} */

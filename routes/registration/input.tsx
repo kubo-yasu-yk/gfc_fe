@@ -1,10 +1,7 @@
-import { useState } from "preact/hooks";
 import { MainHeader } from "../../components/common/MainHeader.tsx";
 import { Title } from "../../components/registration/Title.tsx";
 import { Step } from "../../components/registration/Step.tsx";
-import { Leading } from "../../components/registration/Leading.tsx";
 import { GrayButton } from "../../components/common/GrayButton.tsx";
-import { RadioButton } from "../../components/registration/RadioButton.tsx";
 import Main from "../../islands/RegistrationInput.tsx";
 
 export default function Completion() {
