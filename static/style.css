@@ -40,7 +40,7 @@
 .swiper-slide-prev,.swiper-slide-next {
   opacity: 0.4;
   overflow: hidden;
-  transform: scale(0.9);
+  transform: scale(0.9) !important;
 }
 .swiper-slide-active {
   opacity: 1;

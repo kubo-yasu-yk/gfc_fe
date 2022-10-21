@@ -6,7 +6,7 @@ export function Feature1(props: Props) {
   return (
     <>
       <div
-        class={`h-[10rem] border rounded-[0.625rem] text-center bg-[${props.bgColor}] swiper-slide`}
+        class={`border rounded-[0.625rem] text-center bg-[${props.bgColor}] swiper-slide`}
       >
         <p class="text-[0.625rem] text-[#ffffff] m-auto leading-[10rem]">
           特集ページ

@@ -41,7 +41,7 @@ export default class SlideFeatures extends Component {
   render() {
     return (
       <>
-        <div class="swiper-container">
+        <div class="swiper-container overflow-hidden">
           <div class="swiper-wrapper">
             {features.map((feature, i) => feature)}
           </div>
