@@ -1,7 +1,7 @@
 import { Feature2 } from "../../components/index/Feature.tsx";
 import { useState } from "preact/hooks";
 
-export function FeatureContentsBar() {
+export function FeatureContents() {
   const [tabNumber, setTabNumber] = useState(0);
   const tabs = ["おすすめ", "新着", "事例紹介", "読みもの"];
   const getClass = (i: number) =>

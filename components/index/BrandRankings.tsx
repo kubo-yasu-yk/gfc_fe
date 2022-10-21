@@ -1,6 +1,6 @@
-import { BrandRanking } from "../components/index/BrandRanking.tsx";
+import { BrandRanking } from "./BrandRanking.tsx";
 
-export default function islands() {
+export function BrandRankings() {
   const brands = [
     {
       src: "/icon/brandLogo.png",

@@ -4,15 +4,15 @@ interface Props {
 
 export function Feature1(props: Props) {
   return (
-    <div>
+    <>
       <div
-        class={`w-[18rem] h-[10rem] border rounded-[0.625rem] ml-4 text-center bg-[${props.bgColor}]`}
+        class={`border rounded-[0.625rem] text-center bg-[${props.bgColor}] swiper-slide`}
       >
         <p class="text-[0.625rem] text-[#ffffff] m-auto leading-[10rem]">
           特集ページ
         </p>
       </div>
-    </div>
+    </>
   );
 }
 
