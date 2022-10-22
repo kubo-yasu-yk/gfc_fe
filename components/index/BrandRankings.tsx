@@ -34,7 +34,7 @@ export function BrandRankings() {
     },
   ];
   return (
-    <div class="flex flex-row w-full overflow-x-auto pr-4 hidden-scrollbar">
+    <div class="flex w-full overflow-x-auto pr-4 hidden-scrollbar">
       {brands.map((brand, i) => (
         <BrandRanking
           src={brand.src}
