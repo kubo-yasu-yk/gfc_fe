@@ -3,8 +3,8 @@ import { Title } from "../../components/registration/Title.tsx";
 import { Step } from "../../components/registration/Step.tsx";
 import { ConfirmMsg } from "../../components/registration/ConfirmMsg.tsx";
 import { Leading } from "../../components/registration/Leading.tsx";
-import { BrownButton } from "../../components/common/BrownButton.tsx";
-import { WhiteButton } from "../../components/common/WhiteButton.tsx";
+import { BrownButton } from "../../components/common/Button.tsx";
+import { WhiteButton } from "../../components/common/Button.tsx";
 
 export default function Completion() {
   return (
