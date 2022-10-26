@@ -6,17 +6,19 @@ import { NarrowDown } from "../components/searchGenre/NarrowDown/NarrowDown.tsx"
 
 export default function searchGenre() {
   const [open, setOpen] = useState(false);
-  const [display, setDisplay] = useState(false);
   const [visibleMenu, setVisibleMenu] = useState(false);
-  const [visibleNarrowDown, setVisibleNarrowDown] = useState(false);
+  const [display, setDisplay] = useState(true);
+  const [visibleNarrowDown, setVisibleNarrowDown] = useState(true);
 
   const DrawerToggleFunction = () => {
     if (open) {
+      console.log("押されているよ！");
       setOpen(false);
       setTimeout(() => {
         setVisibleMenu(false);
       }, 400);
     } else {
+      console.log("こっちだよ！");
       setOpen(true);
       setVisibleMenu(true);
     }
@@ -48,9 +50,11 @@ export default function searchGenre() {
         onClick={DrawerToggleFunction}
         onClickButton={NarrowToggleFunction}
       />
+
       {visibleNarrowDown
         ? <NarrowDown open={display} onClickButton={NarrowToggleFunction} />
         : null}
+
       {visibleMenu
         ? <DrawerMenu open={open} onClick={DrawerToggleFunction} />
         : null}

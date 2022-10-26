@@ -2,7 +2,7 @@ import { Header } from "./Header.tsx";
 import { GenreName } from "./GenreName.tsx";
 import { Brand } from "./brand.tsx";
 import { Button } from "./Button.tsx";
-import { PageNation } from "./pageNation.tsx";
+import { PageNation } from "./PageNation.tsx";
 import { FooterSearchBox } from "./SearchBox.tsx";
 import { SearchLink } from "./SearchLink.tsx";
 import { Banner } from "./Banner.tsx";
@@ -22,7 +22,7 @@ export function SearchGenre(props: Props) {
     "NEWS一覧",
     "お問い合わせ",
   ]];
-  console.log(props.display);
+  // console.log(props.display);
   return (
     <div class={`${props.display ? "fixed w-full" : ""}`}>
       <Header onClick={props.onClick} />

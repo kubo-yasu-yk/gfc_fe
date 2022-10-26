@@ -59,6 +59,9 @@
   background: #947771;
 }
 
+.shrink {
+  flex-shrink: 0;
+}
 
 
 /* .scroll-left{
