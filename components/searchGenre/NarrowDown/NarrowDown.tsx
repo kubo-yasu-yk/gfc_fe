@@ -6,7 +6,7 @@ interface Props {
 export function NarrowDown(props: Props) {
   return (
     <>
-      <div class={`h-full bg-white relative ${props.open ? "open" : "close"}`}>
+      <div class={`h-screen bg-white relative ${props.open ? "open" : "close"}`}>
         <div class="bg-[#EBEBEB] h-12 flex items-center justify-center">
           <p>ブランドを絞り込む</p>
         </div>

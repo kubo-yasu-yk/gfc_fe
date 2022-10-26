@@ -7,8 +7,8 @@ import { NarrowDown } from "../components/searchGenre/NarrowDown/NarrowDown.tsx"
 export default function searchGenre() {
   const [open, setOpen] = useState(false);
   const [visibleMenu, setVisibleMenu] = useState(false);
-  const [display, setDisplay] = useState(true);
-  const [visibleNarrowDown, setVisibleNarrowDown] = useState(true);
+  const [display, setDisplay] = useState(false);
+  const [visibleNarrowDown, setVisibleNarrowDown] = useState(false);
 
   const DrawerToggleFunction = () => {
     if (open) {

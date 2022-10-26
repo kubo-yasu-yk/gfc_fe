@@ -28,7 +28,7 @@ export function SearchGenre(props: Props) {
       <Header onClick={props.onClick} />
       <GenreName />
       <div class="flex mx-5 mb-5">
-        <Button name="絞り込む" onClick={props.onClickButton} />
+        <Button name="絞り込む" onClickButton={props.onClickButton} />
         <Button name="表示順" />
       </div>
       <Brand />
