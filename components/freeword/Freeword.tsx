@@ -1,5 +1,5 @@
 import { Header } from "./Header.tsx";
-import { GenreName } from "./GenreName.tsx";
+import { ResultNumber } from "./GenreName.tsx";
 import { Brand } from "./Brand.tsx";
 import { AccodionButton, Button } from "./Button.tsx";
 import { PageNation } from "./PageNation.tsx";
@@ -18,7 +18,7 @@ interface Props {
   Accodion?: (e: Event) => void;
 }
 
-export function SearchGenre(props: Props) {
+export function Freeword(props: Props) {
   const contents = [["飲食フランチャイズ.com", "トップページへ"], ["特集ページ一覧", "新着ブランド一覧"], [
     "NEWS一覧",
     "お問い合わせ",
@@ -27,7 +27,7 @@ export function SearchGenre(props: Props) {
   return (
     <div class={`${props.display || props.open ? "fixed w-full" : ""}`}>
       <Header onClick={props.onClick} />
-      <GenreName />
+      <ResultNumber />
       <div class="flex mx-5 mb-5">
         <Button name="絞り込む" onClickButton={props.onClickButton} />
         <AccodionButton name="表示順" Accodion={props.Accodion} />
