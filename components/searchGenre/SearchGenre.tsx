@@ -1,8 +1,8 @@
 import { Header } from "./Header.tsx";
 import { GenreName } from "./GenreName.tsx";
 import { Brand } from "./brand.tsx";
-import { Button } from "./Button.tsx";
-import { PageNation } from "./pageNation.tsx";
+import { AccodionButton, Button } from "./Button.tsx";
+import { PageNation } from "./PageNation.tsx";
 import { FooterSearchBox } from "./SearchBox.tsx";
 import { SearchLink } from "./SearchLink.tsx";
 import { Banner } from "./Banner.tsx";
@@ -15,6 +15,7 @@ interface Props {
   display: boolean;
   onClick: (e: Event) => void;
   onClickButton: (e: Event) => void;
+  Accodion?: (e: Event) => void;
 }
 
 export function SearchGenre(props: Props) {
@@ -22,14 +23,14 @@ export function SearchGenre(props: Props) {
     "NEWS一覧",
     "お問い合わせ",
   ]];
-  console.log(props.display);
+  // console.log(props.display);
   return (
-    <div class={`${props.display ? "fixed w-full" : ""}`}>
+    <div class={`${props.display || props.open ? "fixed w-full" : ""}`}>
       <Header onClick={props.onClick} />
       <GenreName />
       <div class="flex mx-5 mb-5">
-        <Button name="絞り込む" onClick={props.onClickButton} />
-        <Button name="表示順" />
+        <Button name="絞り込む" onClickButton={props.onClickButton} />
+        <AccodionButton name="表示順" Accodion={props.Accodion} />
       </div>
       <Brand />
       <Brand />

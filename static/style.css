@@ -10,7 +10,7 @@
 }
 
 .open{
-  animation:fadeIn .4s ease-in-out;
+  animation:fadeIn .2s ease-in-out;
   }
 
 @keyframes fadeIn{
@@ -23,9 +23,9 @@
     }
   }
 
-.close{
-  animation:fadeOut .4s ease-in-out;
-    }
+  .close{
+    animation:fadeOut .2s ease-in-out;
+      }
 
 @keyframes fadeOut{
       from {
@@ -59,7 +59,13 @@
   background: #947771;
 }
 
+.shrink {
+  flex-shrink: 0;
+}
 
+.rotate {
+  
+}
 
 /* .scroll-left{
   animation: scroll-left 30s linear infinite both;
