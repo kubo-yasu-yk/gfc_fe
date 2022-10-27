@@ -1,3 +1,10 @@
+import { css } from "twind/css";
+import { tw } from "twind";
+const shrink = css`
+{
+  flex-shrink: 0;
+}`;
+
 interface Props {
   open: boolean;
   onClickButton: (e: Event) => void;
@@ -6,7 +13,9 @@ interface Props {
 export function NarrowDown(props: Props) {
   return (
     <>
-      <div class={`h-screen bg-white relative ${props.open ? "open" : "close"}`}>
+      <div
+        class={`h-screen bg-white relative ${props.open ? "open" : "close"}`}
+      >
         <div class="bg-[#EBEBEB] h-12 flex items-center justify-center">
           <p>ブランドを絞り込む</p>
         </div>
@@ -35,7 +44,7 @@ export function NarrowDown(props: Props) {
 
         <div class="border-b">
           <div class="h-12 text-sm flex items-center mx-3">
-            <p class="w-[70px] mr-3 shrink">価格帯</p>
+            <p class={`w-[70px] mr-3 ${tw`(shrink)`}`}>価格帯</p>
             <div class="flex items-center">
               <input class="h-9 border border-[#947771] rounded w-[50%]" />
               <p class="mx-1 whitespace-nowrap">円〜</p>

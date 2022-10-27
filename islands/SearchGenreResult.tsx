@@ -9,6 +9,7 @@ export default function searchGenre() {
   const [visibleMenu, setVisibleMenu] = useState(false);
   const [display, setDisplay] = useState(false);
   const [visibleNarrowDown, setVisibleNarrowDown] = useState(false);
+  const sec = 200;
 
   const DrawerToggleFunction = () => {
     if (open) {
@@ -16,7 +17,7 @@ export default function searchGenre() {
       setOpen(false);
       setTimeout(() => {
         setVisibleMenu(false);
-      }, 400);
+      }, sec);
     } else {
       console.log("こっちだよ！");
       setOpen(true);
@@ -30,7 +31,7 @@ export default function searchGenre() {
       setDisplay(false);
       setTimeout(() => {
         setVisibleNarrowDown(false);
-      }, 400);
+      }, sec);
     } else {
       console.log("開く");
       setDisplay(true);
@@ -38,18 +39,21 @@ export default function searchGenre() {
     }
   };
 
+  const Accodion = 2;
+
   return (
     <div>
       <Head>
         <link href="/style.css" rel="stylesheet" />
       </Head>
-
-      <SearchGenre
-        open={visibleMenu}
-        display={visibleNarrowDown}
-        onClick={DrawerToggleFunction}
-        onClickButton={NarrowToggleFunction}
-      />
+      {visibleNarrowDown || visibleMenu ? null : (
+        <SearchGenre
+          open={visibleMenu}
+          display={visibleNarrowDown}
+          onClick={DrawerToggleFunction}
+          onClickButton={NarrowToggleFunction}
+        />
+      )}
 
       {visibleNarrowDown
         ? <NarrowDown open={display} onClickButton={NarrowToggleFunction} />

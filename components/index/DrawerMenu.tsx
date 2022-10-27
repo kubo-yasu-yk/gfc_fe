@@ -10,7 +10,7 @@ interface Props {
 export function DrawerMenu(props: Props) {
   return (
     <>
-      <div class={`${props.open ? "fixed w-full" : ""}`}>
+      <div class={`${props.open ? "relative w-full" : ""}`}>
         <div class={`bg-white relative top-0 ${props.open ? "open" : "close"}`}>
           <div class="h-16 bg-[#947771]">
             <div class="h-full w-12 ml-4 bg-white">
