@@ -1,10 +1,5 @@
 interface Props {
   contents: string;
-  disabled?: boolean;
-  onClick?: (e: Event) => void;
-  mandatory?: boolean;
-  Arrow?: "left" | "right";
-  color?: string;
 }
 
 export function GrayButton(props: Props) {

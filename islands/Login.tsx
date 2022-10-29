@@ -1,4 +1,4 @@
-import { Button } from "../components/common/Button.tsx";
+import { Button } from "../components/login/Button.tsx";
 import { InputMail } from "../components/login/InputMail.tsx";
 import { InputPassword } from "../components/login/InputPassword.tsx";
 import { useState } from "preact/hooks";
