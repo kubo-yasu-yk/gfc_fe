@@ -1,5 +1,5 @@
 interface Props {
-  contents: {src: string; alt: string; label: string}[];
+  contents: { src: string; alt: string; label: string }[];
 }
 
 export function RegisteredContents(props: Props) {

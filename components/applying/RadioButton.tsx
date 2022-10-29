@@ -8,12 +8,11 @@ interface Props {
 export function RadioButton(props: Props) {
   return (
     <>
-      <label class="flex flex-row mt-4 mr-6 mb-7 ml-[8%] cursor-pointer relative">
+      <label class="flex text-xs items-center ml-5 my-5">
         <input
           type="radio"
           name={props.name}
-          class="w-[0.875rem] h-[0.875rem] rounded-[0.875rem]
-                    border-[#C3C3C3] border-[1px] mr-2"
+          class="w-3 h-3 rounded-xl border mr-1"
           required
           checked={props.checked}
           onClick={props.onClick}
