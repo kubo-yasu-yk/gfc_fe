@@ -3,7 +3,7 @@ export function SubFooter() {
     <footer class="bg-[#947771] mt-[17.5rem]">
       <ul class="py-7 pl-5 text-[14px] text-[#ffffff] font-extralight">
         <li class="mb-4">
-          <a>飲食フランチャイズ.comのトップへ</a>
+          <a href="/">飲食フランチャイズ.comのトップへ</a>
         </li>
         <li class="mb-4">
           <a>ご利用ガイド</a>

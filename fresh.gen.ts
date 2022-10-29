@@ -19,15 +19,16 @@ import * as $12 from "./routes/registration/confirmation-company.tsx";
 import * as $13 from "./routes/registration/confirmation.tsx";
 import * as $14 from "./routes/registration/input.tsx";
 import * as $15 from "./routes/search-genre.tsx";
-import * as $$0 from "./islands/BrowsingHistory.tsx";
-import * as $$1 from "./islands/FavoriteBrands.tsx";
-import * as $$2 from "./islands/Feature.tsx";
-import * as $$3 from "./islands/Freeword.tsx";
-import * as $$4 from "./islands/Login.tsx";
-import * as $$5 from "./islands/RegistrationInput.tsx";
-import * as $$6 from "./islands/SearchGenre.tsx";
-import * as $$7 from "./islands/UnderContract.tsx";
-import * as $$8 from "./islands/index.tsx";
+import * as $$0 from "./islands/Applying.tsx";
+import * as $$1 from "./islands/BrowsingHistory.tsx";
+import * as $$2 from "./islands/FavoriteBrands.tsx";
+import * as $$3 from "./islands/Feature.tsx";
+import * as $$4 from "./islands/Freeword.tsx";
+import * as $$5 from "./islands/Login.tsx";
+import * as $$6 from "./islands/RegistrationInput.tsx";
+import * as $$7 from "./islands/SearchGenre.tsx";
+import * as $$8 from "./islands/UnderContract.tsx";
+import * as $$9 from "./islands/index.tsx";
 
 const manifest = {
   routes: {
@@ -49,15 +50,16 @@ const manifest = {
     "./routes/search-genre.tsx": $15,
   },
   islands: {
-    "./islands/BrowsingHistory.tsx": $$0,
-    "./islands/FavoriteBrands.tsx": $$1,
-    "./islands/Feature.tsx": $$2,
-    "./islands/Freeword.tsx": $$3,
-    "./islands/Login.tsx": $$4,
-    "./islands/RegistrationInput.tsx": $$5,
-    "./islands/SearchGenre.tsx": $$6,
-    "./islands/UnderContract.tsx": $$7,
-    "./islands/index.tsx": $$8,
+    "./islands/Applying.tsx": $$0,
+    "./islands/BrowsingHistory.tsx": $$1,
+    "./islands/FavoriteBrands.tsx": $$2,
+    "./islands/Feature.tsx": $$3,
+    "./islands/Freeword.tsx": $$4,
+    "./islands/Login.tsx": $$5,
+    "./islands/RegistrationInput.tsx": $$6,
+    "./islands/SearchGenre.tsx": $$7,
+    "./islands/UnderContract.tsx": $$8,
+    "./islands/index.tsx": $$9,
   },
   baseUrl: import.meta.url,
   config,
