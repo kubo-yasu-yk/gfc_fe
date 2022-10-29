@@ -1,5 +1,5 @@
 import { Header } from "./Header.tsx";
-import { ResultNumber } from "./GenreName.tsx";
+import { ResultNumber } from "./ResultNumber.tsx";
 import { Brand } from "./Brand.tsx";
 import { AccodionButton, Button } from "./Button.tsx";
 import { PageNation } from "./PageNation.tsx";
