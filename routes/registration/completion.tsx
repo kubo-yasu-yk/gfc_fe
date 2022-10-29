@@ -2,8 +2,8 @@ import { MainHeader } from "../../components/common/MainHeader.tsx";
 import { Title } from "../../components/registration/Title.tsx";
 import { Step } from "../../components/registration/Step.tsx";
 import { CompBanner } from "../../components/common/CompBanner.tsx";
-import { BrownButton } from "../../components/common/Button.tsx";
-import { WhiteButton } from "../../components/common/Button.tsx";
+import { BrownButton } from "../../components/common/BrownButton.tsx";
+import { WhiteButton } from "../../components/common/WhiteButton.tsx";
 import { SubFooter } from "../../components/common/SubFooter.tsx";
 
 export default function Completion() {

@@ -1,4 +1,4 @@
-import { BrownButton } from "../index/Button.tsx";
+import { BrownButton } from "../index/BrownButton.tsx";
 
 export function Inquiry() {
   return (

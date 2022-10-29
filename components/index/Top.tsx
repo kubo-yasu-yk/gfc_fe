@@ -2,7 +2,7 @@ import { Leading } from "./Leading.tsx";
 import { Header } from "./Header.tsx";
 import { Genre } from "./Genre.tsx";
 import { NewBrands } from "./NewBrands.tsx";
-import { WhiteButton } from "./Button.tsx";
+import { WhiteButton } from "../common/WhiteButton.tsx";
 import { Info } from "./Info.tsx";
 import { Inquiry } from "./Inquiry.tsx";
 import { PublicAccount } from "./PublicAccount.tsx";
@@ -73,7 +73,7 @@ export function Top(props: Props) {
 
       <Leading title="特集コンテンツ" />
       <FeatureContents />
-      <WhiteButton contents="特集コンテンツをもっと見る" />
+      <WhiteButton contents="特集コンテンツをもっと見る" Arrow="left" />
 
       <Leading title="お知らせ" more="新着情報一覧" mandatory={true} />
       <Info />

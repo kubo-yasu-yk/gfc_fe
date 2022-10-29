@@ -1,6 +1,6 @@
-import { NoArrowButton } from "./Button.tsx";
+import { NoArrowButton } from "./NoArrowButton.tsx";
 import { Item } from "./HamburgerMenu/Item.tsx";
-import { LightBrownBox } from "./HamburgerMenu/lightBrownBox.tsx";
+import { LightBrownBox } from "./HamburgerMenu/LightBrownBox.tsx";
 
 interface Props {
   open: boolean;

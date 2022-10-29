@@ -1,7 +1,7 @@
 import { MainHeader } from "../../components/common/MainHeader.tsx";
 import { Title } from "../../components/registration/Title.tsx";
 import { Step } from "../../components/registration/Step.tsx";
-import { GrayButton } from "../../components/common/Button.tsx";
+import { GrayButton } from "../../components/common/GrayButton.tsx";
 import Main from "../../islands/RegistrationInput.tsx";
 
 export default function Completion() {
