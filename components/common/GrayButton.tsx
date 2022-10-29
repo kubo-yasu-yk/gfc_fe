@@ -1,6 +1,5 @@
 interface Props {
   contents: string;
-  mandatory?: boolean;
 }
 
 export function GrayButton(props: Props) {

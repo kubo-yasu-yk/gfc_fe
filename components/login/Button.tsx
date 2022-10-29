@@ -2,6 +2,7 @@ interface Props {
   contents: string;
   disabled?: boolean;
   onClick?: (e: Event) => void;
+  mandatory?: boolean;
 }
 
 export function Button(props: Props) {

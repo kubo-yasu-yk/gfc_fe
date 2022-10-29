@@ -44,7 +44,7 @@ export default function Completion() {
         <p class="ml-6 my-4">受け取る</p>
       </main>
       <div class="mt-12 mb-[17.5rem]">
-        <BrownButton contents="登録する" />
+        <BrownButton Arrow="right" contents="登録する" />
         <WhiteButton Arrow="left" contents="戻る" />
       </div>
     </>

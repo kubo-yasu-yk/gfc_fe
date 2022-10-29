@@ -1,6 +1,6 @@
 interface Props {
   contents: string;
-  Arrow: string;
+  Arrow?: "left" | "right";
 }
 
 export function WhiteButton(props: Props) {
@@ -11,6 +11,7 @@ export function WhiteButton(props: Props) {
         {props.Arrow == "right"
           ? <p class="mx-auto pl-7">{props.contents}</p>
           : null}
+
         {props.Arrow == "right"
           ? (
             <img
@@ -22,7 +23,7 @@ export function WhiteButton(props: Props) {
           : (
             <img
               src="/icon/brownLeftArrow.png"
-              alt="茶色の左やじるし"
+              alt="茶色の左矢印"
               class="h-3 w-3 my-auto ml-4 text-left"
             />
           )}

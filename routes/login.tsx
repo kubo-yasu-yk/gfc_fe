@@ -1,7 +1,7 @@
 import { MainHeader } from "../components/common/MainHeader.tsx";
 import { Title } from "../components/registration/Title.tsx";
 import { SubFooter } from "../components/common/SubFooter.tsx";
-import L from "../islands/Login.tsx";
+import Login_i from "../islands/Login.tsx";
 
 export default function Login() {
   return (
@@ -9,7 +9,7 @@ export default function Login() {
       <MainHeader />
 
       <Title title="ログイン" />
-      <L></L>
+      <Login_i></Login_i>
 
       <p class="text-[10px] text-[#947771] text-center font-bold mb-6">
         初めてのご利用の方（新規会員登録）
