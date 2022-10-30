@@ -23,7 +23,6 @@ export function Freeword(props: Props) {
     "NEWS一覧",
     "お問い合わせ",
   ]];
-  // console.log(props.display);
   return (
     <div class={`${props.display || props.open ? "fixed w-full" : ""}`}>
       <Header onClick={props.onClick} />

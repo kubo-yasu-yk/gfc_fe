@@ -46,7 +46,7 @@ export default function Completion() {
         <p class="ml-6 my-4">000-0000-0000</p>
       </div>
       <BrownButton2 link="/brand/application/completion" contents="申請する" />
-      <WhiteButton link="#" contents="戻る" leftArrow={true} />
+      <WhiteButton link="/brand/brand-detail" contents="戻る" leftArrow={true} />
     </>
   );
 }
