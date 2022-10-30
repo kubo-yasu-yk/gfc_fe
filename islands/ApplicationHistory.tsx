@@ -1,10 +1,10 @@
 import { Head } from "$fresh/runtime.ts";
-import { DrawerMenu } from "../components/index/DrawerMenu.tsx";
 import { useState } from "preact/hooks";
-import { Freeword } from "../components/freeword/Freeword.tsx";
-import { NarrowDown } from "../components/freeword/NarrowDown/NarrowDown.tsx";
+import { DrawerMenu } from "../components/index/DrawerMenu.tsx";
+import { ApplicationHistory } from "../components/applicationHistory/ApplicationHistory.tsx";
+import { NarrowDown } from "../components/applicationHistory/NarrowDown.tsx";
 
-export default function searchGenre() {
+export default function islands() {
   const [open, setOpen] = useState(false);
   const [visibleMenu, setVisibleMenu] = useState(false);
   const [display, setDisplay] = useState(false);
@@ -39,16 +39,16 @@ export default function searchGenre() {
     <div>
       <Head>
         <link href="/style.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
       </Head>
       {visibleNarrowDown || visibleMenu ? null : (
-        <Freeword
+        <ApplicationHistory
           open={visibleMenu}
           display={visibleNarrowDown}
           onClick={DrawerToggleFunction}
           onClickButton={NarrowToggleFunction}
         />
       )}
-
       {visibleNarrowDown
         ? <NarrowDown open={display} onClickButton={NarrowToggleFunction} />
         : null}
