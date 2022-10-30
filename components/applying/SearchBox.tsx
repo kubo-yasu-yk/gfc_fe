@@ -1,6 +1,6 @@
 export function SearchBox() {
   return (
-    <div class="mx-5 mt-5">
+    <div class="h-9 mx-5 mt-5">
       <input
         class="h-9 bg-white rounded-[0.625rem] w-[100%] pl-11 text-[0.75rem] border border-[#947771] outline-hidden"
         placeholder="ブランドを検索する"

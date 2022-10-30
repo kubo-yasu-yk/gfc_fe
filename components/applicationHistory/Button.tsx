@@ -51,12 +51,14 @@ export function BrownButton(props: Props) {
 //絞り込むボタン
 export function WhiteButton3(props: Props) {
   return (
-    <button
-      class="h-[2.625rem] w-[50%] border border-[#947771] rounded-[5px] text-[#947771] text-[0.75rem] first:mr-3"
+    <div
+      class="w-[50%] border border-[#947771] rounded-[5px] text-[#947771] text-[0.75rem] first:mr-3 text-center"
       onClick={props.onClickButton}
     >
-      {props.contents}
-    </button>
+      <button class="h-10">
+        {props.contents}
+      </button>
+    </div>
   );
 }
 

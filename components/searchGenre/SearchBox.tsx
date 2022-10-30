@@ -16,7 +16,7 @@ export function HeaderSearchBox() {
 
 export function FooterSearchBox() {
   return (
-    <div class="mx-5">
+    <div class="h-9 mx-5">
       <input
         class="h-9 bg-white rounded-[0.625rem] w-[100%] pl-11 text-[0.75rem] border border-[#5F5F5F] outline-hidden"
         placeholder="ブランドを検索する"

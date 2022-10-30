@@ -12,7 +12,7 @@ export function DrawerMenu(props: Props) {
     <>
       <div class={`${props.open ? "relative w-full" : ""}`}>
         <div class={`bg-white relative top-0 ${props.open ? "open" : "close"}`}>
-          <div class="h-16 bg-[#947771]">
+          <div class="h-16 bg-[#947771] border-0">
             <div class="h-full w-12 ml-4 bg-white">
               <img
                 src="/icon/cross.png"

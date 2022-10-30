@@ -18,12 +18,11 @@ interface Props {
 export function ApplicationHistory(props: Props) {
   return (
     <div
-      class={`${props.open ? "fixed w-full" : ""}`}
+      class={`${props.display || props.open ? "fixed w-full" : ""}`}
     >
       <Header onClick={props.onClick} />
       <Title title="申請中ブランド一覧" />
       <SearchBox />
-      <div class="h-4" />
       <div class="flex mx-5 mb-5">
         <WhiteButton3 contents="絞り込む" onClickButton={props.onClickButton} />
         <AccodionButton contents="表示順" Accodion={props.Accodion} />

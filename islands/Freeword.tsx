@@ -13,13 +13,11 @@ export default function searchGenre() {
 
   const DrawerToggleFunction = () => {
     if (open) {
-      console.log("押されているよ！");
       setOpen(false);
       setTimeout(() => {
         setVisibleMenu(false);
       }, sec);
     } else {
-      console.log("こっちだよ！");
       setOpen(true);
       setVisibleMenu(true);
     }
@@ -27,13 +25,11 @@ export default function searchGenre() {
 
   const NarrowToggleFunction = () => {
     if (display) {
-      console.log("閉じる");
       setDisplay(false);
       setTimeout(() => {
         setVisibleNarrowDown(false);
       }, sec);
     } else {
-      console.log("開く");
       setDisplay(true);
       setVisibleNarrowDown(true);
     }
