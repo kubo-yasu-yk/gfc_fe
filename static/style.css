@@ -9,6 +9,10 @@
   outline: none;
 }
 
+.shrink {
+  flex-shrink: 0;
+}
+
 .open{
   animation:fadeIn .2s ease-in-out;
   }
@@ -59,19 +63,10 @@
   background: #947771;
 }
 
-.shrink {
-  flex-shrink: 0;
+.swiper-button-prev,
+.swiper-button-next {
+  background-size: contain;
+  content: "";
+  height: 2rem;
+  width: 2rem;
 }
-
-/* .scroll-left{
-  animation: scroll-left 30s linear infinite both;
-}
-
-@keyframes scroll-left {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-} */
