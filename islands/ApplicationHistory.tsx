@@ -1,10 +1,10 @@
 import { Head } from "$fresh/runtime.ts";
-import { DrawerMenu } from "../components/index/DrawerMenu.tsx";
 import { useState } from "preact/hooks";
-import { Freeword } from "../components/freeword/Freeword.tsx";
-import { NarrowDown } from "../components/freeword/NarrowDown/NarrowDown.tsx";
+import { ApplicationHistory } from "../components/applicationHistory/ApplicationHistory.tsx";
+import { DrawerMenu } from "../components/index/DrawerMenu.tsx";
+import { NarrowDown } from "../components/applicationHistory/NarrowDown.tsx";
 
-export default function searchGenre() {
+export default function islands() {
   const [open, setOpen] = useState(false);
   const [visibleMenu, setVisibleMenu] = useState(false);
   const [display, setDisplay] = useState(false);
@@ -13,13 +13,11 @@ export default function searchGenre() {
 
   const DrawerToggleFunction = () => {
     if (open) {
-      console.log("押されているよ！");
       setOpen(false);
       setTimeout(() => {
         setVisibleMenu(false);
       }, sec);
     } else {
-      console.log("こっちだよ！");
       setOpen(true);
       setVisibleMenu(true);
     }
@@ -27,13 +25,11 @@ export default function searchGenre() {
 
   const NarrowToggleFunction = () => {
     if (display) {
-      console.log("閉じる");
       setDisplay(false);
       setTimeout(() => {
         setVisibleNarrowDown(false);
       }, sec);
     } else {
-      console.log("開く");
       setDisplay(true);
       setVisibleNarrowDown(true);
     }
@@ -42,17 +38,22 @@ export default function searchGenre() {
   return (
     <div>
       <Head>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+        />
         <link href="/style.css" rel="stylesheet" />
+
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
       </Head>
       {visibleNarrowDown || visibleMenu ? null : (
-        <Freeword
+        <ApplicationHistory
           open={visibleMenu}
           display={visibleNarrowDown}
           onClick={DrawerToggleFunction}
           onClickButton={NarrowToggleFunction}
         />
       )}
-
       {visibleNarrowDown
         ? <NarrowDown open={display} onClickButton={NarrowToggleFunction} />
         : null}
