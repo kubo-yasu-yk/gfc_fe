@@ -7,36 +7,39 @@ import * as $0 from "./routes/[name].tsx";
 import * as $1 from "./routes/api/joke.ts";
 import * as $2 from "./routes/brand/application/completion.tsx";
 import * as $3 from "./routes/brand/application/confirmation.tsx";
-import * as $4 from "./routes/brand/cancel-contract/completion.tsx";
-import * as $5 from "./routes/brand/cancel-contract/confirmation.tsx";
-import * as $6 from "./routes/brand/cancel/completion.tsx";
-import * as $7 from "./routes/brand/cancel/confirmation.tsx";
-import * as $8 from "./routes/brand/contract/completion.tsx";
-import * as $9 from "./routes/brand/contract/confirmation.tsx";
-import * as $10 from "./routes/freeword.tsx";
-import * as $11 from "./routes/index.tsx";
-import * as $12 from "./routes/login.tsx";
-import * as $13 from "./routes/mypage/application-history.tsx";
-import * as $14 from "./routes/mypage/applying.tsx";
-import * as $15 from "./routes/mypage/browsing-history.tsx";
-import * as $16 from "./routes/mypage/favorite.tsx";
-import * as $17 from "./routes/mypage/index.tsx";
-import * as $18 from "./routes/mypage/under-contract.tsx";
-import * as $19 from "./routes/registration/completion.tsx";
-import * as $20 from "./routes/registration/confirmation-company.tsx";
-import * as $21 from "./routes/registration/confirmation.tsx";
-import * as $22 from "./routes/registration/input.tsx";
-import * as $23 from "./routes/search-genre.tsx";
+import * as $4 from "./routes/brand/brand-detail.tsx";
+import * as $5 from "./routes/brand/cancel-contract/completion.tsx";
+import * as $6 from "./routes/brand/cancel-contract/confirmation.tsx";
+import * as $7 from "./routes/brand/cancel/completion.tsx";
+import * as $8 from "./routes/brand/cancel/confirmation.tsx";
+import * as $9 from "./routes/brand/contract/completion.tsx";
+import * as $10 from "./routes/brand/contract/confirmation.tsx";
+import * as $11 from "./routes/freeword.tsx";
+import * as $12 from "./routes/index.tsx";
+import * as $13 from "./routes/login.tsx";
+import * as $14 from "./routes/mypage/application-history.tsx";
+import * as $15 from "./routes/mypage/applying.tsx";
+import * as $16 from "./routes/mypage/browsing-history.tsx";
+import * as $17 from "./routes/mypage/favorite.tsx";
+import * as $18 from "./routes/mypage/index.tsx";
+import * as $19 from "./routes/mypage/under-contract.tsx";
+import * as $20 from "./routes/registration/completion.tsx";
+import * as $21 from "./routes/registration/confirmation-company.tsx";
+import * as $22 from "./routes/registration/confirmation.tsx";
+import * as $23 from "./routes/registration/input.tsx";
+import * as $24 from "./routes/search-genre.tsx";
 import * as $$0 from "./islands/Applying.tsx";
-import * as $$1 from "./islands/BrowsingHistory.tsx";
-import * as $$2 from "./islands/FavoriteBrands.tsx";
-import * as $$3 from "./islands/Feature.tsx";
-import * as $$4 from "./islands/Freeword.tsx";
-import * as $$5 from "./islands/Login.tsx";
-import * as $$6 from "./islands/RegistrationInput.tsx";
-import * as $$7 from "./islands/SearchGenre.tsx";
-import * as $$8 from "./islands/UnderContract.tsx";
-import * as $$9 from "./islands/index.tsx";
+import * as $$1 from "./islands/BrandDetail.tsx";
+import * as $$2 from "./islands/BrandPhoto.tsx";
+import * as $$3 from "./islands/BrowsingHistory.tsx";
+import * as $$4 from "./islands/FavoriteBrands.tsx";
+import * as $$5 from "./islands/Feature.tsx";
+import * as $$6 from "./islands/Freeword.tsx";
+import * as $$7 from "./islands/Login.tsx";
+import * as $$8 from "./islands/RegistrationInput.tsx";
+import * as $$9 from "./islands/SearchGenre.tsx";
+import * as $$10 from "./islands/UnderContract.tsx";
+import * as $$11 from "./islands/index.tsx";
 
 const manifest = {
   routes: {
@@ -44,38 +47,41 @@ const manifest = {
     "./routes/api/joke.ts": $1,
     "./routes/brand/application/completion.tsx": $2,
     "./routes/brand/application/confirmation.tsx": $3,
-    "./routes/brand/cancel-contract/completion.tsx": $4,
-    "./routes/brand/cancel-contract/confirmation.tsx": $5,
-    "./routes/brand/cancel/completion.tsx": $6,
-    "./routes/brand/cancel/confirmation.tsx": $7,
-    "./routes/brand/contract/completion.tsx": $8,
-    "./routes/brand/contract/confirmation.tsx": $9,
-    "./routes/freeword.tsx": $10,
-    "./routes/index.tsx": $11,
-    "./routes/login.tsx": $12,
-    "./routes/mypage/application-history.tsx": $13,
-    "./routes/mypage/applying.tsx": $14,
-    "./routes/mypage/browsing-history.tsx": $15,
-    "./routes/mypage/favorite.tsx": $16,
-    "./routes/mypage/index.tsx": $17,
-    "./routes/mypage/under-contract.tsx": $18,
-    "./routes/registration/completion.tsx": $19,
-    "./routes/registration/confirmation-company.tsx": $20,
-    "./routes/registration/confirmation.tsx": $21,
-    "./routes/registration/input.tsx": $22,
-    "./routes/search-genre.tsx": $23,
+    "./routes/brand/brand-detail.tsx": $4,
+    "./routes/brand/cancel-contract/completion.tsx": $5,
+    "./routes/brand/cancel-contract/confirmation.tsx": $6,
+    "./routes/brand/cancel/completion.tsx": $7,
+    "./routes/brand/cancel/confirmation.tsx": $8,
+    "./routes/brand/contract/completion.tsx": $9,
+    "./routes/brand/contract/confirmation.tsx": $10,
+    "./routes/freeword.tsx": $11,
+    "./routes/index.tsx": $12,
+    "./routes/login.tsx": $13,
+    "./routes/mypage/application-history.tsx": $14,
+    "./routes/mypage/applying.tsx": $15,
+    "./routes/mypage/browsing-history.tsx": $16,
+    "./routes/mypage/favorite.tsx": $17,
+    "./routes/mypage/index.tsx": $18,
+    "./routes/mypage/under-contract.tsx": $19,
+    "./routes/registration/completion.tsx": $20,
+    "./routes/registration/confirmation-company.tsx": $21,
+    "./routes/registration/confirmation.tsx": $22,
+    "./routes/registration/input.tsx": $23,
+    "./routes/search-genre.tsx": $24,
   },
   islands: {
     "./islands/Applying.tsx": $$0,
-    "./islands/BrowsingHistory.tsx": $$1,
-    "./islands/FavoriteBrands.tsx": $$2,
-    "./islands/Feature.tsx": $$3,
-    "./islands/Freeword.tsx": $$4,
-    "./islands/Login.tsx": $$5,
-    "./islands/RegistrationInput.tsx": $$6,
-    "./islands/SearchGenre.tsx": $$7,
-    "./islands/UnderContract.tsx": $$8,
-    "./islands/index.tsx": $$9,
+    "./islands/BrandDetail.tsx": $$1,
+    "./islands/BrandPhoto.tsx": $$2,
+    "./islands/BrowsingHistory.tsx": $$3,
+    "./islands/FavoriteBrands.tsx": $$4,
+    "./islands/Feature.tsx": $$5,
+    "./islands/Freeword.tsx": $$6,
+    "./islands/Login.tsx": $$7,
+    "./islands/RegistrationInput.tsx": $$8,
+    "./islands/SearchGenre.tsx": $$9,
+    "./islands/UnderContract.tsx": $$10,
+    "./islands/index.tsx": $$11,
   },
   baseUrl: import.meta.url,
   config,
