@@ -19,7 +19,7 @@ export function RankingBrand(props: Props) {
           class="h-14 w-14 my-3 mx-2"
         />
         <div class="mt-2">
-          <div class="flex flex-row">
+          <div class="flex">
             <p>
               {props.rank}
               <span class="text-[0.625rem]">位</span>
@@ -28,7 +28,7 @@ export function RankingBrand(props: Props) {
           </div>
           <p class="text-[0.625rem] mt-1 ml-4">ジャンル：{props.genre}</p>
           <p class="text-[0.625rem] mt-1 ml-4">
-            契約数：{props.contractNum.toLocaleString()}
+            契約数：{props.contractNum?.toLocaleString()}
           </p>
         </div>
       </div>
@@ -38,36 +38,25 @@ export function RankingBrand(props: Props) {
 
 //ブランドを一覧で表示する際に使う
 export function BrandList(props: Props) {
-  const BrandList = [{
-    src: "/icon/brandLogo.png",
-    name: "ガスト",
-    content: "ガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここ",
-  }, {
-    src: "/icon/brandLogo.png",
-    name: "ガスト",
-    content: "ガストの説明はここガストの説明はここガストの説明はここ",
-  }, {
-    src: "/icon/brandLogo.png",
-    name: "ガスト",
-    content: "ガストの説明はここガストの説明はここ",
-  }];
-
   return (
     <>
-      {props.brandList.map((brand) => (
-        <div class="h-[6.25rem] mx-4 border rounded mb-3 last:mb-6 flex flex-row">
+      {props.brandList?.map((brand) => (
+        <a
+          href="/brand/brand-detail"
+          class="h-[6.25rem] mx-4 border rounded mb-3 last:mb-6 flex"
+        >
           <img
             src={`${brand.src}`}
             alt="ブランドロゴ"
             class="h-[3.75rem] w-[3.75rem] my-5 ml-3 mr-1"
           />
           <div class="mx-3 my-3.5">
-            <p class="text-[14px] font-semibold mb-1">{brand.name}</p>
+            <p class="text-sm mb-1">{brand.name}</p>
             <p class="text-[0.625rem]">
               {brand.content}
             </p>
           </div>
-        </div>
+        </a>
       ))}
     </>
   );
