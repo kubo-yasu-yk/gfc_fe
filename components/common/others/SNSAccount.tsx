@@ -9,7 +9,7 @@ export function SNSAccount() {
     { src: "/icon/common/sns/LINE.png", alt: "LINEのアイコン", link: "" },
   ];
   return (
-    <div class="text-center mb-[15rem]">
+    <div class="text-center">
       <p class="text-[0.625rem] mb-5">飲食フランチャイズ.com公式アカウント</p>
       <div class="flex w-[16rem] mx-auto justify-between">
         {icons.map((icon) => (

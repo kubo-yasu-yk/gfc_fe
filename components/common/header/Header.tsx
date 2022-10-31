@@ -7,6 +7,14 @@ interface Props {
   onClick?: (e: Event) => void;
 }
 
+//茶色の背景だけのヘッダー
+export function BrownHeader() {
+  return (
+    <header class="bg-[#947771] h-16">
+    </header>
+  );
+}
+
 //DrawerMenuのヘッダー（未ログイン時）
 export function DrawerMenuHeader(props: Props) {
   return (

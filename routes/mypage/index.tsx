@@ -1,13 +1,13 @@
-import { MainHeader } from "../../components/common/MainHeader.tsx";
-import { Title } from "../../components/common/Title.tsx";
-import { SubFooter } from "../../components/common/SubFooter.tsx";
+import { BrownHeader } from "../../components/common/header/Header.tsx";
+import { Title } from "../../components/common/screen-title/Title.tsx";
+import { Footer } from "../../components/common/footer/Footer.tsx";
 import { BrandList } from "../../components/mypage/BrandList.tsx";
 import { RegisteredContents } from "../../components/mypage/RegisteredContents.tsx";
 import FavoriteBrands from "../../islands/FavoriteBrands.tsx";
-import { Leading } from "../../components/common/Leading.tsx";
+import { Leading } from "../../components/common/others/Leading.tsx";
 import { CheckedBrands } from "../../components/mypage/CheckedBrands.tsx";
 import { Inquiry } from "../../components/common/others/Inquiry.tsx";
-import { PublicAccount } from "../../components/common/PublicAccount.tsx";
+import { SNSAccount } from "../../components/common/others/SNSAccount.tsx";
 // import L from "../islands/Login.tsx";
 
 export default function Index() {
@@ -20,7 +20,7 @@ export default function Index() {
 
   return (
     <>
-      <MainHeader />
+      <BrownHeader />
 
       <Title title="マイページ" />
       <p class="text-center text-[#5F5F5F] font-bold my-5">グルメ商店さま</p>
@@ -32,10 +32,10 @@ export default function Index() {
         申請履歴は<span class="underline underline-offset-auto">コチラ</span>
       </p>
 
-      <Leading title="人気ブランド総合ランキング" more="すべて見る" mandatory={true} />
+      <Leading title="人気ブランド総合ランキング" more={true} linkName="すべて見る" />
       <FavoriteBrands />
 
-      <Leading title="最近チェックしたブランド" more="すべて見る" mandatory={true} />
+      <Leading title="最近チェックしたブランド" more={true} linkName="すべて見る" />
       <CheckedBrands />
 
       <Leading title="登録内容の確認・修正" />
@@ -45,7 +45,7 @@ export default function Index() {
       </p>
 
       <Inquiry />
-      <PublicAccount />
+      <SNSAccount />
 
       {/* <L></L> */}
 
@@ -77,7 +77,7 @@ export default function Index() {
       </div> */
       }
 
-      <SubFooter />
+      <Footer />
     </>
   );
 }

@@ -8,7 +8,7 @@ export function Footer() {
     { name: "プライバシポリシー", link: "/" },
   ];
   return (
-    <footer class="bg-[#947771] text-white">
+    <footer class="bg-[#947771] text-white mt-[16rem]">
       <ul class="pt-7 text-xs">
         {contents.map((content) => (
           <li class="ml-5 mb-4">

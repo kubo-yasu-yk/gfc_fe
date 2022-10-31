@@ -5,7 +5,7 @@ import { ResultNumber } from "./ResultNumber.tsx";
 import { ContractBrand } from "./ContractBrand.tsx";
 import { PageNation } from "./PageNation.tsx";
 import { Button } from "./Button.tsx";
-import { SubFooter } from "../common/SubFooter.tsx";
+import { Footer } from "../common/footer/Footer.tsx";
 
 interface Props {
   open: boolean;
@@ -24,7 +24,7 @@ export function UnderContract(props: Props) {
       <ContractBrand />
       <PageNation />
       <Button contents="もっとブランドを探す" />
-      <SubFooter />
+      <Footer />
     </div>
   );
 }

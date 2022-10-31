@@ -6,12 +6,14 @@ interface Props {
   more?: boolean;
   link?: string;
   linkName?: string;
+  mandatory?: boolean;
 }
 
+//見出しは基本こっちを使う
 export function Leading(props: Props) {
   return (
     <div class="mx-5 mb-2 mt-8 flex items-center">
-      <h3 class="text-sm font-medium">{props.title}</h3>
+      <p class="text-sm font-medium">{props.title}</p>
       {props.more
         ? (
           <>
@@ -22,6 +24,16 @@ export function Leading(props: Props) {
           </>
         )
         : null}
+    </div>
+  );
+}
+
+//新規会員登録系の画面で使用する背景色付きの小見出し
+export function BgLeading(props: Props) {
+  return (
+    <div class="bg-[rgb(149,119,113,0.1)] h-8 flex items-center">
+      <p class="ml-5">{props.title}</p>
+      {props.mandatory ? <p class="ml-3 text-[#FF7171]">必須</p> : null}
     </div>
   );
 }

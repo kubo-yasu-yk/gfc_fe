@@ -1,4 +1,4 @@
-import { MainHeader } from "../../../components/common/MainHeader.tsx";
+import { BrownHeader } from "../../../components/common/header/Header.tsx";
 import { Title } from "../../../components/brand/common/Title.tsx";
 import { ConfirmMsg } from "../../../components/brand/application/ConfirmMsg.tsx";
 import { Leading } from "../../../components/brand/common/Leading.tsx";
@@ -11,7 +11,7 @@ import {
 export default function Completion() {
   return (
     <>
-      <MainHeader />
+      <BrownHeader />
       <Title title="申請内容の確認" />
       <ConfirmMsg />
       <div class="text-[0.625rem] text-[#5F5F5F] border-b border-[rgb(149,119,113,0.3)]">

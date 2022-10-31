@@ -7,7 +7,7 @@ import { FooterSearchBox } from "./SearchBox.tsx";
 import { SearchLink } from "./SearchLink.tsx";
 import { Banner } from "./Banner.tsx";
 import { OtherContent } from "./OtherContent.tsx";
-import { SubFooter } from "../common/SubFooter.tsx";
+import { Footer } from "../common/footer/Footer.tsx";
 import { PublicAccount } from "./PublicAccount.tsx";
 
 interface Props {
@@ -58,7 +58,7 @@ export function SearchGenre(props: Props) {
       </div>
       <OtherContent contents={contents} />
       <PublicAccount />
-      <SubFooter />
+      <Footer />
     </div>
   );
 }

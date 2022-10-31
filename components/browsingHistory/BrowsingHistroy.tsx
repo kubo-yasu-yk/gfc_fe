@@ -5,7 +5,7 @@ import { ResultNumber } from "./ResultNumber.tsx";
 import { VisitedBrand } from "./VisitedBrand.tsx";
 import { PageNation } from "./PageNation.tsx";
 import { Button } from "./Button.tsx";
-import { SubFooter } from "../common/SubFooter.tsx";
+import { Footer } from "../common/footer/Footer.tsx";
 
 interface Props {
   open: boolean;
@@ -30,7 +30,7 @@ export function BrowsingHistory(props: Props) {
       </div>
       <PageNation />
       <Button contents="もっとブランドを探す" />
-      <SubFooter />
+      <Footer />
     </div>
   );
 }

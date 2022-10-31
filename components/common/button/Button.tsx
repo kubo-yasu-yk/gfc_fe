@@ -77,3 +77,40 @@ export function BrownButton(props: Props) {
     </a>
   );
 }
+
+//灰色背景のボタン（disabledボタン）
+export function GrayButton(props: Props) {
+  return (
+    <a
+      href={props.link}
+      class="h-10 w-[18rem] mx-auto flex items-center bg-[#EBEBEB] rounded
+            text-center text-white text-xs"
+    >
+      {props.arrow == "left"
+        ? (
+          <>
+            <img
+              src="/icon/common/arrow/whiteLeft.png"
+              alt="茶色の左矢印"
+              class="h-3 w-3 ml-3"
+            />
+          </>
+        )
+        : null}
+      {props.arrow == "right" ? <div class="w-6" /> : null}
+      <p class="flex-1">{props.name}</p>
+      {props.arrow == "right"
+        ? (
+          <>
+            <img
+              src="/icon/common/arrow/whiteRight.png"
+              alt="白色の右矢印"
+              class="h-3 w-3 mr-3"
+            />
+          </>
+        )
+        : null}
+      {props.arrow == "left" ? <div class="w-6" /> : null}
+    </a>
+  );
+}

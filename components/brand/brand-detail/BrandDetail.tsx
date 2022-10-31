@@ -11,7 +11,7 @@ import { SearchLink } from "./SearchLink.tsx";
 import { Banner } from "./Banner.tsx";
 import { OtherContent } from "./OtherContent.tsx";
 import { PublicAccount } from "./PublicAccount.tsx";
-import { SubFooter } from "../../common/SubFooter.tsx";
+import { Footer } from "../../common/footer/Footer.tsx";
 
 interface Props {
   open: boolean;
@@ -67,7 +67,7 @@ export function BrandDetail(props: Props) {
       </div>
       <OtherContent contents={contents} />
       <PublicAccount />
-      <SubFooter />
+      <Footer />
     </div>
   );
 }

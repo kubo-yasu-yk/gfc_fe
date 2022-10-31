@@ -5,7 +5,7 @@ import { RadioButton } from "./RadioButton.tsx";
 import { Leading } from "./Leading.tsx";
 import { WhiteButton } from "./Button.tsx";
 import { Brand } from "./Brand.tsx";
-import { SubFooter } from "../common/SubFooter.tsx";
+import { Footer } from "../common/footer/Footer.tsx";
 
 interface Props {
   open: boolean;
@@ -67,7 +67,7 @@ export function Applying(props: Props) {
       />
 
       <WhiteButton contents="申請中のブランドをもっと見る" />
-      <SubFooter />
+      <Footer />
     </div>
   );
 }

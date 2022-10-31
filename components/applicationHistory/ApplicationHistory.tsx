@@ -4,7 +4,7 @@ import { SearchBox } from "./SearchBox.tsx";
 import { AccodionButton, WhiteButton, WhiteButton3 } from "./Button.tsx";
 import { Leading } from "./Leading.tsx";
 import { Brand } from "./Brand.tsx";
-import { SubFooter } from "../common/SubFooter.tsx";
+import { Footer } from "../common/footer/Footer.tsx";
 
 interface Props {
   open: boolean;
@@ -88,7 +88,7 @@ export function ApplicationHistory(props: Props) {
       />
 
       <WhiteButton contents="申請中のブランドをもっと見る" />
-      <SubFooter />
+      <Footer />
     </div>
   );
 }
