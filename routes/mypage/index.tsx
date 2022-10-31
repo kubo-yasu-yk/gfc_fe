@@ -6,7 +6,7 @@ import { RegisteredContents } from "../../components/mypage/RegisteredContents.t
 import FavoriteBrands from "../../islands/FavoriteBrands.tsx";
 import { Leading } from "../../components/common/Leading.tsx";
 import { CheckedBrands } from "../../components/mypage/CheckedBrands.tsx";
-import { Inquiry } from "../../components/common/Inquiry.tsx";
+import { Inquiry } from "../../components/common/others/Inquiry.tsx";
 import { PublicAccount } from "../../components/common/PublicAccount.tsx";
 // import L from "../islands/Login.tsx";
 

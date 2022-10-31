@@ -1,6 +1,9 @@
-import { BrandRanking } from "./BrandRanking.tsx";
+//人気ブランドランキングを出すときに使うコンポーネント
 
-export function BrandRankings() {
+import { tw } from "twind";
+import { RankingBrand } from "./Brand.tsx";
+
+export function Ranking() {
   const brands = [
     {
       src: "/icon/brandLogo.png",
@@ -34,9 +37,9 @@ export function BrandRankings() {
     },
   ];
   return (
-    <div class="flex w-full overflow-x-auto pr-4 hidden-scrollbar">
+    <div class={`flex w-full overflow-x-auto pr-4 ${tw`(hidden-scrollbar)`}`}>
       {brands.map((brand, i) => (
-        <BrandRanking
+        <RankingBrand
           src={brand.src}
           rank={i + 1}
           brandName={brand.brandName}

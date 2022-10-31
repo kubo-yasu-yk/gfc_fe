@@ -1,36 +1,36 @@
 interface Props {
-  contents: string;
-  Arrow?: "left" | "right";
+  name: string;
+  arrow?: "left" | "right";
 }
 
+//todo:他に使っている箇所があるか確認
 export function WhiteButton(props: Props) {
   return (
-    <div class="grid place-items-center">
-      <button class="flex flex-row bg-[#ffffff] py-2.5 rounded-[5px] w-[85%]
-            text-center text-[#947771] text-[14px] border border-solid border-[#947771]">
-        {props.Arrow == "right"
-          ? <p class="mx-auto pl-7">{props.contents}</p>
-          : null}
-
-        {props.Arrow == "right"
-          ? (
+    <button class="h-10 w-[18rem] mx-auto flex items-center bg-[#ffffff] border border-[#947771] rounded
+            text-center text-[#947771] text-xs">
+      {props.arrow == "right"
+        ? (
+          <>
+            <div class="w-6" />
+            <p class="flex-1">{props.name}</p>
             <img
               src="/icon/brownRightArrow.png"
               alt="茶色の右矢印"
-              class="h-3 w-3 my-auto mr-4 text-right"
+              class="h-3 w-3 mr-3"
             />
-          )
-          : (
+          </>
+        )
+        : (
+          <>
             <img
               src="/icon/brownLeftArrow.png"
               alt="茶色の左矢印"
-              class="h-3 w-3 my-auto ml-4 text-left"
+              class="h-3 w-3 ml-3"
             />
-          )}
-        {props.Arrow == "left"
-          ? <p class="mx-auto pr-7">{props.contents}</p>
-          : null}
-      </button>
-    </div>
+            <p class="flex-1">{props.name}</p>
+            <div class="w-6" />
+          </>
+        )}
+    </button>
   );
 }

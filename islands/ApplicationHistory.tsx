@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
-import { DrawerMenu } from "../components/index/DrawerMenu.tsx";
+import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 import { ApplicationHistory } from "../components/applicationHistory/ApplicationHistory.tsx";
 import { NarrowDown } from "../components/applicationHistory/NarrowDown.tsx";
 

@@ -1,5 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
-import { DrawerMenu } from "../components/index/DrawerMenu.tsx";
+import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 import { useState } from "preact/hooks";
 import { SearchGenre } from "../components/searchGenre/SearchGenre.tsx";
 import { NarrowDown } from "../components/searchGenre/NarrowDown/NarrowDown.tsx";

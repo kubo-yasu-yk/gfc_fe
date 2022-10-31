@@ -1,4 +1,6 @@
-export function SubFooter() {
+//フッター挿入時に使用するコンポーネント
+
+export function Footer() {
   const contents = [
     { name: "飲食フランチャイズ.comのトップへ", link: "/" },
     { name: "ご利用ガイド", link: "" },

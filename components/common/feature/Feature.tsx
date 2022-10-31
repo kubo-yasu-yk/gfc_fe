@@ -1,8 +1,12 @@
+//特集ページを出すときに使うコンポーネント
+//todo:swiper以外の特集ページの格納
+
 interface Props {
   bgColor: string;
 }
 
-export function Feature1(props: Props) {
+//swiper.jsに対応した特集ページ作成時に使用
+export function SwiperFeature(props: Props) {
   return (
     <>
       <div

@@ -1,5 +1,7 @@
+//todo:リファクタリング未着手
+
 import { tw } from "twind";
-import { Feature2 } from "../../components/index/Feature.tsx";
+import { Feature2 } from "../../components/common/feature/Feature.tsx";
 import { useState } from "preact/hooks";
 
 export function FeatureContents() {

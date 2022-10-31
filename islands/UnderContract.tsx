@@ -1,7 +1,7 @@
 import { Head } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
 import { UnderContract } from "../components/underContract/UnderContract.tsx";
-import { DrawerMenu } from "../components/index/DrawerMenu.tsx";
+import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
 export default function islands() {
   const [open, setOpen] = useState(false);
