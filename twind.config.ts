@@ -10,6 +10,7 @@ export default {
     },
     backgroundColor: {
       brown: "#947771",
+      white: "#ffffff",
     },
   },
 } as Options;

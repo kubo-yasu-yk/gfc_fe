@@ -1,12 +1,12 @@
 import { BrownHeader } from "../../components/common/header/Header.tsx";
 import { Title } from "../../components/common/screen-title/Title.tsx";
-import { Step } from "../../components/registration/common/StepBar.tsx";
+import { StepBar } from "../../components/registration/StepBar.tsx";
 import { ConfirmMsg } from "../../components/common/others/ConfirmMsg.tsx";
 import { BgLeading } from "../../components/common/others/Leading.tsx";
 import { BrownButton } from "../../components/common/button/Button.tsx";
 import { WhiteButton } from "../../components/common/button/Button.tsx";
 
-export default function routes()  {
+export default function routes() {
   const inputInfo = [
     { title: "会員種別", input: "法人" },
     { title: "会社名", input: "株式会社リクルート" },
@@ -26,7 +26,7 @@ export default function routes()  {
     <>
       <BrownHeader />
       <Title title="登録内容の確認" />
-      <Step step={2} />
+      <StepBar step={2} />
       <ConfirmMsg msg="登録" />
       <main class="text-[0.625rem] text-[#5F5F5F] border-b">
         {inputInfo.map((info) => (

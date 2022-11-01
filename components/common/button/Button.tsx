@@ -1,3 +1,5 @@
+//todo:buttonの高さやマージンの設定ができるようにする
+
 interface Props {
   name: string;
   link?: string;
@@ -34,6 +36,16 @@ export function WhiteButton(props: Props) {
         : null}
       {props.arrow == "left" ? <div class="w-6" /> : null}
     </a>
+  );
+}
+
+//茶色枠・白色背景ボタン（h-6）
+export function SmallWhiteButton(props: Props) {
+  return (
+    <button class="w-[18rem] h-6 mx-auto flex items-center bg-[#ffffff] border border-[#947771] rounded
+     text-[#947771] text-xs">
+      <p class="mx-auto">{props.name}</p>
+    </button>
   );
 }
 

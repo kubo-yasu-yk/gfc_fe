@@ -1,8 +1,10 @@
+//進捗度合いを視覚的に示す際に使用する
+
 interface Props {
   step: number;
 }
 
-export function Step(props: Props) {
+export function StepBar(props: Props) {
   return (
     <div class="mt-5">
       <div class="flex mx-auto w-[17rem]">

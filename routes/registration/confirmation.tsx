@@ -1,6 +1,6 @@
 import { BrownHeader } from "../../components/common/header/Header.tsx";
 import { Title } from "../../components/common/screen-title/Title.tsx";
-import { Step } from "../../components/registration/common/StepBar.tsx";
+import { StepBar } from "../../components/registration/StepBar.tsx";
 import { ConfirmMsg } from "../../components/common/others/ConfirmMsg.tsx";
 import { BgLeading } from "../../components/common/others/Leading.tsx";
 import { BrownButton } from "../../components/common/button/Button.tsx";
@@ -22,7 +22,7 @@ export default function routes() {
     <>
       <BrownHeader />
       <Title title="登録内容の確認" />
-      <Step step={2} />
+      <StepBar step={2} />
       <ConfirmMsg msg="登録" />
       <div class="text-[0.625rem] border-b">
         {inputInfo.map((info) => (

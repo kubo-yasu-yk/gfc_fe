@@ -12,7 +12,7 @@ export function RadioButton(props: Props) {
   return (
     <div class="flex">
       {props.buttonList.map((button) => (
-        <label class="flex mt-4 mr-4 mb-7 ml-8">
+        <label class="flex text-xs items-center mt-4 mr-4 mb-7 ml-8">
           <input
             type="radio"
             name={button.name}

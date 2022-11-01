@@ -1,4 +1,5 @@
-export function Check() {
+//利用規約とプライバシポリシーへの同意を求める際に使う
+export function Permission() {
   return (
     <div class="text-[0.625rem] w-11/12 h-16 bg-[rgb(255,212,203,0.2)] mx-auto mt-12 rounded flex items-center">
       <input
