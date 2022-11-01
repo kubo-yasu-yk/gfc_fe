@@ -5,7 +5,6 @@ interface Props {
   genre?: string;
   contractNum?: number;
   brandList?: { src: string; name: string; content: string }[];
-  //todo:contractNumとbrandListに?をつけるとコンパイルエラーが出るが、フロントは動いているのがなぜかを聞く
 }
 
 //人気ブランドランキングで使うブランド単体のカセット

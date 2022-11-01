@@ -1,5 +1,5 @@
 import SearchGenre from "../islands/SearchGenre.tsx";
 
-export default function index() {
+export default function routes() {
   return <SearchGenre />;
 }

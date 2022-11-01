@@ -1,5 +1,5 @@
 import Index from "../islands/index.tsx";
 
-export default function index() {
+export default function routes()  {
   return <Index />;
 }

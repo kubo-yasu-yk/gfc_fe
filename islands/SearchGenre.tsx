@@ -4,7 +4,7 @@ import { useState } from "preact/hooks";
 import { SearchGenre } from "../components/searchGenre/SearchGenre.tsx";
 import { NarrowDown } from "../components/searchGenre/NarrowDown/NarrowDown.tsx";
 
-export default function searchGenre() {
+export default function islands() {
   const [open, setOpen] = useState(false);
   const [visibleMenu, setVisibleMenu] = useState(false);
   const [display, setDisplay] = useState(false);

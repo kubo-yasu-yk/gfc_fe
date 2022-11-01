@@ -7,7 +7,7 @@ import {
 } from "../../../components/brand/common/Button.tsx";
 import { Footer } from "../../../components/common/footer/Footer.tsx";
 
-export default function Completion() {
+export default function routes() {
   return (
     <>
       <BrownHeader />

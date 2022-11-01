@@ -1,5 +1,5 @@
 import BrandDetail from "../../islands/BrandDetail.tsx";
 
-export default function index() {
+export default function routes()  {
   return <BrandDetail />;
 }

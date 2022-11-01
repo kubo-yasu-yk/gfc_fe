@@ -4,7 +4,7 @@ import { useState } from "preact/hooks";
 import { Freeword } from "../components/freeword/Freeword.tsx";
 import { NarrowDown } from "../components/freeword/NarrowDown/NarrowDown.tsx";
 
-export default function searchGenre() {
+export default function islands() {
   const [open, setOpen] = useState(false);
   const [visibleMenu, setVisibleMenu] = useState(false);
   const [display, setDisplay] = useState(false);

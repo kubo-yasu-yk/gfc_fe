@@ -5,7 +5,7 @@ import Main from "../../islands/RegistrationInput.tsx";
 import { Check } from "../../components/registration/input/Check.tsx";
 import { GrayButton } from "../../components/common/button/Button.tsx";
 
-export default function Input() {
+export default function routes() {
   return (
     <>
       <BrownHeader />

@@ -1,5 +1,5 @@
 import UnderContract from "../../islands/UnderContract.tsx";
 
-export default function index() {
+export default function routes()  {
   return <UnderContract />;
 }

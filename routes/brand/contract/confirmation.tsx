@@ -8,7 +8,7 @@ import {
   WhiteButton,
 } from "../../../components/brand/common/Button.tsx";
 
-export default function Completion() {
+export default function routes()  {
   return (
     <>
       <BrownHeader />

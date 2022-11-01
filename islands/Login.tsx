@@ -3,7 +3,7 @@ import { InputMail } from "../components/login/InputMail.tsx";
 import { InputPassword } from "../components/login/InputPassword.tsx";
 import { useState } from "preact/hooks";
 
-export default function Login() {
+export default function islands() {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const onInputMail = (e: Event) => {

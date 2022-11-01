@@ -1,6 +1,8 @@
+//契約中ブランド一覧画面の要素をまとめたコンポーネント
+
 import { LoginHeader } from "../common/header/Header.tsx";
 import { Title } from "../common/screen-title/Title.tsx";
-import { SearchBox } from "../common/search-box/SearchBox.tsx";
+import { SearchBox } from "../common/input/SearchBox.tsx";
 import { ResultNumber } from "../common/others/ResultNumber.tsx";
 import { BrandList } from "../common/brand/Brand.tsx";
 import { PageNation } from "../common/others/PageNation.tsx";

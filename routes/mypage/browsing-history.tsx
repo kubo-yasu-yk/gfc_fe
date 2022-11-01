@@ -1,5 +1,5 @@
 import BrowsingHistory from "../../islands/BrowsingHistory.tsx";
 
-export default function index() {
+export default function routes()  {
   return <BrowsingHistory />;
 }

@@ -14,7 +14,7 @@ export function Link(props: Props) {
     >
       <p class="text-xs ml-8 flex-1">{props.itemName}</p>
       <img
-        src="/icon/grayRightArrow.png"
+        src="/icon/common/arrow/grayRight.png"
         alt="右矢印アイコン"
         class="h-3 w-3 mr-4"
       />

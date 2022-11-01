@@ -6,13 +6,13 @@ import { BgLeading } from "../../components/common/others/Leading.tsx";
 import { BrownButton } from "../../components/common/button/Button.tsx";
 import { WhiteButton } from "../../components/common/button/Button.tsx";
 
-export default function Completion() {
+export default function routes() {
   const inputInfo = [
     { title: "会員種別", input: "個人" },
     { title: "氏名", input: "佐々木　小次郎" },
     { title: "氏名（カナ）", input: "ササキ　コジロウ" },
     { title: "性別", input: "男性" },
-    { title: "会社のご住所", input: "〒123-4567 横浜市旭区二俣川1-11-11 やまとハウス101" }, //todo:改行する方法を聞く
+    { title: "会社のご住所", input: ["〒123-4567 横浜市旭区二俣川1-11-11 やまとハウス101"] },
     { title: "代表電話番号", input: "000-0000-0000" },
     { title: "メールアドレス", input: "taylor.taylor@icloud.com" },
     { title: "パスワード", input: "**********" },
@@ -28,7 +28,10 @@ export default function Completion() {
         {inputInfo.map((info) => (
           <>
             <BgLeading title={info.title} />
-            <p class="ml-8 my-3">{info.input}</p>
+
+            {info.input instanceof Array
+              ? info.input.map((input) => <p class="ml-8 my-3">{input}</p>) //todo:マージンの修正
+              : <p class="ml-8 my-3">{info.input}</p>}
           </>
         ))}
       </div>

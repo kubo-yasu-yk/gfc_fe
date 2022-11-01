@@ -3,7 +3,7 @@ import { Top } from "../components/index/Top.tsx";
 import { useState } from "preact/hooks";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
-export default function Index() {
+export default function islands() {
   const [open, setOpen] = useState(false);
   const [visibleMenu, setVisibleMenu] = useState(false);
 

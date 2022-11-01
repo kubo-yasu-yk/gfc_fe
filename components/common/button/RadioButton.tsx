@@ -2,15 +2,16 @@ interface Props {
   buttonList: {
     name: string;
     label: string;
-    checked?: boolean;
-    onClick: () => void;
+    checked?: boolean; //デフォルトで選択させたいときに使用する
+    onClick?: () => void; //関数を与えたいときに使用する
   }[];
 }
 
+//単一選択をさせたいときに使用する
 export function RadioButton(props: Props) {
   return (
     <div class="flex">
-      {props.buttonList?.map((button) => (
+      {props.buttonList.map((button) => (
         <label class="flex mt-4 mr-4 mb-7 ml-8">
           <input
             type="radio"

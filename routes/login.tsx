@@ -3,7 +3,7 @@ import { Title } from "../components/common/screen-title/Title.tsx";
 import { Footer } from "../components/common/footer/Footer.tsx";
 import Login_i from "../islands/Login.tsx";
 
-export default function Login() {
+export default function routes()  {
   return (
     <>
       <BrownHeader />

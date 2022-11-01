@@ -8,9 +8,8 @@ import { Leading } from "../../components/common/others/Leading.tsx";
 import { CheckedBrands } from "../../components/mypage/CheckedBrands.tsx";
 import { Inquiry } from "../../components/common/others/Inquiry.tsx";
 import { SNSAccount } from "../../components/common/others/SNSAccount.tsx";
-// import L from "../islands/Login.tsx";
 
-export default function Index() {
+export default function routes() {
   const contents = [
     { src: "/icon/mypage/human.png", alt: "人型アイコン", label: "会員情報の確認・変更" },
     { src: "/icon/mypage/lock.png", alt: "鍵アイコン", label: "パスワードの変更" },
@@ -46,37 +45,6 @@ export default function Index() {
 
       <Inquiry />
       <SNSAccount />
-
-      {/* <L></L> */}
-
-      {
-        /* <p class="text-[10px] text-[#947771] text-center font-bold mb-6">
-        初めてのご利用の方（新規会員登録）
-      </p>
-
-      <div class="flex flex-row my-2">
-        <img
-          src="/icon/brownRightArrow.png"
-          alt="茶色の右矢印"
-          class="h-3 w-3 my-auto mx-4 text-right"
-        />
-        <p class="text-[10px] text-[#5F5F5F] font-bold">
-          メールアドレスをお忘れですか？
-        </p>
-      </div>
-
-      <div class="flex flex-row my-2">
-        <img
-          src="/icon/brownRightArrow.png"
-          alt="茶色の右矢印"
-          class="h-3 w-3 my-auto mx-4 text-right"
-        />
-        <p class="text-[10px] text-[#5F5F5F] font-bold">
-          パスワードをお忘れですか？
-        </p>
-      </div> */
-      }
-
       <Footer />
     </>
   );

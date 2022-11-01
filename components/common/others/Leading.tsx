@@ -37,3 +37,13 @@ export function BgLeading(props: Props) {
     </div>
   );
 }
+
+//見出しのある要素の中にさらに見出しをつけたい場合に使う
+export function SubLeading(props: Props) {
+  return (
+    <div class="mt-4 mb-2 ml-8 flex">
+      <p>{props.title}</p>
+      {props.mandatory ? <p class="ml-3 text-red">必須</p> : null}
+    </div>
+  );
+}

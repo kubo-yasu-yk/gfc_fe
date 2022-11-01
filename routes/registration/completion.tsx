@@ -6,7 +6,7 @@ import { BrownButton } from "../../components/common/button/Button.tsx";
 import { WhiteButton } from "../../components/common/button/Button.tsx";
 import { Footer } from "../../components/common/footer/Footer.tsx";
 
-export default function Completion() {
+export default function routes()  {
   return (
     <>
       <BrownHeader />
