@@ -21,8 +21,12 @@ export function BrandInfo(props: Props) {
     <>
       <div class="mt-3 mb-10">
         <div class="mx-4 flex items-center">
-          <img src="/icon/brand/at.png" alt="会社情報アイコン" class="h-4 w-4 mr-1" />
-          <p class="text-[0.625rem] text-[#D6D6D6]">{props.company}</p>
+          <img
+            src="/icon/common/others/at.png"
+            alt="会社情報アイコン"
+            class="h-4 w-4 mr-1"
+          />
+          <p class="text-[0.625rem] text-lightGray">{props.company}</p>
         </div>
         <p class="text-sm ml-4 my-3">{props.brandName}</p>
         <Tab />

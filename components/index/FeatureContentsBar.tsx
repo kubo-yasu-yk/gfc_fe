@@ -1,7 +1,7 @@
 //todo:リファクタリング未着手
 
 import { tw } from "twind";
-import { Feature2 } from "../../components/common/feature/Feature.tsx";
+import { ScrollFeature2 } from "../../components/common/feature/Feature.tsx";
 import { useState } from "preact/hooks";
 
 export function FeatureContents() {
@@ -14,27 +14,27 @@ export function FeatureContents() {
       : "hover:border-b hover:border-blue-500");
   const contents = [
     <>
-      <Feature2 bgColor="#C18462" />
-      <Feature2 bgColor="#C18462" />
-      <Feature2 bgColor="#C18462" />
+      <ScrollFeature2 bgColor="#C18462" />
+      <ScrollFeature2 bgColor="#C18462" />
+      <ScrollFeature2 bgColor="#C18462" />
     </>,
 
     <>
-      <Feature2 bgColor="red" />
-      <Feature2 bgColor="red" />
-      <Feature2 bgColor="red" />
+      <ScrollFeature2 bgColor="red" />
+      <ScrollFeature2 bgColor="red" />
+      <ScrollFeature2 bgColor="red" />
     </>,
 
     <>
-      <Feature2 bgColor="black" />
-      <Feature2 bgColor="black" />
-      <Feature2 bgColor="black" />
+      <ScrollFeature2 bgColor="black" />
+      <ScrollFeature2 bgColor="black" />
+      <ScrollFeature2 bgColor="black" />
     </>,
 
     <>
-      <Feature2 bgColor="blue" />
-      <Feature2 bgColor="blue" />
-      <Feature2 bgColor="blue" />
+      <ScrollFeature2 bgColor="blue" />
+      <ScrollFeature2 bgColor="blue" />
+      <ScrollFeature2 bgColor="blue" />
     </>,
   ];
   return (

@@ -1,10 +1,11 @@
+//検索結果の数を表示するコンポーネント
+
 interface Props {
   displayNumStart: number;
   displayNumEnd: number;
   totalNum: number;
 }
 
-//検索結果の数を表示する
 export function ResultNumber(props: Props) {
   return (
     <div class="mt-5 mb-3 ml-5">

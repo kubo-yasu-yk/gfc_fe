@@ -1,20 +1,23 @@
 import { BrownHeader } from "../../../components/common/header/Header.tsx";
-import { CompBanner } from "../../../components/brand/cancel/CompBanner.tsx";
-import { Title } from "../../../components/brand/common/Title.tsx";
+import { CompMsg } from "../../../components/common/others/CompMsg.tsx";
+import { Title } from "../../../components/common/screen-title/Title.tsx";
 import {
-  BrownButton2,
+  BrownButton,
   WhiteButton,
-} from "../../../components/brand/common/Button.tsx";
+} from "../../../components/common/button/Button.tsx";
 import { Footer } from "../../../components/common/footer/Footer.tsx";
 
-export default function routes()  {
+const msg = ["申請キャンセルが完了しました。", "引き続き飲食フランチャイズ.comのご利用を", "よろしくお願いいたします。"];
+
+export default function routes() {
   return (
     <>
       <BrownHeader />
       <Title title="申請キャンセル完了" />
-      <CompBanner />
-      <BrownButton2 link="/" contents="トップページへ" />
-      <WhiteButton link="/mypage" contents="マイページへ" />
+      <CompMsg compMsg={msg} />
+      <BrownButton link="/" name="トップページへ" />
+      <div class="h-3" />
+      <WhiteButton link="/mypage" name="マイページへ" />
       <Footer />
     </>
   );

@@ -26,8 +26,7 @@ export default function islands() {
           href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
         />
         <link href="/style.css" rel="stylesheet" />
-
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" />
       </Head>
       <BrandDetail open={visibleMenu} onClick={toggleFunction} />
       {visibleMenu ? <DrawerMenu open={open} onClick={toggleFunction} /> : null}

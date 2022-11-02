@@ -11,6 +11,7 @@ interface Props {
 }
 
 //見出しは基本こっちを使う
+//todo:mtを選択できるようにする
 export function Leading(props: Props) {
   return (
     <div class="mx-5 mb-2 mt-8 flex items-center">

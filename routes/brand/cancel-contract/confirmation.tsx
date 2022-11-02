@@ -1,57 +1,67 @@
 import { BrownHeader } from "../../../components/common/header/Header.tsx";
-import { Title } from "../../../components/brand/common/Title.tsx";
-import { ConfirmMsg } from "../../../components/brand/cancel-contract/ConfirmMsg.tsx";
-import { Leading } from "../../../components/brand/common/Leading.tsx";
+import { Title } from "../../../components/common/screen-title/Title.tsx";
+import { ConfirmMsg } from "../../../components/common/others/ConfirmMsg.tsx";
+import {
+  BgLeading,
+  Leading,
+} from "../../../components/common/others/Leading.tsx";
 import {
   BrownButton,
-  BrownButton2,
   WhiteButton,
-} from "../../../components/brand/common/Button.tsx";
+} from "../../../components/common/button/Button.tsx";
 
-export default function routes()  {
+const cancelInfo = [
+  { title: "ブランド名", info: "オリジン弁当" },
+  { title: "ジャンル", info: "和食、洋食、中華" },
+  { title: "価格帯", info: "500円 〜 1,000円" },
+  { title: "対応エリア", info: "全国" },
+  { title: "取扱商品", info: "のり弁当、唐揚げ弁当など" },
+];
+
+const applicantInfo = [
+  { title: "会社名", info: "株式会社リクルート" },
+  { title: "担当者氏名", info: "佐々木　小次郎" },
+  { title: "メールアドレス", info: "taylor.taylor@icloud.com" },
+  { title: "電話番号", info: "000-0000-0000" },
+];
+
+export default function routes() {
   return (
     <>
       <BrownHeader />
       <Title title="解約申請内容の確認" />
-      <ConfirmMsg />
-      <div class="text-[0.625rem] text-[#5F5F5F] border-b border-[rgb(149,119,113,0.3)]">
-        <Leading title="ブランド名" />
-        <p class="ml-6 my-4">オリジン弁当</p>
-
-        <Leading title="ジャンル" />
-        <p class="ml-6 my-4">和食、洋食、中華</p>
-
-        <Leading title="価格帯" />
-        <p class="ml-6 my-4">500円 〜 1,000円</p>
-
-        <Leading title="対応エリア" />
-        <p class="ml-6 my-4">全国</p>
-
-        <Leading title="取扱商品" />
-        <p class="ml-6 my-4">のり弁当、唐揚げ弁当など</p>
+      <ConfirmMsg msg="解約申請" />
+      <div class="text-[0.625rem] border-b">
+        {cancelInfo.map((info) => (
+          <>
+            <BgLeading title={info.title} />
+            <p class="ml-6 my-4">{info.info}</p>
+          </>
+        ))}
       </div>
 
-      <BrownButton link="/brand/cancel-contract/completion" contents="解約申請する" />
+      <div class="h-12" />
+      <BrownButton link="/brand/cancel-contract/completion" name="解約申請する" />
+      <div class="h-12" />
 
-      <p class="text-xs ml-5 mb-3">申請者情報</p>
-      <div class="text-[0.625rem] text-[#5F5F5F] border-b border-[rgb(149,119,113,0.3)]">
-        <Leading title="会社名" />
-        <p class="ml-6 my-4">株式会社リクルート</p>
-
-        <Leading title="担当者名" />
-        <p class="ml-6 my-4">佐々木　小次郎</p>
-
-        <Leading title="メールアドレス" />
-        <p class="ml-6 my-4">taylor.taylor@icloud.com</p>
-
-        <Leading title="電話番号" />
-        <p class="ml-6 my-4">000-0000-0000</p>
+      <Leading title="申請者情報" />
+      <div class="text-[0.625rem] border-b">
+        {applicantInfo.map((info) => (
+          <>
+            <BgLeading title={info.title} />
+            <p class="ml-6 my-4">{info.info}</p>
+          </>
+        ))}
       </div>
-      <BrownButton2
+
+      <div class="h-12" />
+      <BrownButton
         link="/brand/cancel-contract/completion"
-        contents="解約申請する"
+        name="解約申請する"
       />
-      <WhiteButton link="#" contents="戻る" leftArrow={true} />
+      <div class="h-3" />
+      <WhiteButton link="/brand/brand-detail" name="戻る" arrow="left" />
+      <div class="h-12" />
     </>
   );
 }
