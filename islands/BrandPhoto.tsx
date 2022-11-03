@@ -1,4 +1,4 @@
-//todo:swiperの部分をコンポーネント化する,下のやつがエラーになる
+//todo:swiperの部分をコンポーネント化する,下のやつがエラーになる,スマホだと矢印アイコンがデフォルトのまま
 // import { FavoriteNum } from "../components/common/favorite/Favorite.tsx";
 
 import { Component } from "preact";

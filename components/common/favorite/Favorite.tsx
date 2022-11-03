@@ -9,7 +9,7 @@ export function Favorite(props: Props) {
   return (
     <div class="w-10 h-10 rounded-full border border-[#947771] p-[0.625rem]">
       <img
-        src="./icon/favorite-brown.png"
+        src="/icon/common/four-icons/favorite-brown.png"
         alt="お気に入りアイコン"
       />
     </div>
