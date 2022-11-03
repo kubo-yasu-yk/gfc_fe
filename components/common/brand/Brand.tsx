@@ -1,6 +1,7 @@
 import {
   BrownButton,
   H6BrownButton,
+  H6W1112BrownButton,
   H6WhiteButton,
   W0506BrownButton,
 } from "../button/Button.tsx";
@@ -27,6 +28,29 @@ interface Props {
 }
 
 //人気ブランドランキングで使うブランド単体のカセット
+export function FavBrand(props: Props) {
+  return (
+    <a href="/brand/brand-detail">
+      <div class="w-[16.5rem] h-20 ml-3 border rounded flex">
+        <img
+          src={`${props.src}`}
+          alt="ブランドロゴ"
+          class="h-14 w-14 m-3"
+        />
+        <div class="w-[12rem] mt-2">
+          <p class="text-sm">{props.brandName}</p>
+          <p class="text-[0.625rem] my-0.5">ジャンル：{props.genre}</p>
+          <H6W1112BrownButton
+            name="申請する"
+            link="brand/application/confirmation"
+          />
+        </div>
+      </div>
+    </a>
+  );
+}
+
+//人気ブランドランキングで使うブランド単体のカセット
 export function RankingBrand(props: Props) {
   return (
     <div>
@@ -37,7 +61,7 @@ export function RankingBrand(props: Props) {
         <img
           src={`${props.src}`}
           alt="ブランドロゴ"
-          class="h-14 w-14 my-3 mx-2"
+          class="h-14 w-14 m-3"
         />
         <div class="mt-2">
           <div class="flex">

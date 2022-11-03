@@ -34,10 +34,10 @@ import * as $$2 from "./islands/BrandDetail.tsx";
 import * as $$3 from "./islands/BrandPhoto.tsx";
 import * as $$4 from "./islands/BrowsingHistory.tsx";
 import * as $$5 from "./islands/Favorite.tsx";
-import * as $$6 from "./islands/FavoriteBrands.tsx";
-import * as $$7 from "./islands/Feature.tsx";
-import * as $$8 from "./islands/Freeword.tsx";
-import * as $$9 from "./islands/Login.tsx";
+import * as $$6 from "./islands/Feature.tsx";
+import * as $$7 from "./islands/Freeword.tsx";
+import * as $$8 from "./islands/Login.tsx";
+import * as $$9 from "./islands/Mypage.tsx";
 import * as $$10 from "./islands/RegistrationInput.tsx";
 import * as $$11 from "./islands/SearchGenre.tsx";
 import * as $$12 from "./islands/UnderContract.tsx";
@@ -78,10 +78,10 @@ const manifest = {
     "./islands/BrandPhoto.tsx": $$3,
     "./islands/BrowsingHistory.tsx": $$4,
     "./islands/Favorite.tsx": $$5,
-    "./islands/FavoriteBrands.tsx": $$6,
-    "./islands/Feature.tsx": $$7,
-    "./islands/Freeword.tsx": $$8,
-    "./islands/Login.tsx": $$9,
+    "./islands/Feature.tsx": $$6,
+    "./islands/Freeword.tsx": $$7,
+    "./islands/Login.tsx": $$8,
+    "./islands/Mypage.tsx": $$9,
     "./islands/RegistrationInput.tsx": $$10,
     "./islands/SearchGenre.tsx": $$11,
     "./islands/UnderContract.tsx": $$12,

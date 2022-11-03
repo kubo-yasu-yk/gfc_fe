@@ -148,6 +148,18 @@ export function H6BrownButton(props: Props) {
   );
 }
 
+//茶色背景ボタン（w-11/12,h-6）
+export function H6W1112BrownButton(props: Props) {
+  return (
+    <a
+      href={props.link}
+      class="h-6 w-11/12 text-white text-[0.625rem] rounded flex items-center bg-brown"
+    >
+      <p class="mx-auto">{props.name}</p>
+    </a>
+  );
+}
+
 //茶色背景ボタン（w-5/6,h-6）
 export function W0506BrownButton(props: Props) {
   return (
@@ -184,6 +196,39 @@ export function GrayButton(props: Props) {
           <img
             src="/icon/common/arrow/whiteRight.png"
             alt="白色の右矢印"
+            class="h-3 w-3 mr-3"
+          />
+        )
+        : null}
+      {props.arrow == "left" ? <div class="w-6" /> : null}
+    </a>
+  );
+}
+
+//黒枠・白色背景のボタン（w-[18rem], h-12）
+export function BlackButton(props: Props) {
+  return (
+    <a
+      href={props.link}
+      class="h-12 w-[18rem] mx-auto flex items-center bg-white border border-gray-200 rounded
+            text-center text-gray text-xs"
+    >
+      {props.arrow == "left"
+        ? (
+          <img
+            src="/icon/common/arrow/grayLeft.png"
+            alt="茶色の左矢印"
+            class="h-3 w-3 ml-3"
+          />
+        )
+        : null}
+      {props.arrow == "right" ? <div class="w-6" /> : null}
+      <p class="flex-1">{props.name}</p>
+      {props.arrow == "right"
+        ? (
+          <img
+            src="/icon/common/arrow/grayRight.png"
+            alt="茶色の右矢印"
             class="h-3 w-3 mr-3"
           />
         )
