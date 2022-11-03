@@ -46,7 +46,7 @@ export function UnderContract(props: Props) {
       <SearchBox />
       <ResultNumber displayNumStart={6} displayNumEnd={10} totalNum={15} />
       <BrandList brandList={contractBrands} />
-      <PageNation />
+      <PageNation displayNumStart={2} displayNumEnd={3} />
       <WhiteButton name="もっとブランドを探す" />
       <Footer />
     </div>

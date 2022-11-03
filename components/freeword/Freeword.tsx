@@ -1,4 +1,5 @@
 import { SearchBoxHeader } from "../common/header/Header.tsx";
+import { ResultNumber } from "../common/others/ResultNumber.tsx";
 import { ResultBrand } from "../common/brand/Brand.tsx";
 import { AccodionButton, HalfWWhiteButton } from "../common/button/Button.tsx";
 import { PageNation } from "../common/others/PageNation.tsx";
@@ -69,11 +70,7 @@ export function Freeword(props: Props) {
   return (
     <div class={`${props.display || props.open ? "fixed w-full" : ""}`}>
       <SearchBoxHeader onClick={props.onClick} />
-      <div class="my-5 ml-5">
-        <p class="text-[0.625rem]">
-          11 - 20件 / 275件
-        </p>
-      </div>
+      <ResultNumber displayNumStart={11} displayNumEnd={20} totalNum={275} />
       <div class="flex mx-5 mb-5">
         {
           /* todo:アコーディオンを押すとHalfWhiteButtonまで下に行く（Half
@@ -87,7 +84,7 @@ export function Freeword(props: Props) {
         />
       </div>
       <ResultBrand brandList={brandList} imgs={imgs} />
-      <PageNation />
+      <PageNation displayNumStart={2} displayNumEnd={28} />
       <LongFooter />
     </div>
   );

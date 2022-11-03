@@ -1,5 +1,10 @@
+interface Props {
+  displayNumStart: number;
+  displayNumEnd: number;
+}
+
 //ページネーションを使用するときに使うコンポーネント
-export function PageNation() {
+export function PageNation(props: Props) {
   return (
     <div class="h-10 flex items-center text-center px-5 my-10 border-y">
       <a href="#">
@@ -10,7 +15,9 @@ export function PageNation() {
         />
       </a>
 
-      <p class="text-xs flex-1">2 / 3 ページ</p>
+      <p class="text-xs flex-1">
+        {props.displayNumStart} / {props.displayNumEnd} ページ
+      </p>
       <a href="#">
         <img
           src="/icon/common/arrow/grayRight.png"

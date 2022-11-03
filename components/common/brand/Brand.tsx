@@ -1,4 +1,8 @@
-import { BrownButton, H6WhiteButton } from "../button/Button.tsx";
+import {
+  BrownButton,
+  H6BrownButton,
+  H6WhiteButton,
+} from "../button/Button.tsx";
 import { Favorite } from "../favorite/Favorite.tsx";
 import { ScrollBrandPhotos } from "../scroll/Scroll.tsx";
 
@@ -98,6 +102,41 @@ export function ResultBrand(props: Props) {
         </div>
       ))}
     </div>
+  );
+}
+
+//閲覧履歴など横に3列ブランドを表示する場合に使う
+export function TripleBrand(props: Props) {
+  return (
+    <>
+      <div class="flex text-[0.625rem] ">
+        {props.brandList?.map((brand) => (
+          <a
+            href="/brand/brand-detail"
+            class="w-1/3 border-b border-r last:border-r-0"
+          >
+            <img
+              src={`${brand.src}`}
+              alt="ブランドロゴ"
+              class="w-5/6 mx-auto mt-2 mb-3"
+            />
+            <p class="text-sm ml-2 mb-1">{brand.name}</p>
+            <p class="ml-2">{brand.genre}</p>
+            <div class="flex items-center justify-center my-3">
+              <H6BrownButton
+                name="申請する"
+                link="/brand/application/confirmation"
+              />
+              <img
+                src="/icon/favorite-brown.png"
+                alt="お気に入りボタン"
+                class="w-4 h-4 ml-2"
+              />
+            </div>
+          </a>
+        ))}
+      </div>
+    </>
   );
 }
 

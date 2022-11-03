@@ -94,7 +94,7 @@ export function HalfWWhiteButton(props: Props) {
   );
 }
 
-//茶色背景のボタン（横幅18rem）
+//茶色背景のボタン（w-[18rem]）
 export function BrownButton(props: Props) {
   return (
     <a
@@ -127,12 +127,24 @@ export function BrownButton(props: Props) {
   );
 }
 
-//茶色背景ボタン（横幅6rem）
+//茶色背景ボタン（w-[6rem]）
 export function SmallBrownButton(props: Props) {
   return (
     <button class="h-10 w-[6rem] text-white rounded bg-brown">
       {props.name}
     </button>
+  );
+}
+
+//茶色背景ボタン（w-[6rem],h-6）
+export function H6BrownButton(props: Props) {
+  return (
+    <a
+      href={props.link}
+      class="h-6 w-[5.5rem] text-white rounded flex items-center bg-brown"
+    >
+      <p class="mx-auto">{props.name}</p>
+    </a>
   );
 }
 
