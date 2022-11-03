@@ -1,3 +1,5 @@
+//閲覧履歴の要素をまとめたコンポーネント
+
 import { LoginHeader } from "../common/header/Header.tsx";
 import { Title } from "../common/screen-title/Title.tsx";
 import { SearchBox } from "../common/input/SearchBox.tsx";

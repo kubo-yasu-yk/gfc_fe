@@ -1,3 +1,5 @@
+//フリーワード検索画面の要素をまとめたコンポーネント
+
 import { SearchBoxHeader } from "../common/header/Header.tsx";
 import { ResultNumber } from "../common/others/ResultNumber.tsx";
 import { ResultBrand } from "../common/brand/Brand.tsx";
