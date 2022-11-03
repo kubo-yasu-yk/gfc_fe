@@ -5,25 +5,25 @@ export function FourIcons() {
   const icons = [
     {
       link: "/mypage/favorite",
-      src: "/icon/favorite.png",
+      src: "/icon/common/four-icons/before-favorite.png",
       alt: "お気に入りアイコン",
       label: "お気に入り",
     },
     {
       link: "/mypage/browsing-history",
-      src: "/icon/history.png",
+      src: "/icon/common/four-icons/history.png",
       alt: "閲覧履歴アイコン",
       label: "閲覧履歴",
     },
     {
       link: "/mypage/applying",
-      src: "/icon/application.png",
+      src: "/icon/common/four-icons/application.png",
       alt: "申請中アイコン",
       label: "申請中ブランド",
     },
     {
       link: "/mypage/under-contract",
-      src: "/icon/contract.png",
+      src: "/icon/common/four-icons/contract.png",
       alt: "契約中アイコン",
       label: "契約中ブランド",
     },

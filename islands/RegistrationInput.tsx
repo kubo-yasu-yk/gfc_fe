@@ -45,6 +45,7 @@ export default function islands() {
         入力目安時間（2分）
       </p>
       <BgLeading title="会員種別" mandatory={true} />
+      <div class="h-4" />
       <RadioButton
         buttonList={memberType}
       />
@@ -58,6 +59,7 @@ export default function islands() {
             <WInput inputList={nameKana} mt4={true} mb7={true} />
 
             <BgLeading title="性別" mandatory={true} />
+            <div class="h-4" />
             <RadioButton
               buttonList={gender}
             />

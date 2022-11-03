@@ -28,7 +28,10 @@ interface Props {
 export function RankingBrand(props: Props) {
   return (
     <div>
-      <div class="w-[16.5rem] h-20 ml-4 border rounded flex">
+      <a
+        href="/brand/brand-detail"
+        class="w-[16.5rem] h-20 ml-4 border rounded flex"
+      >
         <img
           src={`${props.src}`}
           alt="ブランドロゴ"
@@ -47,7 +50,7 @@ export function RankingBrand(props: Props) {
             契約数：{props.contractNum?.toLocaleString()}
           </p>
         </div>
-      </div>
+      </a>
     </div>
   );
 }
@@ -128,7 +131,7 @@ export function TripleBrand(props: Props) {
                 link="/brand/application/confirmation"
               />
               <img
-                src="/icon/favorite-brown.png"
+                src="/icon/common/four-icons/favorite-brown.png"
                 alt="お気に入りボタン"
                 class="w-4 h-4 ml-2"
               />
@@ -169,7 +172,14 @@ export function ApplyBrand(props: Props) {
               </p>
             </div>
           </a>
-          {brand.status == 1 ? <BrownButton name="フランチャイズ契約する" /> : null}
+          {brand.status == 1
+            ? (
+              <BrownButton
+                name="フランチャイズ契約する"
+                link="/brand/contract/confirmation"
+              />
+            )
+            : null}
           <div class="h-2" />
           {brand.status == 0 || brand.status == 1 || brand.status == 3
             ? (

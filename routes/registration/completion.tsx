@@ -13,9 +13,9 @@ export default function routes() {
       <Title title="会員登録完了" />
       <StepBar step={3} />
       <CompMsg msg="会員登録が完了しました。" />
-      <BrownButton name="トップページへ" arrow="right" />
+      <BrownButton name="トップページへ" link="/" />
       <div class="h-3" />
-      <WhiteButton name="マイページへ" arrow="right" />
+      <WhiteButton name="マイページへ" link="/mypage" />
       <Footer />
     </>
   );

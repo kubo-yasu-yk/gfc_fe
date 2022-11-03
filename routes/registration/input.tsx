@@ -14,7 +14,11 @@ export default function routes() {
       <Main />
       <Permission />
       <div class="mt-12 mb-[17.5rem]">
-        <GrayButton name="確認画面へ" arrow="right" />
+        <GrayButton
+          name="確認画面へ"
+          arrow="right"
+          link="/registration/confirmation"
+        />
       </div>
     </>
   );
