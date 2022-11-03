@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
-import { BrowsingHistory } from "../components/browsingHistory/BrowsingHistroy.tsx";
+import { BrowsingHistory } from "../components/BrowsingHistroy.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
 export default function islands() {

@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
-import { BrandDetail } from "../components/brand/brand-detail/BrandDetail.tsx";
+import { BrandDetail } from "../components/brand-detail/BrandDetail.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
 export default function islands() {
