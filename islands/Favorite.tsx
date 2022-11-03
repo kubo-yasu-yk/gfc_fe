@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
-import { BrowsingHistory } from "../components/browsingHistory/BrowsingHistroy.tsx";
+import { Favorite } from "../components/Favorite.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
 export default function islands() {
@@ -28,7 +28,7 @@ export default function islands() {
         <link href="/style.css" rel="stylesheet" />
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
       </Head>
-      <BrowsingHistory open={visibleMenu} onClick={toggleFunction} />
+      <Favorite open={visibleMenu} onClick={toggleFunction} />
       {visibleMenu ? <DrawerMenu open={open} onClick={toggleFunction} /> : null}
     </div>
   );
