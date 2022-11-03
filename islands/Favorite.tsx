@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
-import { BrandDetail } from "../components/brand-detail/BrandDetail.tsx";
+import { Favorite } from "../components/Favorite.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
 export default function islands() {
@@ -26,9 +26,9 @@ export default function islands() {
           href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
         />
         <link href="/style.css" rel="stylesheet" />
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" />
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
       </Head>
-      <BrandDetail open={visibleMenu} onClick={toggleFunction} />
+      <Favorite open={visibleMenu} onClick={toggleFunction} />
       {visibleMenu ? <DrawerMenu open={open} onClick={toggleFunction} /> : null}
     </div>
   );

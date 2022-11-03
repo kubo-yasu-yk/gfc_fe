@@ -2,6 +2,7 @@ import {
   BrownButton,
   H6BrownButton,
   H6WhiteButton,
+  W0506BrownButton,
 } from "../button/Button.tsx";
 import { Favorite } from "../favorite/Favorite.tsx";
 import { ScrollBrandPhotos } from "../scroll/Scroll.tsx";
@@ -22,6 +23,7 @@ interface Props {
   }[];
   applyingList?: { status: number; name: string; genre: string; src: string }[];
   imgs?: string[];
+  dastBox?: boolean; //FavTripleBrand関数で削除ボタンに切り替える時に使う
 }
 
 //人気ブランドランキングで使うブランド単体のカセット
@@ -108,7 +110,7 @@ export function ResultBrand(props: Props) {
   );
 }
 
-//閲覧履歴など横に3列ブランドを表示する場合に使う
+//閲覧履歴で3列ブランドを表示する場合に使う
 export function TripleBrand(props: Props) {
   return (
     <>
@@ -125,6 +127,7 @@ export function TripleBrand(props: Props) {
             />
             <p class="text-sm ml-2 mb-1">{brand.name}</p>
             <p class="ml-2">{brand.genre}</p>
+
             <div class="flex items-center justify-center my-3">
               <H6BrownButton
                 name="申請する"
@@ -136,6 +139,46 @@ export function TripleBrand(props: Props) {
                 class="w-4 h-4 ml-2"
               />
             </div>
+          </a>
+        ))}
+      </div>
+    </>
+  );
+}
+
+//お気に入り画面で3列ブランドを表示する場合に使う
+export function FavTripleBrand(props: Props) {
+  return (
+    <>
+      <div class="flex text-[0.625rem] ">
+        {props.brandList?.map((brand) => (
+          <a
+            href="/brand/brand-detail"
+            class="w-1/3 border-b border-r last:border-r-0 flex flex-col content-center"
+          >
+            <img
+              src={`${brand.src}`}
+              alt="ブランドロゴ"
+              class="w-5/6 mx-auto mt-2 mb-3"
+            />
+            <p class="text-sm ml-2 mb-1">{brand.name}</p>
+            <p class="ml-2">{brand.genre}</p>
+            {props.dastBox
+              ? (
+                <img
+                  src="/icon/common/delete/delete.png"
+                  alt="削除アイコン"
+                  class="mx-auto my-3 w-6 h-6"
+                />
+              )
+              : (
+                <div class="flex items-center justify-center my-3">
+                  <W0506BrownButton
+                    name="申請する"
+                    link="/brand/application/confirmation"
+                  />
+                </div>
+              )}
           </a>
         ))}
       </div>

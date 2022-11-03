@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
-import { Applying } from "../components/applying/Applying.tsx";
+import { Applying } from "../components/Applying.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
 export default function islands() {

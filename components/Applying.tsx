@@ -1,12 +1,15 @@
 //申請中ブランド一覧画面の要素をまとめたコンポーネント
 
-import { LoginHeader } from "../common/header/Header.tsx";
-import { Title } from "../common/screen-title/Title.tsx";
-import { SearchBox } from "../common/input/SearchBox.tsx";
-import { BgLeading } from "../common/others/Leading.tsx";
-import { RadioButton, WhiteButton } from "../common/button/Button.tsx";
-import { ApplyBrand } from "../common/brand/Brand.tsx";
-import { Footer } from "../common/footer/Footer.tsx";
+import { LoginHeader } from "../components/common/header/Header.tsx";
+import { Title } from "../components/common/screen-title/Title.tsx";
+import { SearchBox } from "../components/common/input/SearchBox.tsx";
+import { BgLeading } from "../components/common/others/Leading.tsx";
+import {
+  RadioButton,
+  WhiteButton,
+} from "../components/common/button/Button.tsx";
+import { ApplyBrand } from "../components/common/brand/Brand.tsx";
+import { Footer } from "../components/common/footer/Footer.tsx";
 
 interface Props {
   open: boolean;

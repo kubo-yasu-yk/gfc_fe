@@ -1,11 +1,14 @@
 //フリーワード検索画面の要素をまとめたコンポーネント
 
-import { SearchBoxHeader } from "../common/header/Header.tsx";
-import { ResultNumber } from "../common/others/ResultNumber.tsx";
-import { ResultBrand } from "../common/brand/Brand.tsx";
-import { AccodionButton, HalfWWhiteButton } from "../common/button/Button.tsx";
-import { PageNation } from "../common/others/PageNation.tsx";
-import { LongFooter } from "../common/footer/Footer.tsx";
+import { SearchBoxHeader } from "../components/common/header/Header.tsx";
+import { ResultNumber } from "../components/common/others/ResultNumber.tsx";
+import { ResultBrand } from "../components/common/brand/Brand.tsx";
+import {
+  AccodionButton,
+  HalfWWhiteButton,
+} from "../components/common/button/Button.tsx";
+import { PageNation } from "../components/common/others/PageNation.tsx";
+import { LongFooter } from "../components/common/footer/Footer.tsx";
 
 interface Props {
   open: boolean;

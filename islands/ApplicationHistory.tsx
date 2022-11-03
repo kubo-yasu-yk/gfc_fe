@@ -1,7 +1,7 @@
 import { Head } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
-import { ApplicationHistory } from "../components/applicationHistory/ApplicationHistory.tsx";
+import { ApplicationHistory } from "../components/ApplicationHistory.tsx";
 import { MypageNarrowDown } from "../components/common/narrow-down/NarrowDown.tsx";
 
 export default function islands() {

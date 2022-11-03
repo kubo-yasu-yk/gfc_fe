@@ -33,14 +33,15 @@ import * as $$1 from "./islands/Applying.tsx";
 import * as $$2 from "./islands/BrandDetail.tsx";
 import * as $$3 from "./islands/BrandPhoto.tsx";
 import * as $$4 from "./islands/BrowsingHistory.tsx";
-import * as $$5 from "./islands/FavoriteBrands.tsx";
-import * as $$6 from "./islands/Feature.tsx";
-import * as $$7 from "./islands/Freeword.tsx";
-import * as $$8 from "./islands/Login.tsx";
-import * as $$9 from "./islands/RegistrationInput.tsx";
-import * as $$10 from "./islands/SearchGenre.tsx";
-import * as $$11 from "./islands/UnderContract.tsx";
-import * as $$12 from "./islands/index.tsx";
+import * as $$5 from "./islands/Favorite.tsx";
+import * as $$6 from "./islands/FavoriteBrands.tsx";
+import * as $$7 from "./islands/Feature.tsx";
+import * as $$8 from "./islands/Freeword.tsx";
+import * as $$9 from "./islands/Login.tsx";
+import * as $$10 from "./islands/RegistrationInput.tsx";
+import * as $$11 from "./islands/SearchGenre.tsx";
+import * as $$12 from "./islands/UnderContract.tsx";
+import * as $$13 from "./islands/index.tsx";
 
 const manifest = {
   routes: {
@@ -76,14 +77,15 @@ const manifest = {
     "./islands/BrandDetail.tsx": $$2,
     "./islands/BrandPhoto.tsx": $$3,
     "./islands/BrowsingHistory.tsx": $$4,
-    "./islands/FavoriteBrands.tsx": $$5,
-    "./islands/Feature.tsx": $$6,
-    "./islands/Freeword.tsx": $$7,
-    "./islands/Login.tsx": $$8,
-    "./islands/RegistrationInput.tsx": $$9,
-    "./islands/SearchGenre.tsx": $$10,
-    "./islands/UnderContract.tsx": $$11,
-    "./islands/index.tsx": $$12,
+    "./islands/Favorite.tsx": $$5,
+    "./islands/FavoriteBrands.tsx": $$6,
+    "./islands/Feature.tsx": $$7,
+    "./islands/Freeword.tsx": $$8,
+    "./islands/Login.tsx": $$9,
+    "./islands/RegistrationInput.tsx": $$10,
+    "./islands/SearchGenre.tsx": $$11,
+    "./islands/UnderContract.tsx": $$12,
+    "./islands/index.tsx": $$13,
   },
   baseUrl: import.meta.url,
   config,

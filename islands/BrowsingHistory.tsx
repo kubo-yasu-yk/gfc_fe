@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
-import { BrowsingHistory } from "../components/browsingHistory/BrowsingHistroy.tsx";
+import { BrowsingHistory } from "../components/BrowsingHistroy.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
 export default function islands() {
@@ -26,7 +26,6 @@ export default function islands() {
           href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
         />
         <link href="/style.css" rel="stylesheet" />
-
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
       </Head>
       <BrowsingHistory open={visibleMenu} onClick={toggleFunction} />

@@ -1,10 +1,7 @@
-import { Banner } from "../../common/feature/Feature.tsx";
-import { SearchBox } from "../../common/input/SearchBox.tsx";
-import {
-  RightArrowLinkList,
-  WLinkList,
-} from "../../common/others/LinkList.tsx";
-import { SNSAccount } from "../../common/others/SNSAccount.tsx";
+import { Banner } from "../feature/Feature.tsx";
+import { SearchBox } from "../input/SearchBox.tsx";
+import { RightArrowLinkList, WLinkList } from "../others/LinkList.tsx";
+import { SNSAccount } from "../others/SNSAccount.tsx";
 
 //通常のフッターを挿入する時に使用する
 export function Footer() {

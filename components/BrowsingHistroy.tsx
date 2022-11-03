@@ -1,13 +1,13 @@
 //閲覧履歴の要素をまとめたコンポーネント
 
-import { LoginHeader } from "../common/header/Header.tsx";
-import { Title } from "../common/screen-title/Title.tsx";
-import { SearchBox } from "../common/input/SearchBox.tsx";
-import { ResultNumber } from "../common/others/ResultNumber.tsx";
-import { TripleBrand } from "../common/brand/Brand.tsx";
-import { PageNation } from "../common/others/PageNation.tsx";
-import { WhiteButton } from "../common/button/Button.tsx";
-import { Footer } from "../common/footer/Footer.tsx";
+import { LoginHeader } from "../components/common//header/Header.tsx";
+import { Title } from "../components/common//screen-title/Title.tsx";
+import { SearchBox } from "../components/common//input/SearchBox.tsx";
+import { ResultNumber } from "../components/common//others/ResultNumber.tsx";
+import { TripleBrand } from "../components/common//brand/Brand.tsx";
+import { PageNation } from "../components/common//others/PageNation.tsx";
+import { WhiteButton } from "../components/common//button/Button.tsx";
+import { Footer } from "../components/common//footer/Footer.tsx";
 
 interface Props {
   open: boolean;

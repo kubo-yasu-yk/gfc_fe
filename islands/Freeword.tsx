@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
-import { Freeword } from "../components/freeword/Freeword.tsx";
+import { Freeword } from "../components/Freeword.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 import { NarrowDown } from "../components/common/narrow-down/NarrowDown.tsx";
 
