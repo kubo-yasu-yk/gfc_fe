@@ -1,10 +1,10 @@
 import { Head } from "$fresh/runtime.ts";
-import { DrawerMenu } from "../components/index/DrawerMenu.tsx";
 import { useState } from "preact/hooks";
 import { SearchGenre } from "../components/searchGenre/SearchGenre.tsx";
-import { NarrowDown } from "../components/searchGenre/NarrowDown/NarrowDown.tsx";
+import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
+import { NarrowDown } from "../components/common/narrow-down/NarrowDown.tsx";
 
-export default function searchGenre() {
+export default function islands() {
   const [open, setOpen] = useState(false);
   const [visibleMenu, setVisibleMenu] = useState(false);
   const [display, setDisplay] = useState(false);
@@ -13,13 +13,11 @@ export default function searchGenre() {
 
   const DrawerToggleFunction = () => {
     if (open) {
-      console.log("押されているよ！");
       setOpen(false);
       setTimeout(() => {
         setVisibleMenu(false);
       }, sec);
     } else {
-      console.log("こっちだよ！");
       setOpen(true);
       setVisibleMenu(true);
     }
@@ -27,19 +25,15 @@ export default function searchGenre() {
 
   const NarrowToggleFunction = () => {
     if (display) {
-      console.log("閉じる");
       setDisplay(false);
       setTimeout(() => {
         setVisibleNarrowDown(false);
       }, sec);
     } else {
-      console.log("開く");
       setDisplay(true);
       setVisibleNarrowDown(true);
     }
   };
-
-  const Accodion = 2;
 
   return (
     <div>

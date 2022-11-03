@@ -1,16 +1,15 @@
-import { MainHeader } from "../../components/common/MainHeader.tsx";
-import { Title } from "../../components/common/Title.tsx";
-import { SubFooter } from "../../components/common/SubFooter.tsx";
+import { BrownHeader } from "../../components/common/header/Header.tsx";
+import { Title } from "../../components/common/screen-title/Title.tsx";
+import { Footer } from "../../components/common/footer/Footer.tsx";
 import { BrandList } from "../../components/mypage/BrandList.tsx";
 import { RegisteredContents } from "../../components/mypage/RegisteredContents.tsx";
 import FavoriteBrands from "../../islands/FavoriteBrands.tsx";
-import { Leading } from "../../components/common/Leading.tsx";
+import { Leading } from "../../components/common/others/Leading.tsx";
 import { CheckedBrands } from "../../components/mypage/CheckedBrands.tsx";
-import { Inquiry } from "../../components/common/Inquiry.tsx";
-import { PublicAccount } from "../../components/common/PublicAccount.tsx";
-// import L from "../islands/Login.tsx";
+import { Inquiry } from "../../components/common/others/Inquiry.tsx";
+import { SNSAccount } from "../../components/common/others/SNSAccount.tsx";
 
-export default function Index() {
+export default function routes() {
   const contents = [
     { src: "/icon/mypage/human.png", alt: "人型アイコン", label: "会員情報の確認・変更" },
     { src: "/icon/mypage/lock.png", alt: "鍵アイコン", label: "パスワードの変更" },
@@ -20,7 +19,7 @@ export default function Index() {
 
   return (
     <>
-      <MainHeader />
+      <BrownHeader />
 
       <Title title="マイページ" />
       <p class="text-center text-[#5F5F5F] font-bold my-5">グルメ商店さま</p>
@@ -32,10 +31,10 @@ export default function Index() {
         申請履歴は<span class="underline underline-offset-auto">コチラ</span>
       </p>
 
-      <Leading title="人気ブランド総合ランキング" more="すべて見る" mandatory={true} />
+      <Leading title="人気ブランド総合ランキング" more={true} linkName="すべて見る" />
       <FavoriteBrands />
 
-      <Leading title="最近チェックしたブランド" more="すべて見る" mandatory={true} />
+      <Leading title="最近チェックしたブランド" more={true} linkName="すべて見る" />
       <CheckedBrands />
 
       <Leading title="登録内容の確認・修正" />
@@ -45,39 +44,8 @@ export default function Index() {
       </p>
 
       <Inquiry />
-      <PublicAccount />
-
-      {/* <L></L> */}
-
-      {
-        /* <p class="text-[10px] text-[#947771] text-center font-bold mb-6">
-        初めてのご利用の方（新規会員登録）
-      </p>
-
-      <div class="flex flex-row my-2">
-        <img
-          src="/icon/brownRightArrow.png"
-          alt="茶色の右矢印"
-          class="h-3 w-3 my-auto mx-4 text-right"
-        />
-        <p class="text-[10px] text-[#5F5F5F] font-bold">
-          メールアドレスをお忘れですか？
-        </p>
-      </div>
-
-      <div class="flex flex-row my-2">
-        <img
-          src="/icon/brownRightArrow.png"
-          alt="茶色の右矢印"
-          class="h-3 w-3 my-auto mx-4 text-right"
-        />
-        <p class="text-[10px] text-[#5F5F5F] font-bold">
-          パスワードをお忘れですか？
-        </p>
-      </div> */
-      }
-
-      <SubFooter />
+      <SNSAccount />
+      <Footer />
     </>
   );
 }

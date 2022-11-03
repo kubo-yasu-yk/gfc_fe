@@ -1,17 +1,13 @@
-import { tw } from "twind";
-import { Header } from "./Header.tsx";
+//ブランド詳細画面の要素をまとめたコンポーネント
+
+import { LoginHeader } from "../../common/header/Header.tsx";
 import BrandPhoto from "../../../islands//BrandPhoto.tsx";
-import { BrownButton, WhiteButton } from "./Button.tsx";
-import { BrandInfo } from "./BrandInfo.tsx";
-import { Feature } from "./Feature.tsx";
-import { CheckedBrand } from "./CheckedBrand.tsx";
-import { Icons } from "./Icons.tsx";
-import { FooterSearchBox } from "./SearchBox.tsx";
-import { SearchLink } from "./SearchLink.tsx";
-import { Banner } from "./Banner.tsx";
-import { OtherContent } from "./OtherContent.tsx";
-import { PublicAccount } from "./PublicAccount.tsx";
-import { SubFooter } from "../../common/SubFooter.tsx";
+import { BrownButton, WhiteButton } from "../../common/button/Button.tsx";
+import { BrandInfo } from "./BrandInfo.tsx"; //todo:未着手
+import { Leading } from "../../common/others/Leading.tsx";
+import { ScrollFeature } from "../../common/feature/Feature.tsx";
+import { BrandList } from "../../common/brand/Brand.tsx";
+import { LongFooter } from "../../common/footer/Footer.tsx";
 
 interface Props {
   open: boolean;
@@ -19,55 +15,71 @@ interface Props {
 }
 
 export function BrandDetail(props: Props) {
-  const contents = [["飲食フランチャイズ.com", "トップページへ"], ["特集ページ一覧", "新着ブランド一覧"], [
-    "NEWS一覧",
-    "お問い合わせ",
-  ]];
+  const features = [{
+    bgColor: "lightblue",
+    introContent: "一世を風靡したタピオカミルクティーがなぜ人気なのかを解説。タピオカミルクティーの秘密からバズる秘訣を見出します。",
+  }, {
+    bgColor: "lightgreen",
+    introContent: "一世を風靡したタピオカミルクティーがなぜ人気なのかを解説。タピオカミルクティーの秘密からバズる秘訣を見出します。",
+  }, {
+    bgColor: "lightgray",
+    introContent: "一世を風靡したタピオカミルクティーがなぜ人気なのかを解説。タピオカミルクティーの秘密からバズる秘訣を見出します。",
+  }, {
+    bgColor: "black",
+    introContent: "一世を風靡したタピオカミルクティーがなぜ人気なのかを解説。タピオカミルクティーの秘密からバズる秘訣を見出します。",
+  }];
+
+  const checkedBrands = [{
+    src: "/icon/brandLogo.png",
+    name: "ガスト",
+    content: "ガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここ",
+  }, {
+    src: "/icon/brandLogo.png",
+    name: "ガスト",
+    content: "ガストの説明はここガストの説明はここガストの説明はここ",
+  }, {
+    src: "/icon/brandLogo.png",
+    name: "ガスト",
+    content: "ガストの説明はここガストの説明はここ",
+  }];
+
+  const wLinkList = [
+    [{ name: "トップページへ", link: "/" }, { name: "マイページへ", link: "/mypage" }],
+    [{ name: "特集ページ一覧", link: "" }, { name: "新着ブランド一覧", link: "" }],
+    [{ name: "NEWS一覧", link: "" }, { name: "お問い合わせ", link: "" }],
+  ];
+
+  const banners = ["", "", ""]; //バナーを3つ出すために空の配列を作成している
+
+  const linkList = [
+    { name: "ジャンルから探す", link: "", border: true },
+    { name: "お気に入りブランドから探す", link: "/mypage/favorite", border: true },
+    { name: "閲覧履歴から探す", link: "/mypage/browsing-history", border: true },
+    { name: "ランキングから探す", link: "" },
+  ];
+
   return (
     <div
       class={`${props.open ? "fixed w-full" : ""}`}
     >
-      <Header onClick={props.onClick} />
-      <BrandPhoto />
-      <BrandInfo company="オリジン東秀株式会社" brandName="オリジン弁当" />
-      <a href="/brand/application/confirmation">
-        <BrownButton contents="申請手続きへ" />
-      </a>
+      <LoginHeader onClick={props.onClick} />
 
-      <div class="mt-10">
-        <p class="text-sm ml-4 my-3">関連ブログ</p>
-        <div
-          class={`flex flex-row w-full overflow-x-auto pr-4 ${tw`(hidden-scrollbar)`}`}
-        >
-          <Feature bgColor="lightblue" />
-          <Feature bgColor="lightblue" />
-          <Feature bgColor="lightblue" />
-          <Feature bgColor="lightblue" />
-        </div>
-      </div>
-      <div class="mt-10">
-        <p class="text-sm ml-4 my-3">このブランドと一緒にチェックされるブランド</p>
-        <CheckedBrand />
-        <WhiteButton contents="もっと見る" />
-      </div>
-      <div class="my-10 border-b" />
-      <Icons />
-      <div class="bg-[rgb(149,119,113,0.1)] py-5 mb-12">
-        <FooterSearchBox />
-        <div class="border-b border-[#D6D6D6] mb-4">
-          <SearchLink mt8={true} title="ジャンルから探す" />
-          <SearchLink title="お気に入りブランドから探す" />
-          <SearchLink title="閲覧履歴から探す" />
-          <SearchLink noBorder={true} title="ランキングから探す" />
-        </div>
-        <Banner />
-        <Banner />
-        <Banner />
-        <Banner />
-      </div>
-      <OtherContent contents={contents} />
-      <PublicAccount />
-      <SubFooter />
+      <BrandPhoto />
+
+      <BrandInfo company="オリジン東秀株式会社" brandName="オリジン弁当" />
+      <BrownButton name="申請手続きへ" link="/brand/application/confirmation" />
+
+      <div class="h-10" />
+      <Leading title="関連ブログ" />
+      <ScrollFeature features={features} />
+
+      <div class="h-10" />
+      <Leading title="このブランドと一緒にチェックされるブランド" />
+      <BrandList brandList={checkedBrands} />
+      <WhiteButton name="もっと見る" />
+      <div class="mt-10 border-b" />
+
+      <LongFooter />
     </div>
   );
 }

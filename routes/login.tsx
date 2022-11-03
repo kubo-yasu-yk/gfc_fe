@@ -1,12 +1,12 @@
-import { MainHeader } from "../components/common/MainHeader.tsx";
-import { Title } from "../components/registration/Title.tsx";
-import { SubFooter } from "../components/common/SubFooter.tsx";
+import { BrownHeader } from "../components/common/header/Header.tsx";
+import { Title } from "../components/common/screen-title/Title.tsx";
+import { Footer } from "../components/common/footer/Footer.tsx";
 import Login_i from "../islands/Login.tsx";
 
-export default function Login() {
+export default function routes()  {
   return (
     <>
-      <MainHeader />
+      <BrownHeader />
 
       <Title title="ログイン" />
       <Login_i></Login_i>
@@ -17,7 +17,7 @@ export default function Login() {
 
       <div class="flex flex-row my-2">
         <img
-          src="/icon/brownRightArrow.png"
+          src="/icon/common/arrow/brownRight.png"
           alt="茶色の右矢印"
           class="h-3 w-3 my-auto mx-4 text-right"
         />
@@ -28,7 +28,7 @@ export default function Login() {
 
       <div class="flex flex-row my-2">
         <img
-          src="/icon/brownRightArrow.png"
+          src="/icon/common/arrow/brownRight.png"
           alt="茶色の右矢印"
           class="h-3 w-3 my-auto mx-4 text-right"
         />
@@ -37,7 +37,7 @@ export default function Login() {
         </p>
       </div>
 
-      <SubFooter />
+      <Footer />
     </>
   );
 }

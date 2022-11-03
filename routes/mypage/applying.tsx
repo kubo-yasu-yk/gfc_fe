@@ -1,5 +1,5 @@
 import Applying from "../../islands/Applying.tsx";
 
-export default function index() {
+export default function routes()  {
   return <Applying />;
 }

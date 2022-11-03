@@ -1,11 +1,12 @@
-import { Header } from "./Header.tsx";
-import { Title } from "./Title.tsx";
-import { SearchBox } from "./SearchBox.tsx";
-import { RadioButton } from "./RadioButton.tsx";
-import { Leading } from "./Leading.tsx";
-import { WhiteButton } from "./Button.tsx";
-import { Brand } from "./Brand.tsx";
-import { SubFooter } from "../common/SubFooter.tsx";
+//申請中ブランド一覧画面の要素をまとめたコンポーネント
+
+import { LoginHeader } from "../common/header/Header.tsx";
+import { Title } from "../common/screen-title/Title.tsx";
+import { SearchBox } from "../common/input/SearchBox.tsx";
+import { BgLeading } from "../common/others/Leading.tsx";
+import { RadioButton, WhiteButton } from "../common/button/Button.tsx";
+import { ApplyBrand } from "../common/brand/Brand.tsx";
+import { Footer } from "../common/footer/Footer.tsx";
 
 interface Props {
   open: boolean;
@@ -14,60 +15,45 @@ interface Props {
 
 //todo:mapでbrandを回す
 export function Applying(props: Props) {
+  const buttonList = [
+    { name: "status", label: "すべて", checked: true },
+    { name: "status", label: "申請中" },
+    { name: "status", label: "契約可能" },
+  ];
+
+  const applyingList = [{
+    status: 0,
+    name: "マクドナルド",
+    genre: "ファーストフード",
+    src: "/icon/browsingHistory/mac.png",
+  }, {
+    status: 1,
+    name: "マクドナルド",
+    genre: "ファーストフード",
+    src: "/icon/browsingHistory/mac.png",
+  }, {
+    status: 2,
+    name: "マクドナルド",
+    genre: "ファーストフード",
+    src: "/icon/browsingHistory/mac.png",
+  }];
+
   return (
     <div
       class={`${props.open ? "fixed w-full" : ""}`}
     >
-      <Header onClick={props.onClick} />
+      <LoginHeader onClick={props.onClick} />
       <Title title="申請中ブランド一覧" />
       <SearchBox />
-      <div class="flex items-center">
-        <RadioButton name="status" label="すべて" checked />
-        <RadioButton name="status" label="申請中" />
-        <RadioButton name="status" label="契約可能" />
-      </div>
-      <Leading title="2022年10月25日" />
-      <Brand
-        status={0}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
-      <Brand
-        status={1}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
-      <Brand
-        status={2}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
+      <div class="h-4" />
+      <RadioButton buttonList={buttonList} />
+      <BgLeading title="2022年10月25日" xs={true} />
+      <ApplyBrand applyingList={applyingList} />
 
-      <Leading title="2022年10月25日" />
-      <Brand
-        status={0}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
-      <Brand
-        status={1}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
-      <Brand
-        status={2}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
-
-      <WhiteButton contents="申請中のブランドをもっと見る" />
-      <SubFooter />
+      <BgLeading title="2022年10月25日" xs={true} />
+      <ApplyBrand applyingList={applyingList} />
+      <WhiteButton name="申請中のブランドをもっと見る" />
+      <Footer />
     </div>
   );
 }

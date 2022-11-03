@@ -1,21 +1,24 @@
-import { MainHeader } from "../../../components/common/MainHeader.tsx";
-import { CompBanner } from "../../../components/brand/cancel-contract/CompBanner.tsx";
-import { Title } from "../../../components/brand/common/Title.tsx";
+import { BrownHeader } from "../../../components/common/header/Header.tsx";
+import { CompMsg } from "../../../components/common/others/CompMsg.tsx";
+import { Title } from "../../../components/common/screen-title/Title.tsx";
 import {
-  BrownButton2,
+  BrownButton,
   WhiteButton,
-} from "../../../components/brand/common/Button.tsx";
-import { SubFooter } from "../../../components/common/SubFooter.tsx";
+} from "../../../components/common/button/Button.tsx";
+import { Footer } from "../../../components/common/footer/Footer.tsx";
 
-export default function Completion() {
+const msg = ["解約申請を受け付けました。", "解約までしばらくお待ちください。"];
+
+export default function routes() {
   return (
     <>
-      <MainHeader />
+      <BrownHeader />
       <Title title="解約申請完了" />
-      <CompBanner />
-      <BrownButton2 link="/" contents="トップページへ" />
-      <WhiteButton link="/mypage" contents="マイページへ" />
-      <SubFooter />
+      <CompMsg compMsg={msg} />
+      <BrownButton link="/" name="トップページへ" />
+      <div class="h-3" />
+      <WhiteButton link="/mypage" name="マイページへ" />
+      <Footer />
     </>
   );
 }

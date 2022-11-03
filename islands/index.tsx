@@ -1,9 +1,9 @@
 import { Head } from "$fresh/runtime.ts";
 import { Top } from "../components/index/Top.tsx";
 import { useState } from "preact/hooks";
-import { DrawerMenu } from "../components/index/DrawerMenu.tsx";
+import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
-export default function Index() {
+export default function islands() {
   const [open, setOpen] = useState(false);
   const [visibleMenu, setVisibleMenu] = useState(false);
 
@@ -26,8 +26,7 @@ export default function Index() {
           href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
         />
         <link href="/style.css" rel="stylesheet" />
-
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" />
       </Head>
       <Top open={visibleMenu} onClick={toggleFunction} />
       {visibleMenu ? <DrawerMenu open={open} onClick={toggleFunction} /> : null}
