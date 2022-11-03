@@ -1,9 +1,8 @@
 import { LoginHeader } from "../common/header/Header.tsx";
 import { Title } from "../common/screen-title/Title.tsx";
 import { SearchBox } from "../common/input/SearchBox.tsx";
-import { RadioButton } from "../common/button/RadioButton.tsx";
 import { BgLeading } from "../common/others/Leading.tsx";
-import { WhiteButton } from "../common/button/Button.tsx";
+import { RadioButton, WhiteButton } from "../common/button/Button.tsx";
 import { Brand1 } from "../common/brand/Brand.tsx";
 import { Footer } from "../common/footer/Footer.tsx";
 

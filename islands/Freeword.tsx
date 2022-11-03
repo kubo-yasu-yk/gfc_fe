@@ -1,8 +1,8 @@
 import { Head } from "$fresh/runtime.ts";
-import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 import { useState } from "preact/hooks";
 import { Freeword } from "../components/freeword/Freeword.tsx";
-import { NarrowDown } from "../components/freeword/NarrowDown/NarrowDown.tsx";
+import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
+import { NarrowDown } from "../components/common/narrow-down/NarrowDown.tsx";
 
 export default function islands() {
   const [open, setOpen] = useState(false);

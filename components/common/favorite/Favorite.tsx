@@ -4,7 +4,19 @@ interface Props {
   num?: number;
 }
 
-//お気に入りされた数がわかる表示を出したい時に使う
+//丸枠で囲まれたお気に入りアイコン
+export function Favorite(props: Props) {
+  return (
+    <div class="w-10 h-10 rounded-full border border-[#947771] p-[0.625rem]">
+      <img
+        src="./icon/favorite-brown.png"
+        alt="お気に入りアイコン"
+      />
+    </div>
+  );
+}
+
+//丸枠で囲まれたお気に入りアイコンとお気に入りされた数を表示
 export function FavoriteNum(props: Props) {
   return (
     <div class="w-14 h-14 border border-[#947771] rounded-full flex items-center absolute bottom-2 right-2 z-50 bg-white">

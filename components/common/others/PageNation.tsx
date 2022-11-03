@@ -1,5 +1,4 @@
 //ページネーションを使用するときに使うコンポーネント
-
 export function PageNation() {
   return (
     <div class="h-10 flex items-center text-center px-5 my-10 border-y">

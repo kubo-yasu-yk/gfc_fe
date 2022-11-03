@@ -3,14 +3,8 @@ import BrandPhoto from "../../../islands//BrandPhoto.tsx";
 import { BrownButton, WhiteButton } from "../../common/button/Button.tsx";
 import { BrandInfo } from "./BrandInfo.tsx"; //todo:未着手
 import { Leading } from "../../common/others/Leading.tsx";
-import { Banner, ScrollFeature } from "../../common/feature/Feature.tsx";
+import { ScrollFeature } from "../../common/feature/Feature.tsx";
 import { BrandList } from "../../common/brand/Brand.tsx";
-import { SearchBox } from "../../common/input/SearchBox.tsx";
-import {
-  RightArrowLinkList,
-  WLinkList,
-} from "../../common/others/LinkList.tsx";
-import { SNSAccount } from "../../common/others/SNSAccount.tsx";
 import { LongFooter } from "../../common/footer/Footer.tsx";
 
 interface Props {

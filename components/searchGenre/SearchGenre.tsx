@@ -1,14 +1,8 @@
-import { Header } from "./Header.tsx";
-import { GenreName } from "./GenreName.tsx";
-import { Brand } from "./Brand.tsx";
-import { AccodionButton, Button } from "./Button.tsx";
-import { PageNation } from "./PageNation.tsx";
-import { FooterSearchBox } from "./SearchBox.tsx";
-import { SearchLink } from "./SearchLink.tsx";
-import { Banner } from "./Banner.tsx";
-import { OtherContent } from "./OtherContent.tsx";
-import { Footer } from "../common/footer/Footer.tsx";
-import { PublicAccount } from "./PublicAccount.tsx";
+import { SearchBoxHeader } from "../common/header/Header.tsx";
+import { ResultBrand } from "../common/brand/Brand.tsx";
+import { AccodionButton, HalfWWhiteButton } from "../common/button/Button.tsx";
+import { PageNation } from "../common/others/PageNation.tsx";
+import { LongFooter } from "../common/footer/Footer.tsx";
 
 interface Props {
   open: boolean;
@@ -18,47 +12,83 @@ interface Props {
   Accodion?: (e: Event) => void;
 }
 
+const brandList = [{
+  name: "オリジン弁当",
+  genre: "和食、洋食、中華",
+  price: "500円 〜 2,000円",
+}, {
+  name: "オリジン弁当",
+  genre: "和食、洋食、中華",
+  price: "500円 〜 2,000円",
+}, {
+  name: "オリジン弁当",
+  genre: "和食、洋食、中華",
+  price: "500円 〜 2,000円",
+}, {
+  name: "オリジン弁当",
+  genre: "和食、洋食、中華",
+  price: "500円 〜 2,000円",
+}, {
+  name: "オリジン弁当",
+  genre: "和食、洋食、中華",
+  price: "500円 〜 2,000円",
+}, {
+  name: "オリジン弁当",
+  genre: "和食、洋食、中華",
+  price: "500円 〜 2,000円",
+}, {
+  name: "オリジン弁当",
+  genre: "和食、洋食、中華",
+  price: "500円 〜 2,000円",
+}, {
+  name: "オリジン弁当",
+  genre: "和食、洋食、中華",
+  price: "500円 〜 2,000円",
+}, {
+  name: "オリジン弁当",
+  genre: "和食、洋食、中華",
+  price: "500円 〜 2,000円",
+}, {
+  name: "オリジン弁当",
+  genre: "和食、洋食、中華",
+  price: "500円 〜 2,000円",
+}];
+
+const imgs = [
+  "/icon/brand-detail/brandPhoto0.png",
+  "/icon/brand-detail/brandPhoto1.jpeg",
+  "/icon/brand-detail/brandPhoto2.jpeg",
+  "/icon/brand-detail/brandPhoto3.jpeg",
+  "/icon/brand-detail/brandPhoto4.jpeg",
+  "/icon/brand-detail/brandPhoto5.jpeg",
+];
+
+const sortOrders = ["おすすめ", "人気順", "新着順", "価格帯（安い）", "価格帯（高い）"];
+
 export function SearchGenre(props: Props) {
-  const contents = [["飲食フランチャイズ.com", "トップページへ"], ["特集ページ一覧", "新着ブランド一覧"], [
-    "NEWS一覧",
-    "お問い合わせ",
-  ]];
-  // console.log(props.display);
   return (
     <div class={`${props.display || props.open ? "fixed w-full" : ""}`}>
-      <Header onClick={props.onClick} />
-      <GenreName />
+      <SearchBoxHeader onClick={props.onClick} />
+      <div class="my-5 ml-5">
+        <p class="text-[0.875rem]">
+          和食<span class="text-[0.625rem]">（11 - 20件 / 275件）</span>
+        </p>
+      </div>
       <div class="flex mx-5 mb-5">
-        <Button name="絞り込む" onClickButton={props.onClickButton} />
-        <AccodionButton name="表示順" Accodion={props.Accodion} />
+        {
+          /* todo:アコーディオンを押すとHalfWhiteButtonまで下に行く（Half
+        WhiteButtonの一番上のdivに高さを設定すると動かない） */
+        }
+        <HalfWWhiteButton name="絞り込む" onClickButton={props.onClickButton} />
+        <AccodionButton
+          name="表示順"
+          list={sortOrders}
+          Accodion={props.Accodion}
+        />
       </div>
-      <Brand />
-      <Brand />
-      <Brand />
-      <Brand />
-      <Brand />
-      <Brand />
-      <Brand />
-      <Brand />
-      <Brand />
-      <Brand borderButtom={true} />
+      <ResultBrand brandList={brandList} imgs={imgs} />
       <PageNation />
-      <div class="bg-[rgb(149,119,113,0.1)] py-5 mb-12">
-        <FooterSearchBox />
-        <div class="border-b border-[#D6D6D6] mb-4">
-          <SearchLink mt8={true} title="ジャンルから探す" />
-          <SearchLink title="お気に入りブランドから探す" />
-          <SearchLink title="閲覧履歴から探す" />
-          <SearchLink noBorder={true} title="ランキングから探す" />
-        </div>
-        <Banner />
-        <Banner />
-        <Banner />
-        <Banner />
-      </div>
-      <OtherContent contents={contents} />
-      <PublicAccount />
-      <Footer />
+      <LongFooter />
     </div>
   );
 }

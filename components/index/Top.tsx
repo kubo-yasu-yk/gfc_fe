@@ -1,6 +1,6 @@
 //トップページの要素をまとめたコンポーネント
 
-import { TopPageHeader } from "../common/header/Header.tsx";
+import { SearchBoxHeader } from "../common/header/Header.tsx";
 import { FourIcons } from "../common/others/FourIcons.tsx";
 import SwiperFeatures from "../../islands/Feature.tsx";
 import { Leading } from "../common/others/Leading.tsx";
@@ -94,7 +94,7 @@ export function Top(props: Props) {
 
   return (
     <div class={`${props.open ? "fixed w-full" : ""}`}>
-      <TopPageHeader onClick={props.onClick} />
+      <SearchBoxHeader onClick={props.onClick} />
       <FourIcons />
       <SwiperFeatures />
 

@@ -1,8 +1,6 @@
-import {
-  BrownButton,
-  SmallWhiteButton,
-  WhiteButton,
-} from "../button/Button.tsx";
+import { BrownButton, H6WhiteButton } from "../button/Button.tsx";
+import { Favorite } from "../favorite/Favorite.tsx";
+import { ScrollBrandPhotos } from "../scroll/Scroll.tsx";
 
 interface Props {
   src?: string;
@@ -11,8 +9,15 @@ interface Props {
   genre?: string;
   contractNum?: number; //契約数を表示したい時に使う
   status?: number; //ブランドの申請ステータスを取得したい時に使う
-  brandList?: { src: string; name: string; content: string }[];
+  brandList?: {
+    src?: string;
+    name?: string;
+    genre?: string;
+    price?: string;
+    content?: string;
+  }[];
   applyingList?: { status: number; name: string; genre: string; src: string }[];
+  imgs?: string[];
 }
 
 //人気ブランドランキングで使うブランド単体のカセット
@@ -69,6 +74,33 @@ export function BrandList(props: Props) {
   );
 }
 
+//ジャンル検索・FW検索結果一覧画面のブランド表示時に使用する
+export function ResultBrand(props: Props) {
+  return (
+    <div>
+      {props.brandList?.map((list) => (
+        <div class="first:border-t border-b">
+          <div class="mx-5 pt-3 flex">
+            <div class="flex-1 text-[0.625rem]">
+              <p class="text-[0.875rem]">{list.name}</p>
+              <p class="my-1">ジャンル : {list.genre}</p>
+              <p>価格帯 : {list.price}</p>
+            </div>
+            <Favorite />
+          </div>
+          <ScrollBrandPhotos imgs={props.imgs} />
+          <BrownButton
+            name="ブランド詳細ページへ"
+            link="/brand/brand-detail"
+            arrow="right"
+          />
+          <div class="h-5" />
+        </div>
+      ))}
+    </div>
+  );
+}
+
 //申請中ブランド一覧画面のブランド表示時に使う
 //todo:中身の整理まだできそう（ボタンで高さ、マージン設定ができるようになったら再度リファクタリング）
 export function Brand1(props: Props) {
@@ -100,7 +132,7 @@ export function Brand1(props: Props) {
           <div class="h-2" />
           {brand.status == 0 || brand.status == 1
             ? (
-              <SmallWhiteButton
+              <H6WhiteButton
                 name={statusList[brand.status].button}
               />
             )

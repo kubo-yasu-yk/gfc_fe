@@ -59,8 +59,8 @@ export function DrawerMenuHeader(props: Props) {
   );
 }
 
-//トップページのみに使用するヘッダー（未ログイン時）
-export function TopPageHeader(props: Props) {
+//トップページ・ジャンル検索・FW検索画面に使用するヘッダー（未ログイン時）
+export function SearchBoxHeader(props: Props) {
   return (
     <header>
       <div class="h-[7.5rem] bg-[#947771]">

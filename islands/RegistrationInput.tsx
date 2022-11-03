@@ -1,7 +1,9 @@
 import { useState } from "preact/hooks";
 import { BgLeading, SubLeading } from "../components/common/others/Leading.tsx";
-import { SmallBrownButton } from "../components/common/button/Button.tsx";
-import { RadioButton } from "../components/common/button/RadioButton.tsx";
+import {
+  RadioButton,
+  SmallBrownButton,
+} from "../components/common/button/Button.tsx";
 import {
   Checkbox,
   HiddenInput,
@@ -187,7 +189,7 @@ export default function islands() {
       <BgLeading title="メールマガジン" />
       <p class="mt-4 mx-8">メールマガジンにて、新着ブランド情報、コラムなどのお得な情報をお送りします。</p>
       <div class="w-[18rem] h-10 ml-8 mt-2 mb-8 rounded flex border items-center text-[0.625rem]">
-        <Checkbox msg="メールマガジンを受け取る" />
+        <Checkbox msg="メールマガジンを受け取る" mx2={true} />
       </div>
     </div>
   );
