@@ -1,4 +1,6 @@
-import { RoundedBrowwnButton, RoundedWhiteButton } from "../button/Button.tsx";
+import { Header } from "./Header.tsx";
+import { Footer } from "./Footer.tsx";
+import { VerticalCheckbox } from "../input/Input.tsx";
 import { Checkbox, Input } from "../input/Input.tsx";
 
 interface Props {
@@ -6,6 +8,7 @@ interface Props {
   onClickButton: (e: Event) => void;
 }
 
+//FW検索・ジャンル検索結果一覧画面の「絞り込む」ボタンを押した時に出る画面
 export function NarrowDown(props: Props) {
   const list = [
     { name: "キーワード" },
@@ -17,26 +20,16 @@ export function NarrowDown(props: Props) {
   return (
     <>
       <div
-        class={`h-screen bg-white relative ${props.open ? "open" : "close"}`}
+        class={`h-screen bg-white ${props.open ? "open" : "close"}`}
       >
-        <div class="h-12 flex items-center justify-center bg-gray">
-          <p>ブランドを絞り込む</p>
-        </div>
-        <div class="w-12 h-12 absolute top-0 right-0 flex items-center bg-brown">
-          <img
-            src="./icon/common/others/cross-white.png"
-            alt="バツボタン"
-            class="w-6 h-6 mx-auto"
-            onClick={props.onClickButton}
-          />
-        </div>
+        <Header onClickButton={props.onClickButton} />
         <div class="text-xs">
           {list.map((list) => (
-            <>
-              {list.name == "キーワード" || list.name == "季節" || list.name == "価格帯"
-                ? (
-                  <div class="border-b">
-                    <div class="h-12 flex items-center mx-3">
+            <div class="border-b">
+              <div class="h-12 flex items-center mx-3">
+                {list.name == "キーワード" || list.name == "季節" || list.name == "価格帯"
+                  ? (
+                    <>
                       <p
                         class={`w-[5rem] ${
                           list.name == "価格帯" ? "shrink" : null
@@ -80,34 +73,87 @@ export function NarrowDown(props: Props) {
                           </div>
                         )
                         : null}
-                    </div>
-                  </div>
-                )
-                : null}
-              {list.name == "ジャンル" || list.name == "対応エリア"
-                ? (
-                  <div class="border-b">
-                    <div class="h-12 flex items-center mx-3">
+                    </>
+                  )
+                  : null}
+                {list.name == "ジャンル" || list.name == "対応エリア"
+                  ? (
+                    <>
                       <p class="flex-1">{list.name}</p>
                       <img
                         src="/icon/common/arrow/grayRight.png"
                         alt="右矢印"
                         class="h-3"
                       />
-                    </div>
-                  </div>
-                )
-                : null}
-            </>
+                    </>
+                  )
+                  : null}
+              </div>
+            </div>
           ))}
         </div>
       </div>
-
-      <div class="w-full h-12 flex items-center px-5 fixed bottom-0 bg-gray">
-        <RoundedWhiteButton name="リセット" />
-        <div class="w-4" />
-        <RoundedBrowwnButton name="検索" />
-      </div>
+      <Footer />
     </>
+  );
+}
+
+//マイページ配下の画面の「絞り込むボタン」を押下した際に出る画面
+export function MypageNarrowDown(props: Props) {
+  const list = [
+    { name: "キーワード" },
+    { name: "ジャンル" },
+    { name: "ステータス" },
+  ];
+
+  const status = ["申請中", "契約可能", "契約不可", "申請キャンセル", "解約申請中", "解約済"];
+  return (
+    <div>
+      <div
+        class={`h-screen bg-white ${props.open ? "open" : "close"}`}
+      >
+        <Header onClickButton={props.onClickButton} />
+        <div class="text-xs">
+          {list.map((list) => (
+            <div class="border-b">
+              {list.name == "ステータス"
+                ? (
+                  <div class="flex mx-3 mt-3 mb-2">
+                    <p class="w-[5rem]">ステータス</p>
+                    <VerticalCheckbox inputList={status} />
+                  </div>
+                )
+                : (
+                  <div class="h-12 flex items-center mx-3">
+                    {list.name == "キーワード"
+                      ? (
+                        <>
+                          <p class="w-[5rem]">
+                            {list.name}
+                          </p>
+                          <Input w23={true} />
+                        </>
+                      )
+                      : null}
+                    {list.name == "ジャンル"
+                      ? (
+                        <>
+                          <p class="flex-1">{list.name}</p>
+                          <img
+                            src="/icon/common/arrow/grayRight.png"
+                            alt="右矢印"
+                            class="h-3"
+                          />
+                        </>
+                      )
+                      : null}
+                  </div>
+                )}
+            </div>
+          ))}
+        </div>
+      </div>
+      <Footer />
+    </div>
   );
 }

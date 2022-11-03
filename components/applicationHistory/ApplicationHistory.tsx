@@ -1,9 +1,13 @@
-import { Header } from "./Header.tsx";
-import { Title } from "./Title.tsx";
-import { SearchBox } from "./SearchBox.tsx";
-import { AccodionButton, WhiteButton, WhiteButton3 } from "./Button.tsx";
-import { Leading } from "./Leading.tsx";
-import { Brand } from "./Brand.tsx";
+import { LoginHeader } from "../common/header/Header.tsx";
+import { Title } from "../common/screen-title/Title.tsx";
+import { SearchBox } from "../common/input/SearchBox.tsx";
+import {
+  AccodionButton,
+  HalfWWhiteButton,
+  WhiteButton,
+} from "../common/button/Button.tsx";
+import { BgLeading } from "../common/others/Leading.tsx";
+import { ApplyBrand } from "../common/brand/Brand.tsx";
 import { Footer } from "../common/footer/Footer.tsx";
 
 interface Props {
@@ -14,80 +18,63 @@ interface Props {
   Accodion?: (e: Event) => void;
 }
 
-//todo:mapでbrandを回す
 export function ApplicationHistory(props: Props) {
+  const sortOrders = ["申請日順（新しい順）", "申請日順（古い順）"];
+
+  const applyingList = [{
+    status: 0,
+    name: "マクドナルド",
+    genre: "ファーストフード",
+    src: "/icon/browsingHistory/mac.png",
+  }, {
+    status: 1,
+    name: "マクドナルド",
+    genre: "ファーストフード",
+    src: "/icon/browsingHistory/mac.png",
+  }, {
+    status: 2,
+    name: "マクドナルド",
+    genre: "ファーストフード",
+    src: "/icon/browsingHistory/mac.png",
+  }, {
+    status: 3,
+    name: "マクドナルド",
+    genre: "ファーストフード",
+    src: "/icon/browsingHistory/mac.png",
+  }, {
+    status: 4,
+    name: "マクドナルド",
+    genre: "ファーストフード",
+    src: "/icon/browsingHistory/mac.png",
+  }];
+
   return (
     <div
       class={`${props.display || props.open ? "fixed w-full" : ""}`}
     >
-      <Header onClick={props.onClick} />
-      <Title title="申請中ブランド一覧" />
+      <LoginHeader onClick={props.onClick} />
+      <Title title="申請履歴一覧" />
       <SearchBox />
+      <div class="h-4" />
       <div class="flex mx-5 mb-5">
-        <WhiteButton3 contents="絞り込む" onClickButton={props.onClickButton} />
-        <AccodionButton contents="表示順" Accodion={props.Accodion} />
+        {
+          /* todo:アコーディオンを押すとHalfWhiteButtonまで下に行く（Half
+        WhiteButtonの一番上のdivに高さを設定すると動かない） */
+        }
+        <HalfWWhiteButton name="絞り込む" onClickButton={props.onClickButton} />
+        <AccodionButton
+          name="表示順"
+          list={sortOrders}
+          Accodion={props.Accodion}
+        />
       </div>
-      <Leading title="2022年10月25日" />
-      <Brand
-        status={0}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
-      <Brand
-        status={1}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
-      <Brand
-        status={2}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
+      <BgLeading title="2022年10月25日" />
+      <ApplyBrand applyingList={applyingList} />
 
-      <Leading title="2022年10月23日" />
-      <Brand
-        status={0}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
-      <Brand
-        status={1}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
-      <Brand
-        status={3}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
+      <BgLeading title="2022年10月2日" />
+      <ApplyBrand applyingList={applyingList} />
 
-      <Leading title="2022年10月2日" />
-      <Brand
-        status={0}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
-      <Brand
-        status={1}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
-      <Brand
-        status={2}
-        brandName="マクドナルド"
-        genre="ファーストフード"
-        src="/icon/browsingHistory/mac.png"
-      />
-
-      <WhiteButton contents="申請中のブランドをもっと見る" />
+      <WhiteButton name="申請中のブランドをもっと見る" />
       <Footer />
     </div>
   );

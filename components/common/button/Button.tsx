@@ -71,10 +71,13 @@ export function WhiteButton(props: Props) {
 //茶色枠・白色背景ボタン（h-6）
 export function H6WhiteButton(props: Props) {
   return (
-    <button class="w-[18rem] h-6 mx-auto flex items-center bg-white border border-[#947771] rounded
-     text-[#947771] text-xs">
+    <a
+      href={props.link}
+      class="w-[18rem] h-6 mx-auto flex items-center bg-white border border-[#947771] rounded
+     text-[#947771] text-xs"
+    >
       <p class="mx-auto">{props.name}</p>
-    </button>
+    </a>
   );
 }
 
@@ -217,7 +220,7 @@ export function RadioButton(props: Props) {
   return (
     <div class="flex">
       {props.buttonList?.map((button) => (
-        <label class="flex text-xs items-center mt-4 mr-4 mb-7 ml-8">
+        <label class="flex text-xs items-center mr-4 mb-7 ml-8">
           <input
             type="radio"
             name={button.name}

@@ -101,44 +101,54 @@ export function ResultBrand(props: Props) {
   );
 }
 
-//申請中ブランド一覧画面のブランド表示時に使う
+//申請中ブランド・申請履歴ブランド一覧画面のブランド表示時に使う
 //todo:中身の整理まだできそう（ボタンで高さ、マージン設定ができるようになったら再度リファクタリング）
-export function Brand1(props: Props) {
+export function ApplyBrand(props: Props) {
   const statusList = [
     { status: "申請中", button: "申請を取り消す" },
     { status: "契約可能", button: "申請を取り消す" },
     { status: "契約不可", button: "再度申請する" },
+    { status: "契約中", button: "解約する" },
+    { status: "解約済み", button: "再度申請する" },
   ];
 
   return (
     <>
       {props.applyingList?.map((brand) => (
         <div class="border m-5 rounded">
-          <div class="flex my-3 mx-4">
+          <a href="/brand/brand-detail" class="flex my-3 mx-4">
             <img
               src={brand.src}
               alt="ブランドロゴ"
               class="w-14 h-14 mr-4"
             />
-            <div>
-              <p class="text-sm mb-1">{brand.name}</p>
-              <p class="text-[0.625rem] mb-1 ml-4">ジャンル：{brand.genre}</p>
-              <p class="text-[0.625rem] ml-4">
+            <div class="text-[0.625rem]">
+              <p class="text-sm">{brand.name}</p>
+              <p class="my-1 ml-4">ジャンル：{brand.genre}</p>
+              <p class="ml-4">
                 ステータス：{statusList[brand.status].status}
               </p>
             </div>
-          </div>
+          </a>
           {brand.status == 1 ? <BrownButton name="フランチャイズ契約する" /> : null}
           <div class="h-2" />
-          {brand.status == 0 || brand.status == 1
+          {brand.status == 0 || brand.status == 1 || brand.status == 3
             ? (
               <H6WhiteButton
                 name={statusList[brand.status].button}
+                link={brand.status == 0 || brand.status == 1
+                  ? "/brand/cancel/confirmation"
+                  : "/brand/cancel-contract/confirmation"}
               />
             )
             : null}
-          {brand.status == 2
-            ? <BrownButton name={statusList[brand.status].button} />
+          {brand.status == 2 || brand.status == 4
+            ? (
+              <BrownButton
+                name={statusList[brand.status].button}
+                link="/brand/application/confirmation"
+              />
+            )
             : null}
           <div class="h-2" />
         </div>

@@ -103,7 +103,7 @@ export function HiddenInput(props: Props) {
   );
 }
 
-//チェックボックスを使いたい時に使う
+//横並びのチェックボックスを使いたい時に使う
 export function Checkbox(props: Props) {
   return (
     <div class="flex">
@@ -124,6 +124,25 @@ export function Checkbox(props: Props) {
         checked={props.checked}
       />
       <p>{props.msg}</p>
+    </div>
+  );
+}
+
+//横並びのチェックボックスを使いたい時に使う
+export function VerticalCheckbox(props: Props) {
+  return (
+    <div>
+      {props.inputList?.map((list, i) => (
+        <div class="mb-1">
+          <input
+            type="checkbox"
+            id={`status${i}`}
+            class="mr-1"
+            checked
+          />
+          <label for={`status${i}`} class="text-sm">{list}</label>
+        </div>
+      ))}
     </div>
   );
 }

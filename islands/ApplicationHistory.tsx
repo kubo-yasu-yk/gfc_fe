@@ -2,7 +2,7 @@ import { Head } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 import { ApplicationHistory } from "../components/applicationHistory/ApplicationHistory.tsx";
-import { NarrowDown } from "../components/applicationHistory/NarrowDown.tsx";
+import { MypageNarrowDown } from "../components/common/narrow-down/NarrowDown.tsx";
 
 export default function islands() {
   const [open, setOpen] = useState(false);
@@ -39,7 +39,7 @@ export default function islands() {
     <div>
       <Head>
         <link href="/style.css" rel="stylesheet" />
-        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com" />
       </Head>
       {visibleNarrowDown || visibleMenu ? null : (
         <ApplicationHistory
@@ -50,7 +50,12 @@ export default function islands() {
         />
       )}
       {visibleNarrowDown
-        ? <NarrowDown open={display} onClickButton={NarrowToggleFunction} />
+        ? (
+          <MypageNarrowDown
+            open={display}
+            onClickButton={NarrowToggleFunction}
+          />
+        )
         : null}
 
       {visibleMenu
