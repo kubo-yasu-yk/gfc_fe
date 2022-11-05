@@ -69,7 +69,7 @@ export function Banner(props: Props) {
 export function ScrollFeature2(props: Props) {
   return (
     <div>
-      <div class="ml-4 text-2.5 w-40">
+      <div class="ml-4 w-40 text-2.5">
         <div
           class={`flex items-center border rounded mb-2 text-center h-40 bg-[${props.bgColor}]`}
         >

@@ -26,30 +26,30 @@ export function Mypage(props: Props) {
 
   const visitedBrandList = [{
     name: "ガスト",
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
     content: "ガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここ",
   }, {
     name: "ガスト",
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
     content: "ガストの説明はここガストの説明はここガストの説明はここ",
   }, {
     name: "ガスト",
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
     content: "ガストの説明はここガストの説明はここ",
   }];
 
   const favBrandList = [{
     genre: "洋食",
     name: "ガスト",
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
   }, {
     genre: "洋食",
     name: "ガスト",
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
   }, {
     genre: "洋食",
     name: "ガスト",
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
   }];
 
   return (

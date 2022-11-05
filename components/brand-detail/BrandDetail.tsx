@@ -30,15 +30,15 @@ export function BrandDetail(props: Props) {
   }];
 
   const checkedBrands = [{
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
     name: "ガスト",
     content: "ガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここ",
   }, {
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
     name: "ガスト",
     content: "ガストの説明はここガストの説明はここガストの説明はここ",
   }, {
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
     name: "ガスト",
     content: "ガストの説明はここガストの説明はここ",
   }];

@@ -2,7 +2,7 @@
 
 import { SearchBoxHeader } from "../common/header/Header.tsx";
 import { FourIcons } from "../common/others/FourIcons.tsx";
-import SwiperFeatures from "../../islands/Feature.tsx";
+import MainBanners from "../../components/Banner.tsx";
 import { Leading } from "../common/others/Leading.tsx";
 import { Genre } from "./Genre.tsx";
 import { BrandList, BrandRanking } from "../common/brand/Brand.tsx";
@@ -37,7 +37,7 @@ export function Top(props: Props) {
     <div class={`${props.open ? "fixed w-full" : ""}`}>
       <SearchBoxHeader onClick={props.onClick} />
       <FourIcons />
-      <SwiperFeatures />
+      <MainBanners banners={info.mainBanners} />
 
       <Leading title="ジャンルから探す" linkName="ジャンル一覧" more={true} />
       <Genre genres={allGenres} />

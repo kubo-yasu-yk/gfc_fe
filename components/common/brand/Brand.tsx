@@ -21,7 +21,7 @@ interface Props {
     genre?: string;
     price?: string;
     content?: string;
-    contractNum?: number;
+    num?: number;
   }[];
   applyingList?: { status: number; name: string; genre: string; src: string }[];
   imgs?: string[];
@@ -76,7 +76,7 @@ export function BrandRanking(props: Props) {
               </div>
               <p class="mt-1 ml-4 text-2.5">ジャンル：{brand.genre}</p>
               <p class="mt-1 ml-4 text-2.5">
-                契約数：{brand.contractNum?.toLocaleString()}
+                契約数：{brand.num?.toLocaleString()}
               </p>
             </div>
           </a>

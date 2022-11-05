@@ -16,23 +16,23 @@ interface Props {
 
 export function UnderContract(props: Props) {
   const contractBrands = [{
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
     name: "ガスト",
     content: "ガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここ",
   }, {
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
     name: "ガスト",
     content: "ガストの説明はここガストの説明はここガストの説明はここ",
   }, {
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
     name: "ガスト",
     content: "ガストの説明はここガストの説明はここ",
   }, {
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
     name: "ガスト",
     content: "ガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここ",
   }, {
-    src: "/icon/brandLogo.png",
+    src: "/image/brandLogo/logo1.jpg",
     name: "ガスト",
     content: "ガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここ",
   }];

@@ -1,4 +1,4 @@
-//swiper.jsを使用した特集ページを出すときに使うislands
+//swiper.jsを使用した特集ページを出すときに使うコンポーネント
 
 import { Component } from "preact";
 import { SwiperFeature } from "../components/common/Feature.tsx";
@@ -6,18 +6,15 @@ import { SwiperFeature } from "../components/common/Feature.tsx";
 // deno-lint-ignore no-var no-explicit-any
 declare var Swiper: any;
 
-const featureList = [
-  { src: "/banner/top/main1.jpeg" },
-  { src: "/banner/top/main2.jpeg" },
-  { src: "/banner/top/main3.jpeg" },
-  { src: "/banner/top/main4.jpeg" },
-  { src: "/banner/top/main5.jpeg" },
-  { src: "/banner/top/main6.jpeg" },
-  { src: "/banner/top/main7.jpeg" },
-  { src: "/banner/top/main8.jpeg" },
-];
+interface Props {
+  banners: { src: string }[];
+}
 
-export default class SlideFeatures extends Component {
+export default class SwipeBanners extends Component<Props> {
+  constructor(props: Props) {
+    super(props);
+  }
+
   componentDidMount() {
     const swiper = new Swiper(".swiper-container", {
       loop: true,
@@ -44,7 +41,7 @@ export default class SlideFeatures extends Component {
       <>
         <div class="swiper-container overflow-hidden">
           <div class="swiper-wrapper">
-            <SwiperFeature featureList={featureList} />
+            <SwiperFeature featureList={this.props.banners} />
           </div>
           <div class="swiper-pagination" />
         </div>

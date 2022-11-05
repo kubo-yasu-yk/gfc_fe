@@ -1,3 +1,7 @@
+interface banner {
+  src: string;
+}
+
 export interface genre {
   name: string;
   src: string;
@@ -18,12 +22,24 @@ interface info {
 }
 
 export interface TopInfo {
+  mainBanners: banner[];
   allGenres: genre[];
   recentGenres: genre[];
   brandRanking: brand[];
   newBrands: brand[];
   info: info[];
 }
+
+const mainBanners = [
+  { src: "/banner/top/main1.jpeg" },
+  { src: "/banner/top/main2.jpeg" },
+  { src: "/banner/top/main3.jpeg" },
+  { src: "/banner/top/main4.jpeg" },
+  { src: "/banner/top/main5.jpeg" },
+  { src: "/banner/top/main6.jpeg" },
+  { src: "/banner/top/main7.jpeg" },
+  { src: "/banner/top/main8.jpeg" },
+];
 
 const allGenres = [
   { name: "洋食", src: "/image/genre/western.jpeg", link: "/search-genre" },
@@ -79,49 +95,49 @@ const recentGenres = [
 
 const brandRanking = [
   {
-    src: "/icon/brandLogo.png",
-    name: "ガスト",
-    genre: "洋食、中華、和食",
+    src: "/image/brandLogo/logo1.jpg",
+    name: "花村屋拉麺",
+    genre: "ラーメン",
     num: 1000,
   },
   {
-    src: "/icon/brandLogo.png",
-    name: "ガスト",
-    genre: "洋食、中華、和食",
+    src: "/image/brandLogo/logo1.jpg",
+    name: "花村屋拉麺",
+    genre: "ラーメン",
     num: 900,
   },
   {
-    src: "/icon/brandLogo.png",
-    name: "ガスト",
-    genre: "洋食、中華、和食",
+    src: "/image/brandLogo/logo1.jpg",
+    name: "花村屋拉麺",
+    genre: "ラーメン",
     num: 800,
   },
   {
-    src: "/icon/brandLogo.png",
-    name: "ガスト",
-    genre: "洋食、中華、和食",
+    src: "/image/brandLogo/logo1.jpg",
+    name: "花村屋拉麺",
+    genre: "ラーメン",
     num: 700,
   },
   {
-    src: "/icon/brandLogo.png",
-    name: "ガスト",
-    genre: "洋食、中華、和食",
+    src: "/image/brandLogo/logo1.jpg",
+    name: "花村屋拉麺",
+    genre: "ラーメン",
     num: 600,
   },
 ];
 
 const newBrands = [{
-  src: "/icon/brandLogo.png",
-  name: "ガスト",
-  content: "ガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここ",
+  src: "/image/brandLogo/logo1.jpg",
+  name: "花村屋拉麺",
+  content: "花村屋拉麺の説明はここ花村屋拉麺の説明はここ花村屋拉麺の説明はここ花村屋拉麺の説明はここ花村屋拉麺の説明はここ花村屋拉麺の説明はここ",
 }, {
-  src: "/icon/brandLogo.png",
-  name: "ガスト",
-  content: "ガストの説明はここガストの説明はここガストの説明はここ",
+  src: "/image/brandLogo/logo1.jpg",
+  name: "花村屋拉麺",
+  content: "花村屋拉麺の説明はここ花村屋拉麺の説明はここ花村屋拉麺の説明はここ",
 }, {
-  src: "/icon/brandLogo.png",
-  name: "ガスト",
-  content: "ガストの説明はここガストの説明はここ",
+  src: "/image/brandLogo/logo1.jpg",
+  name: "花村屋拉麺",
+  content: "花村屋拉麺の説明はここ花村屋拉麺の説明はここ",
 }];
 
 const info = [{
@@ -143,6 +159,7 @@ const info = [{
 
 export function getTopInfo() {
   return {
+    mainBanners: mainBanners,
     allGenres: allGenres,
     recentGenres: recentGenres,
     brandRanking: brandRanking,
