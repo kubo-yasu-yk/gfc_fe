@@ -86,3 +86,7 @@ html {
 .swiper-button-next::after, .swiper-button-prev::after {
   content: none;
 }
+
+.accent-brown {
+  accent-color: #947771;
+}

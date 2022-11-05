@@ -38,7 +38,7 @@ export function LoginHeader(props: Props) {
 //茶色の背景だけのヘッダー
 export function BrownHeader() {
   return (
-    <header class="bg-[#947771] h-16">
+    <header class="h-16 bg-brown">
     </header>
   );
 }

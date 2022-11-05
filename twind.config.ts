@@ -16,15 +16,16 @@ export default {
       white: "#ffffff",
       gray: "#EBEBEB",
       lightBrown: "rgb(149,119,113,0.1)",
+      lightRed: "rgb(255,212,203,0.2)",
     },
 
     extend: { //これがあると任意で値を変更できる
       colors: {
         brown: "#947771",
         lightBrown: "rgb(149,119,113,0.1)",
+        lightGray: "#D6D6D6",
       },
       fontSize: {
-        2: "0.5rem",
         2.5: "0.625rem",
       },
       height: {

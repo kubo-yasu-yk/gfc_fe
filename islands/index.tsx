@@ -1,7 +1,6 @@
-import { Head } from "$fresh/runtime.ts";
+import { useState } from "preact/hooks";
 import { TopInfo } from "../shared/sever/top.ts";
 import { Top } from "../components/index/Top.tsx";
-import { useState } from "preact/hooks";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
 interface Props {
@@ -25,14 +24,6 @@ export default function islands(props: Props) {
   };
   return (
     <div>
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-        />
-        <link href="/style.css" rel="stylesheet" />
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" />
-      </Head>
       <Top open={drawerMenu} info={props.info} onClick={toggleFunction} />
       {drawerMenu ? <DrawerMenu open={open} onClick={toggleFunction} /> : null}
     </div>

@@ -7,6 +7,7 @@ interface Props {
   link?: string;
   linkName?: string;
   mandatory?: boolean;
+  msg?: string;
   xs?: boolean; //text-xsの適応有無
 }
 
@@ -43,9 +44,12 @@ export function BgLeading(props: Props) {
 //見出しのある要素の中にさらに見出しをつけたい場合に使う
 export function SubLeading(props: Props) {
   return (
-    <div class="mt-4 mb-2 ml-8 flex">
-      <p>{props.title}</p>
-      {props.mandatory ? <p class="ml-3 text-red">必須</p> : null}
-    </div>
+    <>
+      <div class="ml-8 mt-4 mb-1 flex">
+        <p>{props.title}</p>
+        {props.mandatory ? <p class="ml-2 text-red">必須</p> : null}
+      </div>
+      {props.msg ? <p class="mb-1 mx-8">{props.msg}</p> : null}
+    </>
   );
 }

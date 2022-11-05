@@ -71,7 +71,7 @@ export function Mypage(props: Props) {
         link="/mypage/applying"
         arrow="right"
       />
-      <div class="w-[18rem] flex mx-auto mt-2">
+      <div class="w-72 flex mx-auto mt-2">
         <div class="flex-1" />
         <p class="text-xs text-lightGray">
           申請履歴は<a
