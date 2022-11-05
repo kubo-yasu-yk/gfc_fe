@@ -1,6 +1,3 @@
-//DrawerMenuの画面（未ログイン時の画面）
-//todo:ログイン後の画面の実装
-
 import { DrawerMenuHeader } from "../header/Header.tsx";
 import { BrownButton, WhiteButton } from "../Button.tsx";
 import { Link, LinkList } from "./Link.tsx";
@@ -34,6 +31,7 @@ const linkList4 = [
   { name: "お問い合わせ", link: "" },
 ];
 
+//未ログイン時のドロワーメニュー
 export function DrawerMenu(props: Props) {
   return (
     <>
@@ -41,7 +39,7 @@ export function DrawerMenu(props: Props) {
         <div class={`bg-white relative top-0 ${props.open ? "open" : "close"}`}>
           <DrawerMenuHeader onClick={props.onClick} />
           <p class="text-sm my-4 text-center">
-            ゲスト<span class="text-10">さん</span>
+            ゲスト<span class="text-2.5">さん</span>
           </p>
           <BrownButton name="飲食フランチャイズ.comを試す" link="/registration/input" />
           <div class="h-8" />
@@ -50,7 +48,7 @@ export function DrawerMenu(props: Props) {
           <LinkList linkList={linkList2} />
           <LinkList linkList={linkList3} />
           <LinkList linkList={linkList4} />
-          <p class="text-center pb-8 text-brown text-10 pt-[6rem]">
+          <p class="text-center pb-8 pt-[6rem] text-brown text-2.5">
             @Insyoku Franchise.com 2022 All Rights Reserved
           </p>
         </div>
@@ -59,6 +57,7 @@ export function DrawerMenu(props: Props) {
   );
 }
 
+//ログイン時のドロワーメニュー
 export function LoginDrawerMenu(props: Props) {
   return (
     <>
@@ -66,7 +65,7 @@ export function LoginDrawerMenu(props: Props) {
         <div class={`bg-white relative top-0 ${props.open ? "open" : "close"}`}>
           <DrawerMenuHeader onClick={props.onClick} />
           <p class="text-sm my-4 text-center">
-            グルメ商店<span class="text-10">さま</span>
+            グルメ商店<span class="text-2.5">さま</span>
             {/* //check:グルメ商店の部分はログインしたユーザーによって変わる */}
           </p>
           <LinkList linkList={linkList1} />
@@ -74,7 +73,7 @@ export function LoginDrawerMenu(props: Props) {
           <LinkList linkList={linkList3} />
           <LinkList linkList={linkList4} />
           <WhiteButton name="ログアウト" klass="mt-10 mb-[6rem]" />
-          <p class="text-center pb-8 text-brown text-10">
+          <p class="text-center pb-8 text-brown text-2.5">
             @Insyoku Franchise.com 2022 All Rights Reserved
           </p>
         </div>

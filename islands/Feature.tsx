@@ -1,20 +1,20 @@
 //swiper.jsを使用した特集ページを出すときに使うislands
 
 import { Component } from "preact";
-import { SwiperFeature } from "../components/common/feature/Feature.tsx";
+import { SwiperFeature } from "../components/common/Feature.tsx";
 
 // deno-lint-ignore no-var no-explicit-any
 declare var Swiper: any;
 
-const features = [
-  <SwiperFeature bgColor="red" />,
-  <SwiperFeature bgColor="blue" />,
-  <SwiperFeature bgColor="black" />,
-  <SwiperFeature bgColor="orange" />,
-  <SwiperFeature bgColor="green" />,
-  <SwiperFeature bgColor="pink" />,
-  <SwiperFeature bgColor="skyblue" />,
-  <SwiperFeature bgColor="gray" />,
+const featureList = [
+  { src: "/banner/top/main1.jpeg" },
+  { src: "/banner/top/main2.jpeg" },
+  { src: "/banner/top/main3.jpeg" },
+  { src: "/banner/top/main4.jpeg" },
+  { src: "/banner/top/main5.jpeg" },
+  { src: "/banner/top/main6.jpeg" },
+  { src: "/banner/top/main7.jpeg" },
+  { src: "/banner/top/main8.jpeg" },
 ];
 
 export default class SlideFeatures extends Component {
@@ -44,7 +44,7 @@ export default class SlideFeatures extends Component {
       <>
         <div class="swiper-container overflow-hidden">
           <div class="swiper-wrapper">
-            {features.map((feature, i) => feature)}
+            <SwiperFeature featureList={featureList} />
           </div>
           <div class="swiper-pagination" />
         </div>

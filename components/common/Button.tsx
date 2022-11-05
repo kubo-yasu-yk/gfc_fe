@@ -18,31 +18,15 @@ interface Props {
   Accodion?: (e: Event) => void;
 }
 
-//丸い茶色枠・白色背景のボタン（w-1/3）
-export function RoundedWhiteButton(props: Props) {
-  return (
-    <button class="w-1/3 h-9 rounded-full border border-[#947771] bg-white text-xs text-brown">
-      {props.name}
-    </button>
-  );
-}
-
-//丸い茶色背景のボタン（w-2/3）
-export function RoundedBrowwnButton(props: Props) {
-  return (
-    <button class="w-2/3 h-9 rounded-full text-xs text-white bg-brown">
-      {props.name}
-    </button>
-  );
-}
-
-//一番よく使う茶色枠・白色背景のボタン()
+//一番よく使う茶色枠・白色背景のボタン
 export function WhiteButton(props: Props) {
   return (
     <a
       href={props.link}
-      class={`h-10 w-[18rem] mx-auto flex items-center bg-white border border-brown rounded
-            text-center text-xs text-brown ${props.klass ? props.klass : null}`}
+      class={`h-10 w-72 mx-auto flex items-center bg-white border rounded
+            text-center text-xs text-brown border-brown ${
+        props.klass ? props.klass : null
+      }`}
     >
       {props.arrow == "left"
         ? (
@@ -66,6 +50,59 @@ export function WhiteButton(props: Props) {
         : null}
       {props.arrow == "left" ? <div class="w-6" /> : null}
     </a>
+  );
+}
+
+//一番よく使う茶色背景のボタン
+export function BrownButton(props: Props) {
+  return (
+    <a
+      href={props.link}
+      class={`h-10 w-72 mx-auto flex items-center rounded
+            text-center text-white text-xs bg-brown ${
+        props.klass ? props.klass : null
+      }`}
+    >
+      {props.arrow == "left"
+        ? (
+          <img
+            src="/icon/common/arrow/whiteLeft.png"
+            alt="茶色の左矢印"
+            class="h-3 w-3 ml-3"
+          />
+        )
+        : null}
+      {props.arrow == "right" ? <div class="w-6" /> : null}
+      <p class="flex-1">{props.name}</p>
+      {props.arrow == "right"
+        ? (
+          <img
+            src="/icon/common/arrow/whiteRight.png"
+            alt="白色の右矢印"
+            class="h-3 w-3 mr-3"
+          />
+        )
+        : null}
+      {props.arrow == "left" ? <div class="w-6" /> : null}
+    </a>
+  );
+}
+
+//丸い茶色枠・白色背景のボタン（w-1/3）
+export function RoundedWhiteButton(props: Props) {
+  return (
+    <button class="w-1/3 h-9 rounded-full border border-[#947771] bg-white text-xs text-brown">
+      {props.name}
+    </button>
+  );
+}
+
+//丸い茶色背景のボタン（w-2/3）
+export function RoundedBrowwnButton(props: Props) {
+  return (
+    <button class="w-2/3 h-9 rounded-full text-xs text-white bg-brown">
+      {props.name}
+    </button>
   );
 }
 
@@ -105,39 +142,6 @@ export function HalfWWhiteButton(props: Props) {
         </p>
       </div>
     </div>
-  );
-}
-
-//茶色背景のボタン（w-[18rem]）
-export function BrownButton(props: Props) {
-  return (
-    <a
-      href={props.link}
-      class="h-10 w-[18rem] mx-auto flex items-center bg-[#947771] rounded
-            text-center text-white text-xs"
-    >
-      {props.arrow == "left"
-        ? (
-          <img
-            src="/icon/common/arrow/whiteLeft.png"
-            alt="茶色の左矢印"
-            class="h-3 w-3 ml-3"
-          />
-        )
-        : null}
-      {props.arrow == "right" ? <div class="w-6" /> : null}
-      <p class="flex-1">{props.name}</p>
-      {props.arrow == "right"
-        ? (
-          <img
-            src="/icon/common/arrow/whiteRight.png"
-            alt="白色の右矢印"
-            class="h-3 w-3 mr-3"
-          />
-        )
-        : null}
-      {props.arrow == "left" ? <div class="w-6" /> : null}
-    </a>
   );
 }
 

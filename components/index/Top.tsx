@@ -5,9 +5,8 @@ import { FourIcons } from "../common/others/FourIcons.tsx";
 import SwiperFeatures from "../../islands/Feature.tsx";
 import { Leading } from "../common/others/Leading.tsx";
 import { Genre } from "./Genre.tsx";
-import { Ranking } from "../common/brand/Ranking.tsx";
-import { BrandList } from "../common/brand/Brand.tsx";
-import { WhiteButton } from "../common/button/Button.tsx";
+import { BrandList, BrandRanking } from "../common/brand/Brand.tsx";
+import { WhiteButton } from "../common/Button.tsx";
 import { Info } from "./Info.tsx";
 import { Inquiry } from "../common/others/Inquiry.tsx";
 import { SNSAccount } from "../common/others/SNSAccount.tsx";
@@ -47,14 +46,14 @@ export function Top(props: Props) {
       <Genre genres={recentGenres} />
 
       <Leading title="人気ブランド総合ランキング" linkName="すべて見る" more={true} />
-      <Ranking />
+      <BrandRanking brandList={info.brandRanking} />
 
       <Leading title="新着ブランド" linkName="すべて見る" more={true} />
       <BrandList brandList={info.newBrands} />
 
       <Leading title="特集コンテンツ" />
       <FeatureContents />
-      <WhiteButton name="特集コンテンツをもっと見る" arrow="right" />
+      <WhiteButton name="特集コンテンツをもっと見る" arrow="right" klass="mt-4" />
 
       <Leading title="お知らせ" linkName="新着情報一覧" more={true} />
       <Info info={info.info} />

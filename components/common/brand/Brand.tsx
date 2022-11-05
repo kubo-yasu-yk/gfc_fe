@@ -21,6 +21,7 @@ interface Props {
     genre?: string;
     price?: string;
     content?: string;
+    contractNum?: number;
   }[];
   applyingList?: { status: number; name: string; genre: string; src: string }[];
   imgs?: string[];
@@ -50,33 +51,37 @@ export function FavBrand(props: Props) {
   );
 }
 
-//人気ブランドランキングで使うブランド単体のカセット
-export function RankingBrand(props: Props) {
+//人気ブランドランキングで使うブランド単体のカセット（例：トップページ）
+export function BrandRanking(props: Props) {
   return (
-    <div>
-      <a
-        href="/brand/brand-detail"
-        class="w-[16.5rem] h-20 ml-4 border rounded flex"
-      >
-        <img
-          src={`${props.src}`}
-          alt="ブランドロゴ"
-          class="h-14 w-14 m-3"
-        />
-        <div class="mt-2">
-          <div class="flex">
-            <p>
-              {props.rank}
-              <span class="text-[0.625rem]">位</span>
-            </p>
-            <p class="ml-2">{props.brandName}</p>
-          </div>
-          <p class="text-[0.625rem] mt-1 ml-4">ジャンル：{props.genre}</p>
-          <p class="text-[0.625rem] mt-1 ml-4">
-            契約数：{props.contractNum?.toLocaleString()}
-          </p>
+    <div class="flex w-full overflow-x-auto pr-4 hidden-scrollbar">
+      {props.brandList?.map((brand, i) => (
+        <div>
+          <a
+            href="/brand/brand-detail"
+            class="w-64 h-20 ml-4 border rounded flex"
+          >
+            <img
+              src={`${brand.src}`}
+              alt="ブランドロゴ"
+              class="h-14 w-14 m-3"
+            />
+            <div class="mt-2">
+              <div class="flex">
+                <p>
+                  {i + 1}
+                  <span class="ml-0.5 text-2.5">位</span>
+                </p>
+                <p class="ml-2">{brand.name}</p>
+              </div>
+              <p class="mt-1 ml-4 text-2.5">ジャンル：{brand.genre}</p>
+              <p class="mt-1 ml-4 text-2.5">
+                契約数：{brand.contractNum?.toLocaleString()}
+              </p>
+            </div>
+          </a>
         </div>
-      </a>
+      ))}
     </div>
   );
 }
@@ -88,16 +93,16 @@ export function BrandList(props: Props) {
       {props.brandList?.map((brand) => (
         <a
           href="/brand/brand-detail"
-          class="h-[6.25rem] mx-4 border rounded mb-3 last:mb-6 flex"
+          class="h-24 mx-4 border rounded mb-1 flex"
         >
           <img
             src={`${brand.src}`}
             alt="ブランドロゴ"
-            class="h-[3.75rem] w-[3.75rem] my-5 ml-3 mr-1"
+            class="h-16 w-16 my-4 ml-3"
           />
-          <div class="mx-3 my-3.5">
+          <div class="ml-4 mr-3 my-3.5">
             <p class="text-sm mb-1">{brand.name}</p>
-            <p class="text-[0.625rem]">
+            <p class="text-2.5">
               {brand.content}
             </p>
           </div>

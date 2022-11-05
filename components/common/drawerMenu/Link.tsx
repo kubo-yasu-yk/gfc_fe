@@ -31,7 +31,7 @@ export function LinkList(props: Props) {
           href={`${link.link}`}
           class={`h-10 flex items-center ${
             link.noBorder ? "" : "border-b border-lightBrown"
-          } `} // todo:last:border-b-0が効かない
+          } `}
         >
           <p class="text-xs ml-8 flex-1">{link.name}</p>
           <img

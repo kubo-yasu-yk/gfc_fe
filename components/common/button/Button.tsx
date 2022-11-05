@@ -94,13 +94,13 @@ export function HalfWWhiteButton(props: Props) {
   );
 }
 
-//茶色背景のボタン（w-[18rem]）
+//茶色背景のボタン
 export function BrownButton(props: Props) {
   return (
     <a
       href={props.link}
-      class="h-10 w-[18rem] mx-auto flex items-center bg-[#947771] rounded
-            text-center text-white text-xs"
+      class="h-10 w-72 mx-auto flex items-center rounded
+            text-center text-white text-xs bg-brown"
     >
       {props.arrow == "left"
         ? (

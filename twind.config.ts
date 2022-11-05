@@ -24,8 +24,14 @@ export default {
         lightBrown: "rgb(149,119,113,0.1)",
       },
       fontSize: {
-        8: "0.5rem",
-        10: "0.625rem",
+        2: "0.5rem",
+        2.5: "0.625rem",
+      },
+      width: {
+        40: "10rem",
+      },
+      height: {
+        30: "7.5rem",
       },
     },
   },

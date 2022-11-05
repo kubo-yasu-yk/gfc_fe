@@ -14,14 +14,14 @@ interface Props {
 //todo:mtを選択できるようにする
 export function Leading(props: Props) {
   return (
-    <div class="mx-5 mb-2 mt-8 flex items-center">
-      <p class="text-sm font-medium">{props.title}</p>
+    <div class="mx-4 mb-2 mt-10 flex items-center">
+      <p class="text-sm">{props.title}</p>
       {props.more
         ? (
           <>
             <div class="flex-1" />
             <a href={`${props.link}`}>
-              <p class="text-[#0085FF] text-[0.625rem]">{props.linkName}</p>
+              <p class="text-blue text-2.5">{props.linkName}</p>
             </a>
           </>
         )
