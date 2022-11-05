@@ -7,6 +7,7 @@ interface Props {
   link?: string;
   arrow?: "left" | "right"; //矢印を出したいときに使う
   list?: string[];
+  klass?: string;
   buttonList?: {
     name: string;
     label: string;
@@ -40,7 +41,7 @@ export function WhiteButton(props: Props) {
   return (
     <a
       href={props.link}
-      class="h-10 w-[18rem] mx-auto flex items-center bg-white border border-[#947771] rounded
+      class="h-10 w-72 mx-auto flex items-center bg-white border border-[#947771] rounded
             text-center text-[#947771] text-xs"
     >
       {props.arrow == "left"
@@ -48,7 +49,7 @@ export function WhiteButton(props: Props) {
           <img
             src="/icon/common/arrow/brownLeft.png"
             alt="茶色の左矢印"
-            class="h-3 w-3 ml-3"
+            class="h-2 w-2 ml-3"
           />
         )
         : null}
@@ -59,7 +60,7 @@ export function WhiteButton(props: Props) {
           <img
             src="/icon/common/arrow/brownRight.png"
             alt="茶色の右矢印"
-            class="h-3 w-3 mr-3"
+            class="h-2 w-2 mr-3"
           />
         )
         : null}
@@ -73,7 +74,7 @@ export function H6WhiteButton(props: Props) {
   return (
     <a
       href={props.link}
-      class="w-[18rem] h-6 mx-auto flex items-center bg-white border border-[#947771] rounded
+      class="w-72 h-6 mx-auto flex items-center bg-white border border-[#947771] rounded
      text-[#947771] text-xs"
     >
       <p class="mx-auto">{props.name}</p>
@@ -94,20 +95,20 @@ export function HalfWWhiteButton(props: Props) {
   );
 }
 
-//茶色背景のボタン（w-[18rem]）
+//茶色背景のボタン
 export function BrownButton(props: Props) {
   return (
     <a
       href={props.link}
-      class="h-10 w-[18rem] mx-auto flex items-center bg-[#947771] rounded
-            text-center text-white text-xs"
+      class="h-10 w-72 mx-auto flex items-center rounded
+            text-center text-white text-xs bg-brown"
     >
       {props.arrow == "left"
         ? (
           <img
             src="/icon/common/arrow/whiteLeft.png"
             alt="茶色の左矢印"
-            class="h-3 w-3 ml-3"
+            class="h-2 w-2 ml-3"
           />
         )
         : null}
@@ -118,7 +119,7 @@ export function BrownButton(props: Props) {
           <img
             src="/icon/common/arrow/whiteRight.png"
             alt="白色の右矢印"
-            class="h-3 w-3 mr-3"
+            class="h-2 w-2 mr-3"
           />
         )
         : null}
@@ -148,6 +149,18 @@ export function H6BrownButton(props: Props) {
   );
 }
 
+//茶色背景ボタン（w-11/12,h-6）
+export function H6W1112BrownButton(props: Props) {
+  return (
+    <a
+      href={props.link}
+      class="h-6 w-11/12 text-white text-[0.625rem] rounded flex items-center bg-brown"
+    >
+      <p class="mx-auto">{props.name}</p>
+    </a>
+  );
+}
+
 //茶色背景ボタン（w-5/6,h-6）
 export function W0506BrownButton(props: Props) {
   return (
@@ -165,7 +178,7 @@ export function GrayButton(props: Props) {
   return (
     <a
       href={props.link}
-      class="h-10 w-[18rem] mx-auto flex items-center rounded
+      class="h-10 w-72 mx-auto flex items-center rounded
             text-center text-white text-xs bg-gray"
     >
       {props.arrow == "left"
@@ -173,7 +186,7 @@ export function GrayButton(props: Props) {
           <img
             src="/icon/common/arrow/whiteLeft.png"
             alt="茶色の左矢印"
-            class="h-3 w-3 ml-3"
+            class="h-2 w-2 ml-3"
           />
         )
         : null}
@@ -184,7 +197,40 @@ export function GrayButton(props: Props) {
           <img
             src="/icon/common/arrow/whiteRight.png"
             alt="白色の右矢印"
-            class="h-3 w-3 mr-3"
+            class="h-2 w-2 mr-3"
+          />
+        )
+        : null}
+      {props.arrow == "left" ? <div class="w-6" /> : null}
+    </a>
+  );
+}
+
+//黒枠・白色背景のボタン（w-[18rem], h-12）
+export function BlackButton(props: Props) {
+  return (
+    <a
+      href={props.link}
+      class="h-12 w-72 mx-auto flex items-center bg-white border border-gray-200 rounded
+            text-center text-gray text-xs"
+    >
+      {props.arrow == "left"
+        ? (
+          <img
+            src="/icon/common/arrow/grayLeft.png"
+            alt="茶色の左矢印"
+            class="h-2 w-2 ml-3"
+          />
+        )
+        : null}
+      {props.arrow == "right" ? <div class="w-6" /> : null}
+      <p class="flex-1">{props.name}</p>
+      {props.arrow == "right"
+        ? (
+          <img
+            src="/icon/common/arrow/grayRight.png"
+            alt="茶色の右矢印"
+            class="h-2 w-2 mr-3"
           />
         )
         : null}
@@ -210,14 +256,14 @@ export function AccodionButton(props: Props) {
   return (
     <div class="flex flex-col w-1/2 border border-[#947771] rounded text-xs text-brown">
       <div class="h-10 flex items-center text-center">
-        <div class="w-3 h-3 ml-3" />
+        <div class="w-2 h-2 ml-3" />
         <p class="flex-1">
           {props.name}
         </p>
         <img
           src="/icon/common/arrow/brownDown.png"
           alt="矢印"
-          class={`w-3 h-3 mr-3 ${accodion ? "rotate-180" : null}`}
+          class={`w-2 h-2 mr-3 ${accodion ? "rotate-180" : null}`}
           onClick={accodionFunction}
         />
       </div>
@@ -242,13 +288,13 @@ export function AccodionButton(props: Props) {
 //単一選択をさせたいときに使用する
 export function RadioButton(props: Props) {
   return (
-    <div class="flex">
+    <div class={`flex ${props.klass ? props.klass : null}`}>
       {props.buttonList?.map((button) => (
-        <label class="flex text-xs items-center mr-4 mb-7 ml-8">
+        <label class="flex text-xs items-center mr-4 mb-6 ml-8">
           <input
             type="radio"
             name={button.name}
-            class="w-3.5 h-3.5 rounded-full
+            class="w-2 h-2 rounded-full
                   border mr-2"
             required
             checked={button.checked}

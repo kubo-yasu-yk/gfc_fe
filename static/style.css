@@ -1,3 +1,7 @@
+html {
+  color: #5F5F5F ;
+}
+
 .hidden-scrollbar::-webkit-scrollbar {
   -ms-overflow-style: none;
   -moz-overflow-style: none;
@@ -69,4 +73,20 @@
   content: "";
   height: 2rem;
   width: 2rem;
+}
+
+.swiper-button-prev {
+  background-image: url(/icon/brand-detail/leftArrow.png);
+}
+
+.swiper-button-next {
+  background-image: url(/icon/brand-detail/rightArrow.png);
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  content: none;
+}
+
+.accent-brown {
+  accent-color: #947771;
 }

@@ -38,7 +38,7 @@ export function LoginHeader(props: Props) {
 //茶色の背景だけのヘッダー
 export function BrownHeader() {
   return (
-    <header class="bg-[#947771] h-16">
+    <header class="h-16 bg-brown">
     </header>
   );
 }
@@ -63,7 +63,7 @@ export function DrawerMenuHeader(props: Props) {
 export function SearchBoxHeader(props: Props) {
   return (
     <header>
-      <div class="h-[7.5rem] bg-[#947771]">
+      <div class="h-30 bg-brown">
         <div class="flex mx-5">
           <img
             src="/icon/common/header/hamburgerButton.png"
@@ -79,7 +79,7 @@ export function SearchBoxHeader(props: Props) {
                 alt="ログインアイコン"
                 class="h-6 w-6"
               />
-              <p class="text-white text-[0.625rem] mt-1.5">ログイン</p>
+              <p class="text-white mt-1.5 text-2.5">ログイン</p>
             </a>
           </div>
         </div>

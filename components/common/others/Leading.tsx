@@ -7,6 +7,7 @@ interface Props {
   link?: string;
   linkName?: string;
   mandatory?: boolean;
+  msg?: string;
   xs?: boolean; //text-xsの適応有無
 }
 
@@ -14,14 +15,14 @@ interface Props {
 //todo:mtを選択できるようにする
 export function Leading(props: Props) {
   return (
-    <div class="mx-5 mb-2 mt-8 flex items-center">
-      <p class="text-sm font-medium">{props.title}</p>
+    <div class="mx-4 mb-2 mt-10 flex items-center">
+      <p class="text-sm">{props.title}</p>
       {props.more
         ? (
           <>
             <div class="flex-1" />
             <a href={`${props.link}`}>
-              <p class="text-[#0085FF] text-[0.625rem]">{props.linkName}</p>
+              <p class="text-blue text-2.5">{props.linkName}</p>
             </a>
           </>
         )
@@ -43,9 +44,12 @@ export function BgLeading(props: Props) {
 //見出しのある要素の中にさらに見出しをつけたい場合に使う
 export function SubLeading(props: Props) {
   return (
-    <div class="mt-4 mb-2 ml-8 flex">
-      <p>{props.title}</p>
-      {props.mandatory ? <p class="ml-3 text-red">必須</p> : null}
-    </div>
+    <>
+      <div class="ml-8 mt-4 mb-1 flex">
+        <p>{props.title}</p>
+        {props.mandatory ? <p class="ml-2 text-red">必須</p> : null}
+      </div>
+      {props.msg ? <p class="mb-1 mx-8">{props.msg}</p> : null}
+    </>
   );
 }

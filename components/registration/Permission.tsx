@@ -1,19 +1,13 @@
+import { Checkbox } from "../../components/common/input/Input.tsx";
+
 //利用規約とプライバシポリシーへの同意を求める際に使う
 export function Permission() {
   return (
-    <div class="text-[0.625rem] w-11/12 h-16 bg-[rgb(255,212,203,0.2)] mx-auto mt-12 rounded flex items-center">
-      <input
-        type="checkbox"
-        class="w-4 h-4 bg-white ml-3 mr-2"
-      />
+    <div class="w-11/12 h-16 mx-auto mt-6 rounded flex items-center text-2.5 bg-lightRed">
+      <Checkbox klass="mx-2" />
       <p>
-        <a href="#" class="text-[#0085FF]">利用規約</a>と
-        <a
-          href="#"
-          class="text-[#0085FF]"
-        >
-          プライバシーポリシー
-        </a>に同意する。
+        <a href="#" class="text-blue">利用規約</a>と
+        <a href="#" class="text-blue">プライバシーポリシー</a>に同意する
       </p>
     </div>
   );

@@ -38,7 +38,7 @@ export function FourIcons() {
               alt={`${icon.alt}`}
               class="h-6 w-6 mb-1"
             />
-            <p class="text-[0.625rem]">{icon.label}</p>
+            <p class="text-2.5">{icon.label}</p>
           </a>
         </div>
       ))}

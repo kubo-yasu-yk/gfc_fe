@@ -66,7 +66,7 @@ export function NarrowDown(props: Props) {
                       {list.name == "価格帯"
                         ? (
                           <div class="flex items-center">
-                            <Input w12={true} mr2={true} />
+                            <Input w12={true} klass="mr-2" />
                             <p class="whitespace-nowrap">円 〜</p>
                             <Input w12={true} mx2={true} />
                             <p>円</p>

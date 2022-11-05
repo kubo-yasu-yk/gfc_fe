@@ -12,15 +12,15 @@ export function Footer() {
     { name: "プライバシポリシー", link: "/" },
   ];
   return (
-    <footer class="bg-[#947771] text-white mt-[16rem]">
-      <ul class="pt-7 text-xs">
+    <footer class="text-white mt-64 bg-brown">
+      <ul class="pt-6 text-xs">
         {contents.map((content) => (
-          <li class="ml-5 mb-4">
+          <li class="ml-4 mb-4">
             <a href={content.link}>{content.name}</a>
           </li>
         ))}
       </ul>
-      <p class="text-center text-[10px] pt-3 pb-7">
+      <p class="text-center pt-4 pb-8  text-2.5">
         @Insyoku Franchise.com 2022 All Rights Reserved
       </p>
     </footer>

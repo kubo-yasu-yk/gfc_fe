@@ -2,6 +2,7 @@ interface Props {
   placeholder?: string;
   msg?: string; //チェックボックス横の文字列
   checked?: boolean; //チェックボックスのチェック有無
+  klass?: string;
   mt2?: boolean; //"mt-2"の適応有無
   mt4?: boolean; //"mt-4"の適応有無
   mr2?: boolean; //"mr-2"の適応有無
@@ -15,7 +16,7 @@ interface Props {
   w4rem?: boolean; //"w-[4rem]"の適応有無
   w6rem?: boolean; //"w-[6rem]"の適応有無
   w10rem?: boolean; //"w-[10rem]"の適応有無
-  w18rem?: boolean; //"w-[18rem]"の適応有無
+  w18rem?: boolean; //"w-72"の適応有無
   w12?: boolean; //"w-1/2"の適応有無
   w23?: boolean; //"w-2/3"の適応有無
   inputList?: string[];
@@ -26,6 +27,7 @@ export function Input(props: Props) {
   return (
     <input
       class={`
+        ${props.klass ? props.klass : ""}
         ${props.mt2 ? "mt-2" : ""}
         ${props.mt4 ? "mt-4" : ""}
         ${props.mr2 ? "mr-2" : ""}
@@ -39,10 +41,12 @@ export function Input(props: Props) {
         ${props.w4rem ? "w-[4rem]" : ""}
         ${props.w6rem ? "w-[6rem]" : ""}
         ${props.w10rem ? "w-[10rem]" : ""}
-        ${props.w18rem ? "w-[18rem]" : ""}
+        ${props.w18rem ? "w-72" : ""}
         ${props.w12 ? "w-1/2" : ""}
         ${props.w23 ? "w-2/3" : ""}
-      pl-2 h-10 rounded border  border-[#C3C3C3]`}
+      pl-2 h-10 rounded border border-lightGray ${
+        props.klass ? props.klass : null
+      }`}
       placeholder={props.placeholder}
     />
   );
@@ -54,13 +58,10 @@ export function WInput(props: Props) {
     <div class="ml-8 flex">
       {props.inputList?.map((input) => (
         <input
-          class={`
-          ${props.mt2 ? "mt-2" : ""}
-          ${props.mt4 ? "mt-4" : ""}
-          ${props.mb2 ? "mb-2" : ""}
-          ${props.mb7 ? "mb-7" : ""}
-          mr-2 pl-2 w-[8rem] h-10 rounded border border-[#C3C3C3]`}
           placeholder={input}
+          class={`mr-2 pl-2 w-32 h-10 rounded border border-lightGray ${
+            props.klass ? props.klass : null
+          }`}
         />
       ))}
     </div>
@@ -70,28 +71,9 @@ export function WInput(props: Props) {
 //パスワードなど入力内容を非表示にしたい時に使う
 export function HiddenInput(props: Props) {
   return (
-    <div
-      class={`
-    ${props.mt2 ? "mt-2" : ""}
-    ${props.mt4 ? "mt-4" : ""}
-    ${props.mr2 ? "mr-2" : ""}
-    ${props.mr4 ? "mr-4" : ""}
-    ${props.mb2 ? "mb-2" : ""}
-    ${props.mb7 ? "mb-7" : ""}
-    ${props.ml2 ? "ml-2" : ""}
-    ${props.ml3 ? "ml-3" : ""}
-    ${props.ml8 ? "ml-8" : ""}
-    ${props.mx2 ? "mx-2" : ""}
-    ${props.w4rem ? "w-[4rem]" : ""}
-    ${props.w6rem ? "w-[6rem]" : ""}
-    ${props.w10rem ? "w-[10rem]" : ""}
-    ${props.w18rem ? "w-[18rem]" : ""}
-    ${props.w12 ? "w-1/2" : ""}
-    ${props.w23 ? "w-2/3" : ""}
-     h-10 relative`}
-    >
+    <div class={`h-10 relative ${props.klass ? props.klass : null}`}>
       <input
-        class="pl-2 w-[18rem] h-10 rounded border-[#C3C3C3] border"
+        class="pl-2 w-72 h-10 rounded border-[#C3C3C3] border"
         placeholder={props.placeholder}
       />
       <img
@@ -120,10 +102,10 @@ export function Checkbox(props: Props) {
         ${props.ml3 ? "ml-3" : ""}
         ${props.ml8 ? "ml-8" : ""}
         ${props.mx2 ? "mx-2" : ""}
-         w-4 h-4 bg-white`}
+         w-4 h-4 bg-white accent-brown ${props.klass ? props.klass : null}`}
         checked={props.checked}
       />
-      <p>{props.msg}</p>
+      {props.msg ? <p>{props.msg}</p> : null}
     </div>
   );
 }
@@ -137,7 +119,7 @@ export function VerticalCheckbox(props: Props) {
           <input
             type="checkbox"
             id={`status${i}`}
-            class="mr-1"
+            class="mr-1 accent-brown"
             checked
           />
           <label for={`status${i}`} class="text-sm">{list}</label>

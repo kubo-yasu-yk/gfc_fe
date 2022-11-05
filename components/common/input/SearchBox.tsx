@@ -11,7 +11,7 @@ export function SearchBox() {
         class="h-6 w-6 left-2 top-1.5 absolute"
       />
       <input
-        class={`h-9 bg-white rounded-lg w-full pl-11 text-xs border border-[#947771] ${tw`(outline-hidden)`} `}
+        class={`h-9 bg-white rounded-full w-full pl-11 text-xs border border-brown ${tw`(outline-hidden)`} `}
         placeholder="ブランドを検索する"
       />
     </div>
