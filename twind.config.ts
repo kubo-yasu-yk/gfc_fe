@@ -15,6 +15,18 @@ export default {
       brown: "#947771",
       white: "#ffffff",
       gray: "#EBEBEB",
+      lightBrown: "rgb(149,119,113,0.1)",
+    },
+
+    extend: { //これがあると任意で値を変更できる
+      colors: {
+        brown: "#947771",
+        lightBrown: "rgb(149,119,113,0.1)",
+      },
+      fontSize: {
+        8: "0.5rem",
+        10: "0.625rem",
+      },
     },
   },
 } as Options;

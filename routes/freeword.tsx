@@ -1,5 +1,5 @@
 import Freeword from "../islands/Freeword.tsx";
 
-export default function routes()  {
+export default function routes() {
   return <Freeword />;
 }

@@ -13,84 +13,26 @@ import { Inquiry } from "../common/others/Inquiry.tsx";
 import { SNSAccount } from "../common/others/SNSAccount.tsx";
 import { Footer } from "../common/footer/Footer.tsx";
 import { FeatureContents } from "./FeatureContentsBar.tsx"; //todo:このコンポーネントは未着手
+import { genre, TopInfo } from "../../shared/sever/top.ts";
 
 interface Props {
   open: boolean;
+  info: TopInfo;
   onClick: (e: Event) => void;
 }
 
+function creatPair(genres: genre[]) {
+  const twoGenres: genre[][] = [];
+  for (let i = 0; i < genres.length; i += 2) {
+    twoGenres.push([genres[i], genres[i + 1]]);
+  }
+  return twoGenres;
+}
+
 export function Top(props: Props) {
-  const allGenres = [
-    [{ name: "洋食", src: "/icon/genreIcon.jpg", link: "/search-genre" }, {
-      name: "中華",
-      src: "/icon/genreIcon.jpg",
-      link: "/search-genre",
-    }],
-    [{ name: "和食", src: "/icon/genreIcon.jpg", link: "/search-genre" }, {
-      name: "エスニック",
-      src: "/icon/genreIcon.jpg",
-      link: "/search-genre",
-    }],
-    [{ name: "ラーメン", src: "/icon/genreIcon.jpg", link: "/search-genre" }, {
-      name: "焼肉",
-      src: "/icon/genreIcon.jpg",
-      link: "/search-genre",
-    }],
-    [{ name: "ファーストフード", src: "/icon/genreIcon.jpg", link: "/search-genre" }, {
-      name: "スイーツ",
-      src: "/icon/genreIcon.jpg",
-      link: "/search-genre",
-    }],
-    [{ name: "飲み物", src: "/icon/genreIcon.jpg", link: "/search-genre" }, {
-      name: "その他",
-      src: "/icon/genreIcon.jpg",
-      link: "/search-genre",
-    }],
-  ];
-
-  const recentGenres = [
-    [{ name: "洋食", src: "/icon/genreIcon.jpg", link: "/search-genre" }, {
-      name: "焼肉",
-      src: "/icon/genreIcon.jpg",
-      link: "/search-genre",
-    }],
-    [{ name: "ファーストフード", src: "/icon/genreIcon.jpg", link: "/search-genre" }, {
-      name: "飲み物",
-      src: "/icon/genreIcon.jpg",
-      link: "/search-genre",
-    }],
-  ];
-
-  const newBrandList = [{
-    src: "/icon/brandLogo.png",
-    name: "ガスト",
-    content: "ガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここ",
-  }, {
-    src: "/icon/brandLogo.png",
-    name: "ガスト",
-    content: "ガストの説明はここガストの説明はここガストの説明はここ",
-  }, {
-    src: "/icon/brandLogo.png",
-    name: "ガスト",
-    content: "ガストの説明はここガストの説明はここ",
-  }];
-
-  const info = [{
-    date: "2022/09/12",
-    content: "お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。",
-  }, {
-    date: "2022/09/12",
-    content: "お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。",
-  }, {
-    date: "2022/09/12",
-    content: "お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。",
-  }, {
-    date: "2022/09/12",
-    content: "お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。",
-  }, {
-    date: "2022/09/12",
-    content: "お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。お知らせだよ。",
-  }];
+  const info = props.info;
+  const allGenres = creatPair(info.allGenres);
+  const recentGenres = creatPair(info.recentGenres);
 
   return (
     <div class={`${props.open ? "fixed w-full" : ""}`}>
@@ -108,14 +50,14 @@ export function Top(props: Props) {
       <Ranking />
 
       <Leading title="新着ブランド" linkName="すべて見る" more={true} />
-      <BrandList brandList={newBrandList} />
+      <BrandList brandList={info.newBrands} />
 
       <Leading title="特集コンテンツ" />
       <FeatureContents />
       <WhiteButton name="特集コンテンツをもっと見る" arrow="right" />
 
       <Leading title="お知らせ" linkName="新着情報一覧" more={true} />
-      <Info info={info} />
+      <Info info={info.info} />
       <Inquiry />
       <SNSAccount />
       <Footer />

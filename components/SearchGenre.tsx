@@ -3,7 +3,10 @@
 import { SearchBoxHeader } from "../components/common/header/Header.tsx";
 import { ResultNumber } from "../components/common/others/ResultNumber.tsx";
 import { ResultBrand } from "../components/common/brand/Brand.tsx";
-import { AccodionButton, HalfWWhiteButton } from "../components/common/button/Button.tsx";
+import {
+  AccodionButton,
+  HalfWWhiteButton,
+} from "../components/common/button/Button.tsx";
 import { PageNation } from "../components/common/others/PageNation.tsx";
 import { LongFooter } from "../components/common/footer/Footer.tsx";
 

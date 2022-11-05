@@ -1,3 +1,19 @@
+html {
+  color: #5F5F5F ;
+}
+
+.font10{
+  font-size: 0.625rem;
+}
+
+.font8 {
+  font-size: 0.5rem;
+}
+
+.w18rem {
+  width: 18rem;
+}
+
 .hidden-scrollbar::-webkit-scrollbar {
   -ms-overflow-style: none;
   -moz-overflow-style: none;
@@ -69,4 +85,16 @@
   content: "";
   height: 2rem;
   width: 2rem;
+}
+
+.swiper-button-prev {
+  background-image: url(/icon/brand-detail/leftArrow.png);
+}
+
+.swiper-button-next {
+  background-image: url(/icon/brand-detail/rightArrow.png);
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  content: none;
 }

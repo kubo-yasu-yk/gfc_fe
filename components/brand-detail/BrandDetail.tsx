@@ -1,7 +1,7 @@
 //ブランド詳細画面の要素をまとめたコンポーネント
 
 import { LoginHeader } from "../common/header/Header.tsx";
-import BrandPhoto from "../../islands//BrandPhoto.tsx";
+import BrandPhoto from "../../components/brand-detail/BrandPhoto.tsx";
 import { BrownButton, WhiteButton } from "../common/button/Button.tsx";
 import { BrandInfo } from "./BrandInfo.tsx"; //todo:未着手
 import { Leading } from "../common/others/Leading.tsx";

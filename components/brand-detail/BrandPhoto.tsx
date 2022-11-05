@@ -1,6 +1,6 @@
-//todo:swiperの部分をコンポーネント化する,下のやつがエラーになる,スマホだと矢印アイコンがデフォルトのまま
-// import { FavoriteNum } from "../components/common/favorite/Favorite.tsx";
-
+//ブランド詳細のブランド画像に関するコンポーネント
+//todo:swiperの部分をコンポーネント化する
+import { FavoriteNum } from "../../components/common/favorite/Favorite.tsx";
 import { Component } from "preact";
 
 // deno-lint-ignore no-var no-explicit-any
@@ -46,26 +46,10 @@ export default class BrandPhoto extends Component {
                 />
               ))}
             </div>
-            <img
-              src="/icon/brand-detail/leftArrow.png"
-              class="swiper-button-prev"
-            />
-            <img
-              src="/icon/brand-detail/rightArrow.png"
-              class="swiper-button-next"
-            />
+            <div class="swiper-button-prev" />
+            <div class="swiper-button-next" />
           </div>
-          {/* <FavoriteNum num={358} /> */}
-          <div class="w-14 h-14 border border-[#947771] rounded-full flex items-center absolute bottom-2 right-2 z-50 bg-white">
-            <div class="flex flex-col text-center mx-auto">
-              <img
-                src="/icon/common/four-icons/after-favorite.png"
-                alt="お気に入り"
-                class="w-6 h-6 my-1"
-              />
-              <p class="text-[0.625rem]">358</p>
-            </div>
-          </div>
+          <FavoriteNum num={358} />
         </div>
       </>
     );

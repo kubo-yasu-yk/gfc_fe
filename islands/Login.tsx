@@ -7,11 +7,9 @@ export default function islands() {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const onInputMail = (e: Event) => {
-    // console.log((e.target as HTMLInputElement).value);
     setMail((e.target as HTMLInputElement).value);
   };
   const onInputPassword = (e: Event) => {
-    // console.log((e.target as HTMLInputElement).value);
     setPassword((e.target as HTMLInputElement).value);
   };
 

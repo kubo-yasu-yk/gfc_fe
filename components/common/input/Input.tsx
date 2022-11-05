@@ -2,6 +2,7 @@ interface Props {
   placeholder?: string;
   msg?: string; //チェックボックス横の文字列
   checked?: boolean; //チェックボックスのチェック有無
+  klass?: string;
   mt2?: boolean; //"mt-2"の適応有無
   mt4?: boolean; //"mt-4"の適応有無
   mr2?: boolean; //"mr-2"の適応有無
@@ -26,6 +27,7 @@ export function Input(props: Props) {
   return (
     <input
       class={`
+        ${props.klass ? props.klass : ""}
         ${props.mt2 ? "mt-2" : ""}
         ${props.mt4 ? "mt-4" : ""}
         ${props.mr2 ? "mr-2" : ""}

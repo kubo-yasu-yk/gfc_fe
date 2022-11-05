@@ -1,21 +1,26 @@
 import { Head } from "$fresh/runtime.ts";
+import { TopInfo } from "../shared/sever/top.ts";
 import { Top } from "../components/index/Top.tsx";
 import { useState } from "preact/hooks";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
-export default function islands() {
+interface Props {
+  info: TopInfo;
+}
+
+export default function islands(props: Props) {
   const [open, setOpen] = useState(false);
-  const [visibleMenu, setVisibleMenu] = useState(false);
+  const [drawerMenu, setDrawerMenu] = useState(false);
 
   const toggleFunction = () => {
     if (open) {
       setOpen(false);
       setTimeout(() => {
-        setVisibleMenu(false);
+        setDrawerMenu(false);
       }, 200);
     } else {
       setOpen(true);
-      setVisibleMenu(true);
+      setDrawerMenu(true);
     }
   };
   return (
@@ -28,8 +33,8 @@ export default function islands() {
         <link href="/style.css" rel="stylesheet" />
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" />
       </Head>
-      <Top open={visibleMenu} onClick={toggleFunction} />
-      {visibleMenu ? <DrawerMenu open={open} onClick={toggleFunction} /> : null}
+      <Top open={drawerMenu} info={props.info} onClick={toggleFunction} />
+      {drawerMenu ? <DrawerMenu open={open} onClick={toggleFunction} /> : null}
     </div>
   );
 }
