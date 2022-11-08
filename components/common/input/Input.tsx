@@ -73,7 +73,7 @@ export function HiddenInput(props: Props) {
   return (
     <div class={`h-10 relative ${props.klass ? props.klass : null}`}>
       <input
-        class="pl-2 w-72 h-10 rounded border-[#C3C3C3] border"
+        class="pl-2 w-72 h-10 rounded border-lightGray border"
         placeholder={props.placeholder}
       />
       <img

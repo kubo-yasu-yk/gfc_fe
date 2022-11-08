@@ -4,9 +4,9 @@ import {
   H6W1112BrownButton,
   H6WhiteButton,
   W0506BrownButton,
-} from "../button/Button.tsx";
-import { Favorite } from "../favorite/Favorite.tsx";
-import { ScrollBrandPhotos } from "../scroll/Scroll.tsx";
+} from "./Button.tsx";
+import { Favorite } from "../Favorite.tsx";
+import { ScrollBrandPhotos } from "./scroll/Scroll.tsx";
 
 interface Props {
   src?: string;
@@ -31,7 +31,7 @@ interface Props {
 //人気ブランドランキングで使うブランド単体のカセット
 export function FavBrand(props: Props) {
   return (
-    <a href="/brand/brand-detail">
+    <a href="/Brand-detail">
       <div class="w-[16.5rem] h-20 ml-3 border rounded flex">
         <img
           src={`${props.src}`}
@@ -54,12 +54,12 @@ export function FavBrand(props: Props) {
 //人気ブランドランキングで使うブランド単体のカセット（例：トップページ）
 export function BrandRanking(props: Props) {
   return (
-    <div class="flex w-full overflow-x-auto pr-4 hidden-scrollbar">
+    <div class="flex w-full overflow-x-auto hidden-scrollbar">
       {props.brandList?.map((brand, i) => (
-        <div>
+        <div class="first:ml-4 pr-4">
           <a
-            href="/brand/brand-detail"
-            class="w-64 h-20 ml-4 border rounded flex"
+            href="/Brand-detail"
+            class="w-64 h-20 border rounded flex"
           >
             <img
               src={`${brand.src}`}
@@ -91,22 +91,24 @@ export function BrandList(props: Props) {
   return (
     <>
       {props.brandList?.map((brand) => (
-        <a
-          href="/brand/brand-detail"
-          class="h-24 mx-4 border rounded mb-1 flex"
-        >
-          <img
-            src={`${brand.src}`}
-            alt="ブランドロゴ"
-            class="h-16 w-16 my-4 ml-3"
-          />
-          <div class="ml-4 mr-3 my-3.5">
-            <p class="text-sm mb-1">{brand.name}</p>
-            <p class="text-2.5">
-              {brand.content}
-            </p>
-          </div>
-        </a>
+        <div class="first:ml-4 mr-4">
+          <a
+            href="/Brand-detail"
+            class="h-24 border rounded mb-1 flex"
+          >
+            <img
+              src={`${brand.src}`}
+              alt="ブランドロゴ"
+              class="h-16 w-16 my-4 ml-3"
+            />
+            <div class="ml-4 mr-3 my-3.5">
+              <p class="text-sm mb-1">{brand.name}</p>
+              <p class="text-2.5">
+                {brand.content}
+              </p>
+            </div>
+          </a>
+        </div>
       ))}
     </>
   );
@@ -129,7 +131,7 @@ export function ResultBrand(props: Props) {
           <ScrollBrandPhotos imgs={props.imgs} />
           <BrownButton
             name="ブランド詳細ページへ"
-            link="/brand/brand-detail"
+            link="/Brand-detail"
             arrow="right"
           />
           <div class="h-5" />
@@ -146,7 +148,7 @@ export function TripleBrand(props: Props) {
       <div class="flex text-[0.625rem] ">
         {props.brandList?.map((brand) => (
           <a
-            href="/brand/brand-detail"
+            href="/Brand-detail"
             class="w-1/3 border-b border-r last:border-r-0"
           >
             <img
@@ -182,7 +184,7 @@ export function FavTripleBrand(props: Props) {
       <div class="flex text-[0.625rem] ">
         {props.brandList?.map((brand) => (
           <a
-            href="/brand/brand-detail"
+            href="/Brand-detail"
             class="w-1/3 border-b border-r last:border-r-0 flex flex-col content-center"
           >
             <img
@@ -230,7 +232,7 @@ export function ApplyBrand(props: Props) {
     <>
       {props.applyingList?.map((brand) => (
         <div class="border m-5 rounded">
-          <a href="/brand/brand-detail" class="flex my-3 mx-4">
+          <a href="/Brand-detail" class="flex my-3 mx-4">
             <img
               src={brand.src}
               alt="ブランドロゴ"

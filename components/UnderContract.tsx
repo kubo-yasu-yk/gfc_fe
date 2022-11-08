@@ -1,13 +1,13 @@
 //契約中ブランド一覧画面の要素をまとめたコンポーネント
 
-import { LoginHeader } from "../components/common/header/Header.tsx";
+import { LoginHeader } from "../components/common/Header.tsx";
 import { Title } from "../components/common/screen-title/Title.tsx";
 import { SearchBox } from "../components/common/input/SearchBox.tsx";
 import { ResultNumber } from "../components/common/others/ResultNumber.tsx";
-import { BrandList } from "../components/common/brand/Brand.tsx";
+import { BrandList } from "../components/common/Brand.tsx";
 import { PageNation } from "../components/common/others/PageNation.tsx";
-import { WhiteButton } from "../components/common/button/Button.tsx";
-import { Footer } from "../components/common/footer/Footer.tsx";
+import { WhiteButton } from "../components/common/Button.tsx";
+import { Footer } from "../components/common/Footer.tsx";
 
 interface Props {
   open: boolean;

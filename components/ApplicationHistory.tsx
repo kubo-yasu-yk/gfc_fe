@@ -1,16 +1,16 @@
 //申請中履歴一覧画面の要素をまとめたコンポーネント
 
-import { LoginHeader } from "../components/common/header/Header.tsx";
+import { LoginHeader } from "../components/common/Header.tsx";
 import { Title } from "../components/common/screen-title/Title.tsx";
 import { SearchBox } from "../components/common/input/SearchBox.tsx";
 import {
   AccodionButton,
   HalfWWhiteButton,
   WhiteButton,
-} from "../components/common/button/Button.tsx";
+} from "../components/common/Button.tsx";
 import { BgLeading } from "../components/common/others/Leading.tsx";
-import { ApplyBrand } from "../components/common/brand/Brand.tsx";
-import { Footer } from "../components/common/footer/Footer.tsx";
+import { ApplyBrand } from "../components/common/Brand.tsx";
+import { Footer } from "../components/common/Footer.tsx";
 
 interface Props {
   open: boolean;

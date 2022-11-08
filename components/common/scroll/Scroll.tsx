@@ -1,4 +1,4 @@
-import { FavBrand } from "../brand/Brand.tsx";
+import { FavBrand } from "../Brand.tsx";
 import { tw } from "twind";
 
 interface Props {

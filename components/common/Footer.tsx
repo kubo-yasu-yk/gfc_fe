@@ -1,7 +1,7 @@
-import { Banner } from "../feature/Feature.tsx";
-import { SearchBox } from "../input/SearchBox.tsx";
-import { RightArrowLinkList, WLinkList } from "../others/LinkList.tsx";
-import { SNSAccount } from "../others/SNSAccount.tsx";
+import { Banner } from "./Feature.tsx";
+import { SearchBox } from "./input/SearchBox.tsx";
+import { RightArrowLinkList, WLinkList } from "./others/LinkList.tsx";
+import { SNSAccount } from "./others/SNSAccount.tsx";
 
 //通常のフッターを挿入する時に使用する
 export function Footer() {
@@ -20,7 +20,7 @@ export function Footer() {
           </li>
         ))}
       </ul>
-      <p class="text-center pt-4 pb-8  text-2.5">
+      <p class="text-center pt-4 pb-8 text-2.5">
         @Insyoku Franchise.com 2022 All Rights Reserved
       </p>
     </footer>

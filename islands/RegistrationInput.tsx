@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { BrownHeader } from "../components/common/header/Header.tsx";
+import { BrownHeader } from "../components/common/Header.tsx";
 import { Title } from "../components/common/screen-title/Title.tsx";
 import { StepBar } from "../components/registration/StepBar.tsx";
 import { Permission } from "../components/registration/Permission.tsx";

@@ -1,6 +1,6 @@
 //ブランド詳細のブランド画像に関するコンポーネント
 //todo:swiperの部分をコンポーネント化する
-import { FavoriteNum } from "../../components/common/favorite/Favorite.tsx";
+import { FavoriteNum } from "../../components/common/Favorite.tsx";
 import { Component } from "preact";
 
 // deno-lint-ignore no-var no-explicit-any

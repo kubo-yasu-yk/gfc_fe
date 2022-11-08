@@ -1,16 +1,16 @@
 //トップページの要素をまとめたコンポーネント
 
-import { SearchBoxHeader } from "../common/header/Header.tsx";
+import { SearchBoxHeader } from "../common/Header.tsx";
 import { FourIcons } from "../common/others/FourIcons.tsx";
 import MainBanners from "../../components/Banner.tsx";
 import { Leading } from "../common/others/Leading.tsx";
 import { Genre } from "./Genre.tsx";
-import { BrandList, BrandRanking } from "../common/brand/Brand.tsx";
+import { BrandList, BrandRanking } from "../common/Brand.tsx";
 import { WhiteButton } from "../common/Button.tsx";
 import { Info } from "./Info.tsx";
 import { Inquiry } from "../common/others/Inquiry.tsx";
 import { SNSAccount } from "../common/others/SNSAccount.tsx";
-import { Footer } from "../common/footer/Footer.tsx";
+import { Footer } from "../common/Footer.tsx";
 import { FeatureContents } from "./FeatureContentsBar.tsx"; //todo:このコンポーネントは未着手
 import { genre, TopInfo } from "../../shared/sever/top.ts";
 

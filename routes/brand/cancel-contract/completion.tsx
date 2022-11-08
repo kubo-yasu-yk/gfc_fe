@@ -1,11 +1,11 @@
-import { BrownHeader } from "../../../components/common/header/Header.tsx";
+import { BrownHeader } from "../../../components/common/Header.tsx";
 import { CompMsg } from "../../../components/common/others/CompMsg.tsx";
 import { Title } from "../../../components/common/screen-title/Title.tsx";
 import {
   BrownButton,
   WhiteButton,
-} from "../../../components/common/button/Button.tsx";
-import { Footer } from "../../../components/common/footer/Footer.tsx";
+} from "../../../components/common/Button.tsx";
+import { Footer } from "../../../components/common/Footer.tsx";
 
 const msg = ["解約申請を受け付けました。", "解約までしばらくお待ちください。"];
 

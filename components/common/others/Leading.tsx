@@ -35,7 +35,7 @@ export function Leading(props: Props) {
 export function BgLeading(props: Props) {
   return (
     <div class="bg-[rgb(149,119,113,0.1)] h-8 flex items-center">
-      <p class={`${props.xs ? "text-xs" : ""} ml-5`}>{props.title}</p>
+      <p class={`${props.xs ? "text-xs" : ""} ml-4`}>{props.title}</p>
       {props.mandatory ? <p class="ml-3 text-[#FF7171]">必須</p> : null}
     </div>
   );

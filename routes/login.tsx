@@ -1,6 +1,6 @@
-import { BrownHeader } from "../components/common/header/Header.tsx";
+import { BrownHeader } from "../components/common/Header.tsx";
 import { Title } from "../components/common/screen-title/Title.tsx";
-import { Footer } from "../components/common/footer/Footer.tsx";
+import { Footer } from "../components/common/Footer.tsx";
 import Login_i from "../islands/Login.tsx";
 
 export default function routes() {

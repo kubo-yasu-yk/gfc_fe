@@ -1,13 +1,13 @@
 //ブランド詳細画面の要素をまとめたコンポーネント
 
-import { LoginHeader } from "../common/header/Header.tsx";
+import { LoginHeader } from "../common/Header.tsx";
 import BrandPhoto from "../../components/brand-detail/BrandPhoto.tsx";
-import { BrownButton, WhiteButton } from "../common/button/Button.tsx";
+import { BrownButton, WhiteButton } from "../common/Button.tsx";
 import { BrandInfo } from "./BrandInfo.tsx"; //todo:未着手
 import { Leading } from "../common/others/Leading.tsx";
-import { ScrollFeature } from "../common/feature/Feature.tsx";
-import { BrandList } from "../common/brand/Brand.tsx";
-import { LongFooter } from "../common/footer/Footer.tsx";
+import { ScrollFeature } from "../common/Feature.tsx";
+import { BrandList } from "../common/Brand.tsx";
+import { LongFooter } from "../common/Footer.tsx";
 
 interface Props {
   open: boolean;

@@ -1,4 +1,4 @@
-import { DrawerMenuHeader } from "../header/Header.tsx";
+import { DrawerMenuHeader } from "../Header.tsx";
 import { BrownButton, WhiteButton } from "../Button.tsx";
 import { Link, LinkList } from "./Link.tsx";
 

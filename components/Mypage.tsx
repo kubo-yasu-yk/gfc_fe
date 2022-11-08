@@ -1,15 +1,15 @@
 //マイページトップの要素をまとめたコンポーネント
 
-import { LoginHeader } from "./common/header/Header.tsx";
+import { LoginHeader } from "./common/Header.tsx";
 import { Title } from "./common/screen-title/Title.tsx";
-import { BlackButton } from "./common/button/Button.tsx";
+import { BlackButton } from "./common/Button.tsx";
 import { Leading } from "./common/others/Leading.tsx";
 import { ScrollFavBrand } from "./common/scroll/Scroll.tsx";
 import { BorderLinkList } from "./common/others/LinkList.tsx";
-import { BrandList } from "./common/brand/Brand.tsx";
+import { BrandList } from "./common/Brand.tsx";
 import { Inquiry } from "./common/others/Inquiry.tsx";
 import { SNSAccount } from "./common/others/SNSAccount.tsx";
-import { Footer } from "./common/footer/Footer.tsx";
+import { Footer } from "./common/Footer.tsx";
 
 interface Props {
   open: boolean;

@@ -93,8 +93,10 @@ export function FreeWhiteButton(props: Props) {
   return (
     <a
       href={props.link}
-      class={`mx-auto flex items-center bg-white border border-[#947771] rounded
-            text-center text-xs text-brown ${props.klass ? props.klass : null}`}
+      class={`mx-auto flex items-center bg-white border rounded
+            text-center text-xs text-brown border-brown ${
+        props.klass ? props.klass : null
+      }`}
     >
       <p class="mx-auto">{props.name}</p>
     </a>
@@ -106,8 +108,9 @@ export function FreeBrownButton(props: Props) {
   return (
     <a
       href={props.link}
-      class={`flex items-center bg-brown rounded
-            text-center text-xs text-white ${props.klass ? props.klass : null}`}
+      class={`flex items-center rounded text-center text-xs text-white bg-brown ${
+        props.klass ? props.klass : null
+      }`}
     >
       <p class="mx-auto">{props.name}</p>
     </a>
@@ -119,8 +122,7 @@ export function GrayButton(props: Props) {
   return (
     <a
       href={props.link}
-      class={`h-10 w-72 mx-auto flex items-center rounded
-            text-center text-white text-xs bg-gray ${
+      class={`h-10 w-72 mx-auto flex items-center rounded text-center text-white text-xs bg-[#EBEBEB] ${
         props.klass ? props.klass : null
       }`}
     >

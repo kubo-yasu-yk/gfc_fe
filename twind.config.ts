@@ -4,17 +4,17 @@ export default {
   selfURL: import.meta.url,
   theme: {
     textColor: {
+      red: "#FF7171",
+      blue: "#0085FF",
       brown: "#947771",
       white: "#ffffff",
-      red: "#FF7171",
-      lightGray: "#D6D6D6",
       gray: "#5F5F5F",
-      blue: "#0085FF",
+      lightGray: "#EBEBEB",
     },
     backgroundColor: {
       brown: "#947771",
       white: "#ffffff",
-      gray: "#EBEBEB",
+      lightgray: "#EBEBEB",
       lightBrown: "rgb(149,119,113,0.1)",
       lightRed: "rgb(255,212,203,0.2)",
     },

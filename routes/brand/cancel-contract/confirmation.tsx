@@ -1,4 +1,4 @@
-import { BrownHeader } from "../../../components/common/header/Header.tsx";
+import { BrownHeader } from "../../../components/common/Header.tsx";
 import { Title } from "../../../components/common/screen-title/Title.tsx";
 import { ConfirmMsg } from "../../../components/common/others/ConfirmMsg.tsx";
 import {
@@ -8,7 +8,7 @@ import {
 import {
   BrownButton,
   WhiteButton,
-} from "../../../components/common/button/Button.tsx";
+} from "../../../components/common/Button.tsx";
 
 const cancelInfo = [
   { title: "ブランド名", info: "オリジン弁当" },
@@ -60,7 +60,7 @@ export default function routes() {
         name="解約申請する"
       />
       <div class="h-3" />
-      <WhiteButton link="/brand/brand-detail" name="戻る" arrow="left" />
+      <WhiteButton link="/Brand-detail" name="戻る" arrow="left" />
       <div class="h-12" />
     </>
   );

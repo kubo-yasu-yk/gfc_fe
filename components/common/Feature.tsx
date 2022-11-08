@@ -68,8 +68,8 @@ export function Banner(props: Props) {
 //特集の横スクロールを出したい時に使う
 export function ScrollFeature2(props: Props) {
   return (
-    <div>
-      <div class="ml-4 w-40 text-2.5">
+    <div class="first:ml-4 pr-4">
+      <div class="w-40 text-2.5">
         <div
           class={`flex items-center border rounded mb-2 text-center h-40 bg-[${props.bgColor}]`}
         >
