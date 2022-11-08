@@ -20,18 +20,17 @@ interface Props {
   onClick: (e: Event) => void;
 }
 
-function creatPair(genres: genre[]) {
-  const twoGenres: genre[][] = [];
-  for (let i = 0; i < genres.length; i += 2) {
-    twoGenres.push([genres[i], genres[i + 1]]);
-  }
-  return twoGenres;
+function creatPair(genres: genre[], n: number) {
+  const pair: genre[][] = [];
+  for (let i = 0; i < genres.length; i += n)
+    pair.push(genres.slice(i, i + n));
+  return pair;
 }
 
 export function Top(props: Props) {
   const info = props.info;
-  const allGenres = creatPair(info.allGenres);
-  const recentGenres = creatPair(info.recentGenres);
+  const allGenres = creatPair(info.allGenres, 2);
+  const recentGenres = creatPair(info.recentGenres, 2);
 
   return (
     <div class={`${props.open ? "fixed w-full" : ""}`}>
