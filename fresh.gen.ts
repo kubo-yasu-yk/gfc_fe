@@ -32,18 +32,19 @@ import * as $$0 from "./islands/ApplicationHistory.tsx";
 import * as $$1 from "./islands/Applying.tsx";
 import * as $$2 from "./islands/BrandDetail.tsx";
 import * as $$3 from "./islands/BrowsingHistory.tsx";
-import * as $$4 from "./islands/CancelContractConfirmation.tsx";
-import * as $$5 from "./islands/Favorite.tsx";
-import * as $$6 from "./islands/Freeword.tsx";
-import * as $$7 from "./islands/Login.tsx";
-import * as $$8 from "./islands/Mypage.tsx";
-import * as $$9 from "./islands/RegistrationCompletion.tsx";
-import * as $$10 from "./islands/RegistrationConfirmation.tsx";
-import * as $$11 from "./islands/RegistrationConfirmationCompany.tsx";
-import * as $$12 from "./islands/RegistrationInput.tsx";
-import * as $$13 from "./islands/SearchGenre.tsx";
-import * as $$14 from "./islands/UnderContract.tsx";
-import * as $$15 from "./islands/index.tsx";
+import * as $$4 from "./islands/CancelContractCompletion.tsx";
+import * as $$5 from "./islands/CancelContractConfirmation.tsx";
+import * as $$6 from "./islands/Favorite.tsx";
+import * as $$7 from "./islands/Freeword.tsx";
+import * as $$8 from "./islands/Login.tsx";
+import * as $$9 from "./islands/Mypage.tsx";
+import * as $$10 from "./islands/RegistrationCompletion.tsx";
+import * as $$11 from "./islands/RegistrationConfirmation.tsx";
+import * as $$12 from "./islands/RegistrationConfirmationCompany.tsx";
+import * as $$13 from "./islands/RegistrationInput.tsx";
+import * as $$14 from "./islands/SearchGenre.tsx";
+import * as $$15 from "./islands/UnderContract.tsx";
+import * as $$16 from "./islands/index.tsx";
 
 const manifest = {
   routes: {
@@ -78,18 +79,19 @@ const manifest = {
     "./islands/Applying.tsx": $$1,
     "./islands/BrandDetail.tsx": $$2,
     "./islands/BrowsingHistory.tsx": $$3,
-    "./islands/CancelContractConfirmation.tsx": $$4,
-    "./islands/Favorite.tsx": $$5,
-    "./islands/Freeword.tsx": $$6,
-    "./islands/Login.tsx": $$7,
-    "./islands/Mypage.tsx": $$8,
-    "./islands/RegistrationCompletion.tsx": $$9,
-    "./islands/RegistrationConfirmation.tsx": $$10,
-    "./islands/RegistrationConfirmationCompany.tsx": $$11,
-    "./islands/RegistrationInput.tsx": $$12,
-    "./islands/SearchGenre.tsx": $$13,
-    "./islands/UnderContract.tsx": $$14,
-    "./islands/index.tsx": $$15,
+    "./islands/CancelContractCompletion.tsx": $$4,
+    "./islands/CancelContractConfirmation.tsx": $$5,
+    "./islands/Favorite.tsx": $$6,
+    "./islands/Freeword.tsx": $$7,
+    "./islands/Login.tsx": $$8,
+    "./islands/Mypage.tsx": $$9,
+    "./islands/RegistrationCompletion.tsx": $$10,
+    "./islands/RegistrationConfirmation.tsx": $$11,
+    "./islands/RegistrationConfirmationCompany.tsx": $$12,
+    "./islands/RegistrationInput.tsx": $$13,
+    "./islands/SearchGenre.tsx": $$14,
+    "./islands/UnderContract.tsx": $$15,
+    "./islands/index.tsx": $$16,
   },
   baseUrl: import.meta.url,
   config,
