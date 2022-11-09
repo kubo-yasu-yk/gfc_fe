@@ -1,7 +1,7 @@
 import {
   BrownButton,
+  FreeBrownButton,
   H6BrownButton,
-  H6W1112BrownButton,
   H6WhiteButton,
   W0506BrownButton,
 } from "./Button.tsx";
@@ -31,19 +31,20 @@ interface Props {
 //人気ブランドランキングで使うブランド単体のカセット
 export function FavBrand(props: Props) {
   return (
-    <a href="/Brand-detail">
-      <div class="w-[16.5rem] h-20 ml-3 border rounded flex">
+    <a href="/brand/brand-detail">
+      <div class="w-64 h-20 ml-3 border rounded flex">
         <img
           src={`${props.src}`}
           alt="ブランドロゴ"
-          class="h-14 w-14 m-3"
+          class="h-14 w-14 m-2"
         />
-        <div class="w-[12rem] mt-2">
+        <div class="w-48 mt-2">
           <p class="text-sm">{props.brandName}</p>
-          <p class="text-[0.625rem] my-0.5">ジャンル：{props.genre}</p>
-          <H6W1112BrownButton
+          <p class="my-0.5 text-2.5">ジャンル：{props.genre}</p>
+          <FreeBrownButton
             name="申請する"
             link="brand/application/confirmation"
+            klass="h-6 w-11/12 text-2.5"
           />
         </div>
       </div>
@@ -91,18 +92,18 @@ export function BrandList(props: Props) {
   return (
     <>
       {props.brandList?.map((brand) => (
-        <div class="first:ml-4 mr-4">
+        <div class="mx-4 mb-2">
           <a
-            href="/Brand-detail"
-            class="h-24 border rounded mb-1 flex"
+            href="/brand/brand-detail"
+            class="h-24 border rounded flex"
           >
             <img
               src={`${brand.src}`}
               alt="ブランドロゴ"
-              class="h-16 w-16 my-4 ml-3"
+              class="h-16 w-16 my-4 ml-4"
             />
-            <div class="ml-4 mr-3 my-3.5">
-              <p class="text-sm mb-1">{brand.name}</p>
+            <div class="mx-4 my-4">
+              <p class="text-sm mb-0.5">{brand.name}</p>
               <p class="text-2.5">
                 {brand.content}
               </p>

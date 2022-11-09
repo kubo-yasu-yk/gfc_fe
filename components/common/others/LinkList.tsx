@@ -49,25 +49,25 @@ export function RightArrowLinkList(props: Props) {
 //1列×n列（任意の数）の外枠・右矢印付きリンク集を作りたい時に使用する（例：マイページ）
 export function BorderLinkList(props: Props) {
   return (
-    <div class="mx-auto w-11/12 border rounded">
+    <div class="mx-4 border rounded">
       {props.linkList?.map((list) => (
         <>
           <a
             href={`${list.link}`}
             class="w-full flex items-center justify-between bg-white h-12 text-xs border-b last:border-b-0"
           >
-            <div class="flex ml-3">
+            <div class="flex mx-4">
               <img
                 src={`${list.src}`}
                 alt={`${list.alt}`}
                 class="h-4 w-4"
               />
-              <p class="my-auto ml-2">{list.name}</p>
+              <p class="my-auto ml-4">{list.name}</p>
             </div>
             <img
               src="/icon/common/arrow/grayRight.png"
               alt="グレーの右矢印"
-              class="h-3 w-3 my-auto mr-3"
+              class="h-2 w-2 my-auto mr-4"
             />
           </a>
         </>

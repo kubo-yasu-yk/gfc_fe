@@ -14,6 +14,7 @@ export default {
     backgroundColor: {
       brown: "#947771",
       white: "#ffffff",
+      gray: "#5F5F5F",
       lightgray: "#EBEBEB",
       lightBrown: "rgb(149,119,113,0.1)",
       lightRed: "rgb(255,212,203,0.2)",

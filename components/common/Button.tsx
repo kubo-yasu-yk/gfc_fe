@@ -88,13 +88,48 @@ export function BrownButton(props: Props) {
   );
 }
 
-//height,widthをklassで任意の値に指定する茶色枠・白色背景のボタン
+//黒枠白色背景のボタン
+export function BlackButton(props: Props) {
+  return (
+    <a
+      href={props.link}
+      class={`h-10 w-72 mx-auto flex items-center rounded
+            text-center text-xs border text-gray border-gray ${
+        props.klass ? props.klass : null
+      }`}
+    >
+      {props.arrow == "left"
+        ? (
+          <img
+            src="/icon/common/arrow/grayLeft.png"
+            alt="茶色の左矢印"
+            class="h-2 w-2 ml-4"
+          />
+        )
+        : null}
+      {props.arrow == "right" ? <div class="w-6" /> : null}
+      <p class="flex-1">{props.name}</p>
+      {props.arrow == "right"
+        ? (
+          <img
+            src="/icon/common/arrow/grayRight.png"
+            alt="白色の右矢印"
+            class="h-2 w-2 mr-4"
+          />
+        )
+        : null}
+      {props.arrow == "left" ? <div class="w-6" /> : null}
+    </a>
+  );
+}
+
+//height,width,font-sizeをklassで任意の値に指定する茶色枠・白色背景のボタン
 export function FreeWhiteButton(props: Props) {
   return (
     <a
       href={props.link}
       class={`mx-auto flex items-center bg-white border rounded
-            text-center text-xs text-brown border-brown ${
+            text-center text-brown border-brown ${
         props.klass ? props.klass : null
       }`}
     >
@@ -103,12 +138,12 @@ export function FreeWhiteButton(props: Props) {
   );
 }
 
-//height,widthをklassで任意の値に指定する茶色背景のボタン
+//height,width,font-sizeをklassで任意の値に指定する茶色背景のボタン
 export function FreeBrownButton(props: Props) {
   return (
     <a
       href={props.link}
-      class={`flex items-center rounded text-center text-xs text-white bg-brown ${
+      class={`flex items-center rounded text-center text-white bg-brown ${
         props.klass ? props.klass : null
       }`}
     >
@@ -227,39 +262,6 @@ export function W0506BrownButton(props: Props) {
       class="h-6 w-5/6 text-white rounded flex items-center bg-brown"
     >
       <p class="mx-auto">{props.name}</p>
-    </a>
-  );
-}
-
-//黒枠・白色背景のボタン（w-[18rem], h-12）
-export function BlackButton(props: Props) {
-  return (
-    <a
-      href={props.link}
-      class="h-12 w-72 mx-auto flex items-center bg-white border border-gray-200 rounded
-            text-center text-gray text-xs"
-    >
-      {props.arrow == "left"
-        ? (
-          <img
-            src="/icon/common/arrow/grayLeft.png"
-            alt="茶色の左矢印"
-            class="h-2 w-2 ml-4"
-          />
-        )
-        : null}
-      {props.arrow == "right" ? <div class="w-6" /> : null}
-      <p class="flex-1">{props.name}</p>
-      {props.arrow == "right"
-        ? (
-          <img
-            src="/icon/common/arrow/grayRight.png"
-            alt="茶色の右矢印"
-            class="h-2 w-2 mr-4"
-          />
-        )
-        : null}
-      {props.arrow == "left" ? <div class="w-6" /> : null}
     </a>
   );
 }
