@@ -45,14 +45,12 @@ export function Applying(props: Props) {
       <LoginHeader onClick={props.onClick} />
       <Title title="申請中ブランド一覧" />
       <SearchBox />
-      <div class="h-4" />
-      <RadioButton buttonList={buttonList} />
+      <RadioButton buttonList={buttonList} klass="my-4" />
       <BgLeading title="2022年10月25日" />
       <ApplyBrand applyingList={applyingList} />
-
       <BgLeading title="2022年10月25日" />
       <ApplyBrand applyingList={applyingList} />
-      <WhiteButton name="申請中のブランドをもっと見る" />
+      <WhiteButton name="申請中のブランドをもっと見る" klass="mt-10" />
       <Footer />
     </div>
   );

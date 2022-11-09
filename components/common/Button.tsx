@@ -317,12 +317,12 @@ export function RadioButton(props: Props) {
   return (
     <div class={`flex ${props.klass ? props.klass : null}`}>
       {props.buttonList?.map((button) => (
-        <label class="flex text-xs items-center mr-1 mb-6 ml-8">
+        <label class="flex text-xs items-center ml-8">
           <input
             type="radio"
             name={button.name}
-            class="w-3 h-3 rounded-full
-                  border mr-1.5 accent-brown"
+            class="w-4 h-4 rounded-full
+                  border mr-1 accent-brown"
             required
             checked={button.checked}
             onClick={button.onClick}

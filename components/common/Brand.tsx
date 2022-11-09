@@ -232,14 +232,14 @@ export function ApplyBrand(props: Props) {
   return (
     <>
       {props.applyingList?.map((brand) => (
-        <div class="border m-5 rounded">
-          <a href="/Brand-detail" class="flex my-3 mx-4">
+        <div class="border m-4 rounded">
+          <a href="/brand/brand-detail" class="flex my-4 mx-4">
             <img
               src={brand.src}
               alt="ブランドロゴ"
               class="w-14 h-14 mr-4"
             />
-            <div class="text-[0.625rem]">
+            <div class="text-2.5">
               <p class="text-sm">{brand.name}</p>
               <p class="my-1 ml-4">ジャンル：{brand.genre}</p>
               <p class="ml-4">
