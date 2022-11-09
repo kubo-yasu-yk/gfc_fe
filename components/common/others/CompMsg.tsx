@@ -1,7 +1,7 @@
 //各種完了画面で使用するコンポーネント
 
 interface Props {
-  compMsg?: string[] | string; //todo:orの書き方教えてもらう
+  compMsg?: string[] | string;
 }
 
 export function CompMsg(props: Props) {
