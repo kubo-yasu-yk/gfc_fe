@@ -10,7 +10,7 @@ interface Props {
 //検索結果の数を表示するコンポーネント
 export function ResultNumber(props: Props) {
   return (
-    <div class="mt-5 mb-3 mx-5 flex items-end text-[0.625rem]">
+    <div class="mt-4 mb-2 mx-4 flex items-end text-2.5">
       {props.name
         ? (
           <>

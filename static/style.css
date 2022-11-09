@@ -90,3 +90,7 @@ html {
 .accent-brown {
   accent-color: #947771;
 }
+
+.brown-placeholder::placeholder {
+  color: rgb(149,119,113,0.5);
+}

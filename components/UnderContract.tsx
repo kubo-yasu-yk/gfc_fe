@@ -42,12 +42,14 @@ export function UnderContract(props: Props) {
       class={`${props.open ? "fixed w-full" : ""}`}
     >
       <LoginHeader onClick={props.onClick} />
-      <Title title="契約中ブランド一覧" />
-      <SearchBox />
-      <ResultNumber displayNumStart={6} displayNumEnd={10} totalNum={15} />
-      <BrandList brandList={contractBrands} />
-      <PageNation displayNumStart={2} displayNumEnd={3} />
-      <WhiteButton name="もっとブランドを探す" />
+      <main>
+        <Title title="契約中ブランド一覧" />
+        <SearchBox />
+        <ResultNumber displayNumStart={6} displayNumEnd={10} totalNum={15} />
+        <BrandList brandList={contractBrands} />
+        <PageNation displayNumStart={2} displayNumEnd={3} />
+        <WhiteButton name="もっとブランドを探す" />
+      </main>
       <Footer />
     </div>
   );
