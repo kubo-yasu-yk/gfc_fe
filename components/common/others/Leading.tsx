@@ -34,9 +34,9 @@ export function Leading(props: Props) {
 //新規会員登録系の画面で使用する背景色付きの小見出し
 export function BgLeading(props: Props) {
   return (
-    <div class="bg-[rgb(149,119,113,0.1)] h-8 flex items-center">
-      <p class={`${props.xs ? "text-xs" : ""} ml-4`}>{props.title}</p>
-      {props.mandatory ? <p class="ml-3 text-[#FF7171]">必須</p> : null}
+    <div class="h-8 flex items-center bg-lightBrown text-2.5">
+      <p class="ml-4">{props.title}</p>
+      {props.mandatory ? <p class="ml-2 text-red">必須</p> : null}
     </div>
   );
 }

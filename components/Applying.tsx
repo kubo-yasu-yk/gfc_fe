@@ -47,10 +47,10 @@ export function Applying(props: Props) {
       <SearchBox />
       <div class="h-4" />
       <RadioButton buttonList={buttonList} />
-      <BgLeading title="2022年10月25日" xs={true} />
+      <BgLeading title="2022年10月25日" />
       <ApplyBrand applyingList={applyingList} />
 
-      <BgLeading title="2022年10月25日" xs={true} />
+      <BgLeading title="2022年10月25日" />
       <ApplyBrand applyingList={applyingList} />
       <WhiteButton name="申請中のブランドをもっと見る" />
       <Footer />

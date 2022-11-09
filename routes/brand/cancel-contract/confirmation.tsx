@@ -1,67 +1,13 @@
-import { BrownHeader } from "../../../components/common/Header.tsx";
-import { Title } from "../../../components/common/screen-title/Title.tsx";
-import { ConfirmMsg } from "../../../components/common/others/ConfirmMsg.tsx";
-import {
-  BgLeading,
-  Leading,
-} from "../../../components/common/others/Leading.tsx";
-import {
-  BrownButton,
-  WhiteButton,
-} from "../../../components/common/Button.tsx";
-
-const cancelInfo = [
-  { title: "ブランド名", info: "オリジン弁当" },
-  { title: "ジャンル", info: "和食、洋食、中華" },
-  { title: "価格帯", info: "500円 〜 1,000円" },
-  { title: "対応エリア", info: "全国" },
-  { title: "取扱商品", info: "のり弁当、唐揚げ弁当など" },
-];
-
-const applicantInfo = [
-  { title: "会社名", info: "株式会社リクルート" },
-  { title: "担当者氏名", info: "佐々木　小次郎" },
-  { title: "メールアドレス", info: "taylor.taylor@icloud.com" },
-  { title: "電話番号", info: "000-0000-0000" },
-];
+import { Head } from "$fresh/runtime.ts";
+import CancelContractConfirmation from "../../../islands/CancelContractConfirmation.tsx";
 
 export default function routes() {
   return (
     <>
-      <BrownHeader />
-      <Title title="解約申請内容の確認" />
-      <ConfirmMsg msg="解約申請" />
-      <div class="text-[0.625rem] border-b">
-        {cancelInfo.map((info) => (
-          <>
-            <BgLeading title={info.title} />
-            <p class="ml-6 my-4">{info.info}</p>
-          </>
-        ))}
-      </div>
-
-      <div class="h-12" />
-      <BrownButton link="/brand/cancel-contract/completion" name="解約申請する" />
-      <div class="h-12" />
-
-      <Leading title="申請者情報" />
-      <div class="text-[0.625rem] border-b">
-        {applicantInfo.map((info) => (
-          <>
-            <BgLeading title={info.title} />
-            <p class="ml-6 my-4">{info.info}</p>
-          </>
-        ))}
-      </div>
-
-      <div class="h-12" />
-      <BrownButton
-        link="/brand/cancel-contract/completion"
-        name="解約申請する"
-      />
-      <div class="h-3" />
-      <WhiteButton link="/Brand-detail" name="戻る" arrow="left" />
-      <div class="h-12" />
+      <Head>
+        <link href="/style.css" rel="stylesheet" />
+      </Head>
+      <CancelContractConfirmation />
     </>
   );
 }
