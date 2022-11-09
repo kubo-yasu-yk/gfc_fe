@@ -204,19 +204,6 @@ export function RoundedBrowwnButton(props: Props) {
   );
 }
 
-//茶色枠・白色背景ボタン（h-6）
-export function H6WhiteButton(props: Props) {
-  return (
-    <a
-      href={props.link}
-      class="w-72 h-6 mx-auto flex items-center bg-white border border-[#947771] rounded
-     text-[#947771] text-xs"
-    >
-      <p class="mx-auto">{props.name}</p>
-    </a>
-  );
-}
-
 //茶色枠・白色背景ボタン（w-1/2,h-10）
 export function HalfWWhiteButton(props: Props) {
   return (
@@ -236,18 +223,6 @@ export function H6BrownButton(props: Props) {
     <a
       href={props.link}
       class="h-6 w-[5.5rem] text-white rounded flex items-center bg-brown"
-    >
-      <p class="mx-auto">{props.name}</p>
-    </a>
-  );
-}
-
-//茶色背景ボタン（w-11/12,h-6）
-export function H6W1112BrownButton(props: Props) {
-  return (
-    <a
-      href={props.link}
-      class="h-6 w-11/12 text-white text-[0.625rem] rounded flex items-center bg-brown"
     >
       <p class="mx-auto">{props.name}</p>
     </a>

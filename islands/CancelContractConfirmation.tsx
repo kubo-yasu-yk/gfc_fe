@@ -54,7 +54,7 @@ export default function islands() {
           klass="mt-12 mb-2"
         />
         <WhiteButton
-          link="/Brand-detail"
+          link="/brand/brand-detail"
           name="戻る"
           arrow="left"
           klass="mb-12"

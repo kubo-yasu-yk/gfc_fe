@@ -1,8 +1,8 @@
 import {
   BrownButton,
   FreeBrownButton,
+  FreeWhiteButton,
   H6BrownButton,
-  H6WhiteButton,
   W0506BrownButton,
 } from "./Button.tsx";
 import { Favorite } from "../Favorite.tsx";
@@ -59,7 +59,7 @@ export function BrandRanking(props: Props) {
       {props.brandList?.map((brand, i) => (
         <div class="first:ml-4 pr-4">
           <a
-            href="/Brand-detail"
+            href="/brand/brand-detail"
             class="w-64 h-20 border rounded flex"
           >
             <img
@@ -132,7 +132,7 @@ export function ResultBrand(props: Props) {
           <ScrollBrandPhotos imgs={props.imgs} />
           <BrownButton
             name="ブランド詳細ページへ"
-            link="/Brand-detail"
+            link="/brand/brand-detail"
             arrow="right"
           />
           <div class="h-5" />
@@ -149,7 +149,7 @@ export function TripleBrand(props: Props) {
       <div class="flex text-[0.625rem] ">
         {props.brandList?.map((brand) => (
           <a
-            href="/Brand-detail"
+            href="/brand/brand-detail"
             class="w-1/3 border-b border-r last:border-r-0"
           >
             <img
@@ -185,7 +185,7 @@ export function FavTripleBrand(props: Props) {
       <div class="flex text-[0.625rem] ">
         {props.brandList?.map((brand) => (
           <a
-            href="/Brand-detail"
+            href="/brand/brand-detail"
             class="w-1/3 border-b border-r last:border-r-0 flex flex-col content-center"
           >
             <img
@@ -252,17 +252,18 @@ export function ApplyBrand(props: Props) {
               <BrownButton
                 name="フランチャイズ契約する"
                 link="/brand/contract/confirmation"
+                klass="mb-2"
               />
             )
             : null}
-          <div class="h-2" />
           {brand.status == 0 || brand.status == 1 || brand.status == 3
             ? (
-              <H6WhiteButton
+              <FreeWhiteButton
                 name={statusList[brand.status].button}
                 link={brand.status == 0 || brand.status == 1
                   ? "/brand/cancel/confirmation"
                   : "/brand/cancel-contract/confirmation"}
+                klass="w-72 h-6 text-xs mb-2"
               />
             )
             : null}
@@ -271,10 +272,10 @@ export function ApplyBrand(props: Props) {
               <BrownButton
                 name={statusList[brand.status].button}
                 link="/brand/application/confirmation"
+                klass="mb-2"
               />
             )
             : null}
-          <div class="h-2" />
         </div>
       ))}
     </>

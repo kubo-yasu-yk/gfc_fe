@@ -61,7 +61,7 @@ export default function routes() {
         name="契約する"
       />
       <div class="h-3" />
-      <WhiteButton link="/Brand-detail" name="戻る" arrow="left" />
+      <WhiteButton link="/brand/brand-detail" name="戻る" arrow="left" />
       <div class="h-12" />
     </>
   );

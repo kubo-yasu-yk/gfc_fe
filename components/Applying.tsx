@@ -39,18 +39,18 @@ export function Applying(props: Props) {
   }];
 
   return (
-    <div
-      class={`${props.open ? "fixed w-full" : ""}`}
-    >
+    <div class={`${props.open ? "fixed w-full" : ""}`}>
       <LoginHeader onClick={props.onClick} />
-      <Title title="申請中ブランド一覧" />
-      <SearchBox />
-      <RadioButton buttonList={buttonList} klass="my-4" />
-      <BgLeading title="2022年10月25日" />
-      <ApplyBrand applyingList={applyingList} />
-      <BgLeading title="2022年10月25日" />
-      <ApplyBrand applyingList={applyingList} />
-      <WhiteButton name="申請中のブランドをもっと見る" klass="mt-10" />
+      <main>
+        <Title title="申請中ブランド一覧" />
+        <SearchBox />
+        <RadioButton buttonList={buttonList} klass="my-4" />
+        <BgLeading title="2022年10月25日" />
+        <ApplyBrand applyingList={applyingList} />
+        <BgLeading title="2022年10月25日" />
+        <ApplyBrand applyingList={applyingList} />
+        <WhiteButton name="申請中のブランドをもっと見る" klass="mt-10" />
+      </main>
       <Footer />
     </div>
   );
