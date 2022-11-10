@@ -1,10 +1,4 @@
-import {
-  BrownButton,
-  FreeBrownButton,
-  FreeWhiteButton,
-  H6BrownButton,
-  W0506BrownButton,
-} from "./Button.tsx";
+import { BrownButton, FreeBrownButton, FreeWhiteButton } from "./Button.tsx";
 import { Favorite } from "../Favorite.tsx";
 import { ScrollBrandPhotos } from "./scroll/Scroll.tsx";
 
@@ -26,6 +20,7 @@ interface Props {
   applyingList?: { status: number; name: string; genre: string; src: string }[];
   imgs?: string[];
   dastBox?: boolean; //FavTripleBrand関数で削除ボタンに切り替える時に使う
+  visited?: boolean; //TripleBrand関数で閲覧履歴画面の表示に使う
 }
 
 //人気ブランドランキングで使うブランド単体のカセット
@@ -143,27 +138,28 @@ export function ResultBrand(props: Props) {
 }
 
 //閲覧履歴で3列ブランドを表示する場合に使う
+//todo:下のやつとまとめたい
 export function TripleBrand(props: Props) {
   return (
     <>
-      <div class="flex text-[0.625rem] ">
+      <div class="flex text-2.5">
         {props.brandList?.map((brand) => (
           <a
             href="/brand/brand-detail"
-            class="w-1/3 border-b border-r last:border-r-0"
+            class="w-1/3 border-b border-r last:border-r-0 flex flex-col content-center"
           >
             <img
               src={`${brand.src}`}
               alt="ブランドロゴ"
-              class="w-5/6 mx-auto mt-2 mb-3"
+              class="w-5/6 mx-auto my-2"
             />
             <p class="text-sm ml-2 mb-1">{brand.name}</p>
             <p class="ml-2">{brand.genre}</p>
-
-            <div class="flex items-center justify-center my-3">
-              <H6BrownButton
+            <div class="flex items-center justify-center my-2">
+              <FreeBrownButton
                 name="申請する"
                 link="/brand/application/confirmation"
+                klass="h-6 w-20"
               />
               <img
                 src="/icon/common/four-icons/favorite-brown.png"
@@ -179,10 +175,11 @@ export function TripleBrand(props: Props) {
 }
 
 //お気に入り画面で3列ブランドを表示する場合に使う
+//todo:上のやつとまとめたい
 export function FavTripleBrand(props: Props) {
   return (
     <>
-      <div class="flex text-[0.625rem] ">
+      <div class="flex text-2.5">
         {props.brandList?.map((brand) => (
           <a
             href="/brand/brand-detail"
@@ -191,7 +188,7 @@ export function FavTripleBrand(props: Props) {
             <img
               src={`${brand.src}`}
               alt="ブランドロゴ"
-              class="w-5/6 mx-auto mt-2 mb-3"
+              class="w-5/6 mx-auto my-2"
             />
             <p class="text-sm ml-2 mb-1">{brand.name}</p>
             <p class="ml-2">{brand.genre}</p>
@@ -200,17 +197,32 @@ export function FavTripleBrand(props: Props) {
                 <img
                   src="/icon/common/delete/delete.png"
                   alt="削除アイコン"
-                  class="mx-auto my-3 w-6 h-6"
+                  class="h-6 w-6 mx-auto my-2"
                 />
               )
               : (
-                <div class="flex items-center justify-center my-3">
-                  <W0506BrownButton
+                <FreeBrownButton
+                  name="申請する"
+                  link="/brand/application/confirmation"
+                  klass="h-6 w-5/6 mx-auto my-2"
+                />
+              )}
+            {props.visited
+              ? (
+                <div class="flex items-center justify-center my-2">
+                  <FreeBrownButton
                     name="申請する"
                     link="/brand/application/confirmation"
+                    klass="h-6 w-20"
+                  />
+                  <img
+                    src="/icon/common/four-icons/favorite-brown.png"
+                    alt="お気に入りボタン"
+                    class="w-4 h-4 ml-2"
                   />
                 </div>
-              )}
+              )
+              : null}
           </a>
         ))}
       </div>

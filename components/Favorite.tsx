@@ -10,8 +10,8 @@ import { WhiteButton } from "../components/common/Button.tsx";
 import { Footer } from "../components/common/Footer.tsx";
 
 interface Props {
-  open: boolean;
-  onClick: (e: Event) => void;
+  open?: boolean;
+  onClick?: (e: Event) => void;
 }
 
 export function Favorite(props: Props) {
@@ -20,28 +20,26 @@ export function Favorite(props: Props) {
 
   const toggleFunction = () => {
     if (dastBox) {
-      console.log("編集にするよ");
       setDastBox(false);
       setName("編集");
     } else {
-      console.log("キャンセルにするよ");
       setDastBox(true);
       setName("キャンセル");
     }
   };
 
-  const visitedBrands = [{
-    name: "マクドナルド",
-    genre: "ファーストフード",
-    src: "/icon/browsingHistory/mac.png",
+  const favoriteBrandList = [{
+    name: "花村屋拉麺",
+    genre: "ラーメン",
+    src: "/image/brandLogo/logo1.jpg",
   }, {
-    name: "丸亀製麺",
-    genre: "和食",
-    src: "/icon/browsingHistory/marukame.png",
+    name: "花村屋拉麺",
+    genre: "ラーメン",
+    src: "/image/brandLogo/logo1.jpg",
   }, {
-    name: "かぶきや",
-    genre: "和食",
-    src: "/icon/browsingHistory/kabukiya.jpeg",
+    name: "花村屋拉麺",
+    genre: "ラーメン",
+    src: "/image/brandLogo/logo1.jpg",
   }];
 
   const brands = ["", "", "", "", ""]; //5行分出すために空の配列を作成している
@@ -51,22 +49,24 @@ export function Favorite(props: Props) {
       class={`${props.open ? "fixed w-full" : ""}`}
     >
       <LoginHeader onClick={props.onClick} />
-      <Title title="お気に入り" />
-      <SearchBox />
-      <ResultNumber
-        displayNumStart={16}
-        displayNumEnd={30}
-        totalNum={45}
-        name={name}
-        onClick={toggleFunction}
-      />
-      <div class="border border-t">
-        {brands.map(() => (
-          <FavTripleBrand brandList={visitedBrands} dastBox={dastBox} />
-        ))}
-      </div>
-      <PageNation displayNumStart={2} displayNumEnd={3} />
-      <WhiteButton name="もっとブランドを探す" />
+      <main>
+        <Title title="お気に入り" />
+        <SearchBox />
+        <ResultNumber
+          displayNumStart={16}
+          displayNumEnd={30}
+          totalNum={45}
+          name={name}
+          onClick={toggleFunction}
+        />
+        <div class="border border-t">
+          {brands.map(() => (
+            <FavTripleBrand brandList={favoriteBrandList} dastBox={dastBox} />
+          ))}
+        </div>
+        <PageNation displayNumStart={2} displayNumEnd={3} />
+        <WhiteButton name="もっとブランドを探す" link="/" klass="mt-4" />
+      </main>
       <Footer />
     </div>
   );

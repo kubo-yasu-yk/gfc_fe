@@ -41,24 +41,21 @@ export function NarrowDown(props: Props) {
                       {list.name == "季節"
                         ? (
                           <div class="h-12 flex items-center">
-                            <Checkbox msg="春" checked={true} mr2={true} />
+                            <Checkbox msg="春" checked={true} klass="mr-2" />
                             <Checkbox
                               msg="夏"
                               checked={true}
-                              ml3={true}
-                              mr2={true}
+                              klass="ml-3 mr-2"
                             />
                             <Checkbox
                               msg="秋"
                               checked={true}
-                              ml3={true}
-                              mr2={true}
+                              klass="ml-3 mr-2"
                             />
                             <Checkbox
                               msg="冬"
                               checked={true}
-                              ml3={true}
-                              mr2={true}
+                              klass="ml-3 mr-2"
                             />
                           </div>
                         )
@@ -66,9 +63,9 @@ export function NarrowDown(props: Props) {
                       {list.name == "価格帯"
                         ? (
                           <div class="flex items-center">
-                            <Input w12={true} klass="mr-2" />
+                            <Input klass="w-1/2 mr-2" />
                             <p class="whitespace-nowrap">円 〜</p>
-                            <Input w12={true} mx2={true} />
+                            <Input klass="w-1/2 mx-2" />
                             <p>円</p>
                           </div>
                         )
@@ -107,6 +104,7 @@ export function MypageNarrowDown(props: Props) {
   ];
 
   const status = ["申請中", "契約可能", "契約不可", "申請キャンセル", "解約申請中", "解約済"];
+
   return (
     <div>
       <div
@@ -118,20 +116,20 @@ export function MypageNarrowDown(props: Props) {
             <div class="border-b">
               {list.name == "ステータス"
                 ? (
-                  <div class="flex mx-3 mt-3 mb-2">
-                    <p class="w-[5rem]">ステータス</p>
+                  <div class="flex mx-4 my-2">
+                    <p class="w-20">ステータス</p>
                     <VerticalCheckbox inputList={status} />
                   </div>
                 )
                 : (
-                  <div class="h-12 flex items-center mx-3">
+                  <div class="h-12 flex items-center mx-4">
                     {list.name == "キーワード"
                       ? (
                         <>
-                          <p class="w-[5rem]">
+                          <p class="w-20">
                             {list.name}
                           </p>
-                          <Input w23={true} />
+                          <Input klass="w-2/3" />
                         </>
                       )
                       : null}
@@ -142,7 +140,7 @@ export function MypageNarrowDown(props: Props) {
                           <img
                             src="/icon/common/arrow/grayRight.png"
                             alt="右矢印"
-                            class="h-3"
+                            class="h-2 w-2"
                           />
                         </>
                       )

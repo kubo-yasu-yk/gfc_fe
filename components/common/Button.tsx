@@ -228,18 +228,6 @@ export function H6BrownButton(props: Props) {
   );
 }
 
-//茶色背景ボタン（w-5/6,h-6）
-export function W0506BrownButton(props: Props) {
-  return (
-    <a
-      href={props.link}
-      class="h-6 w-5/6 text-white rounded flex items-center bg-brown"
-    >
-      <p class="mx-auto">{props.name}</p>
-    </a>
-  );
-}
-
 //アコーディオンタイプのボタンを表示したい時に使う
 //todo:アコーディオンを開くと高さが微妙に変わる
 export function AccodionButton(props: Props) {
