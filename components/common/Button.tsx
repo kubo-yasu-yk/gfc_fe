@@ -143,6 +143,7 @@ export function FreeWhiteButton(props: Props) {
             text-center text-brown border-brown ${
         props.klass ? props.klass : null
       }`}
+      onClick={props.onClickButton}
     >
       <p class="mx-auto">{props.name}</p>
     </a>
@@ -215,19 +216,6 @@ export function RoundedBrowwnButton(props: Props) {
   );
 }
 
-//茶色枠・白色背景ボタン（w-1/2,h-10）
-export function HalfWWhiteButton(props: Props) {
-  return (
-    <div class="h-[42px] w-1/2 mr-4 border border-[#947771] rounded text-xs text-brown">
-      <div class="h-10 flex items-center" onClick={props.onClickButton}>
-        <p class="mx-auto">
-          {props.name}
-        </p>
-      </div>
-    </div>
-  );
-}
-
 //茶色背景ボタン（w-[6rem],h-6）
 export function H6BrownButton(props: Props) {
   return (
@@ -253,6 +241,7 @@ export function W0506BrownButton(props: Props) {
 }
 
 //アコーディオンタイプのボタンを表示したい時に使う
+//todo:アコーディオンを開くと高さが微妙に変わる
 export function AccodionButton(props: Props) {
   const [open, setOpen] = useState(false);
   const [accodion, setAccodion] = useState(false);
@@ -267,8 +256,16 @@ export function AccodionButton(props: Props) {
     }
   };
   return (
-    <div class="flex flex-col w-1/2 border border-[#947771] rounded text-xs text-brown">
-      <div class="h-10 flex items-center text-center">
+    <div
+      class={`flex flex-col w-1/2 text-xs text-brown  ${
+        accodion ? "border rounded border-brown" : null
+      }`}
+    >
+      <div
+        class={`h-10 flex items-center text-center ${
+          accodion ? null : "border rounded border-brown"
+        }`}
+      >
         <div class="w-2 h-2 ml-4" />
         <p class="flex-1">
           {props.name}
@@ -286,7 +283,7 @@ export function AccodionButton(props: Props) {
             {props.list?.map((list) => (
               <a
                 href=""
-                class="h-10 flex items-center border-t border-[#947771]"
+                class="h-10 flex items-center border-t border-brown"
               >
                 <p class="ml-4">{list}</p>
               </a>

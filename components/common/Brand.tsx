@@ -219,7 +219,6 @@ export function FavTripleBrand(props: Props) {
 }
 
 //申請中ブランド・申請履歴ブランド一覧画面のブランド表示時に使う
-//todo:中身の整理まだできそう（ボタンで高さ、マージン設定ができるようになったら再度リファクタリング）
 export function ApplyBrand(props: Props) {
   const statusList = [
     { status: "申請中", button: "申請を取り消す" },

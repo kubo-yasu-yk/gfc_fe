@@ -5,7 +5,7 @@ import { Title } from "../components/common/screen-title/Title.tsx";
 import { SearchBox } from "../components/common/input/SearchBox.tsx";
 import {
   AccodionButton,
-  HalfWWhiteButton,
+  FreeWhiteButton,
   WhiteButton,
 } from "../components/common/Button.tsx";
 import { BgLeading } from "../components/common/others/Leading.tsx";
@@ -21,33 +21,33 @@ interface Props {
 }
 
 export function ApplicationHistory(props: Props) {
-  const sortOrders = ["申請日順（新しい順）", "申請日順（古い順）"];
+  const sortOrderList = ["申請日順（新しい順）", "申請日順（古い順）"];
 
   const applyingList = [{
     status: 0,
-    name: "マクドナルド",
-    genre: "ファーストフード",
-    src: "/icon/browsingHistory/mac.png",
+    name: "花丸屋拉麺",
+    genre: "ラーメン",
+    src: "/image/brandLogo/logo1.jpg",
   }, {
     status: 1,
-    name: "マクドナルド",
-    genre: "ファーストフード",
-    src: "/icon/browsingHistory/mac.png",
+    name: "花丸屋拉麺",
+    genre: "ラーメン",
+    src: "/image/brandLogo/logo1.jpg",
   }, {
     status: 2,
-    name: "マクドナルド",
-    genre: "ファーストフード",
-    src: "/icon/browsingHistory/mac.png",
+    name: "花丸屋拉麺",
+    genre: "ラーメン",
+    src: "/image/brandLogo/logo1.jpg",
   }, {
     status: 3,
-    name: "マクドナルド",
-    genre: "ファーストフード",
-    src: "/icon/browsingHistory/mac.png",
+    name: "花丸屋拉麺",
+    genre: "ラーメン",
+    src: "/image/brandLogo/logo1.jpg",
   }, {
     status: 4,
-    name: "マクドナルド",
-    genre: "ファーストフード",
-    src: "/icon/browsingHistory/mac.png",
+    name: "花丸屋拉麺",
+    genre: "ラーメン",
+    src: "/image/brandLogo/logo1.jpg",
   }];
 
   return (
@@ -55,28 +55,27 @@ export function ApplicationHistory(props: Props) {
       class={`${props.display || props.open ? "fixed w-full" : ""}`}
     >
       <LoginHeader onClick={props.onClick} />
-      <Title title="申請履歴一覧" />
-      <SearchBox />
-      <div class="h-4" />
-      <div class="flex mx-5 mb-5">
-        {
-          /* todo:アコーディオンを押すとHalfWhiteButtonまで下に行く（Half
-        WhiteButtonの一番上のdivに高さを設定すると動かない） */
-        }
-        <HalfWWhiteButton name="絞り込む" onClickButton={props.onClickButton} />
-        <AccodionButton
-          name="表示順"
-          list={sortOrders}
-          Accodion={props.Accodion}
-        />
-      </div>
-      <BgLeading title="2022年10月25日" />
-      <ApplyBrand applyingList={applyingList} />
-
-      <BgLeading title="2022年10月2日" />
-      <ApplyBrand applyingList={applyingList} />
-
-      <WhiteButton name="申請中のブランドをもっと見る" />
+      <main>
+        <Title title="申請履歴一覧" />
+        <SearchBox />
+        <div class="flex mx-4 my-4">
+          <FreeWhiteButton
+            name="絞り込む"
+            onClickButton={props.onClickButton}
+            klass="h-10 w-1/2 mr-2 text-xs"
+          />
+          <AccodionButton
+            name="表示順"
+            list={sortOrderList}
+            Accodion={props.Accodion}
+          />
+        </div>
+        <BgLeading title="2022年10月25日" />
+        <ApplyBrand applyingList={applyingList} />
+        <BgLeading title="2022年10月2日" />
+        <ApplyBrand applyingList={applyingList} />
+        <WhiteButton name="申請中のブランドをもっと見る" arrow="down" />
+      </main>
       <Footer />
     </div>
   );

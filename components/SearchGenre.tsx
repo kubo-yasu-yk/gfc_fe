@@ -5,7 +5,7 @@ import { ResultNumber } from "../components/common/others/ResultNumber.tsx";
 import { ResultBrand } from "../components/common/Brand.tsx";
 import {
   AccodionButton,
-  HalfWWhiteButton,
+  FreeWhiteButton,
 } from "../components/common/Button.tsx";
 import { PageNation } from "../components/common/others/PageNation.tsx";
 import { LongFooter } from "../components/common/Footer.tsx";
@@ -86,7 +86,11 @@ export function SearchGenre(props: Props) {
           /* todo:アコーディオンを押すとHalfWhiteButtonまで下に行く（Half
         WhiteButtonの一番上のdivに高さを設定すると動かない） */
         }
-        <HalfWWhiteButton name="絞り込む" onClickButton={props.onClickButton} />
+        <FreeWhiteButton
+          name="絞り込む"
+          onClickButton={props.onClickButton}
+          klass="h-[42px] w-1/2 mr-2 text-xs"
+        />
         <AccodionButton
           name="表示順"
           list={sortOrders}
