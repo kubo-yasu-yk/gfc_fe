@@ -1,22 +1,13 @@
-import { BrownHeader } from "../../components/common/header/Header.tsx";
-import { Title } from "../../components/common/screen-title/Title.tsx";
-import { StepBar } from "../../components/registration/StepBar.tsx";
-import { CompMsg } from "../../components/common/others/CompMsg.tsx";
-import { BrownButton } from "../../components/common/button/Button.tsx";
-import { WhiteButton } from "../../components/common/button/Button.tsx";
-import { Footer } from "../../components/common/footer/Footer.tsx";
+import { Head } from "$fresh/runtime.ts";
+import RegistrationCompletion from "../../islands/RegistrationCompletion.tsx";
 
 export default function routes() {
   return (
     <>
-      <BrownHeader />
-      <Title title="会員登録完了" />
-      <StepBar step={3} />
-      <CompMsg msg="会員登録が完了しました。" />
-      <BrownButton name="トップページへ" link="/" />
-      <div class="h-3" />
-      <WhiteButton name="マイページへ" link="/mypage" />
-      <Footer />
+      <Head>
+        <link href="/style.css" rel="stylesheet" />
+      </Head>
+      <RegistrationCompletion />
     </>
   );
 }

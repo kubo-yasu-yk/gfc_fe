@@ -37,10 +37,6 @@ export default function islands() {
 
   return (
     <div>
-      <Head>
-        <link href="/style.css" rel="stylesheet" />
-        <script src="https://cdn.tailwindcss.com" />
-      </Head>
       {visibleNarrowDown || visibleMenu ? null : (
         <ApplicationHistory
           open={visibleMenu}

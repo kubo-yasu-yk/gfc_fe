@@ -6,7 +6,7 @@ interface Props {
 
 export function ConfirmMsg(props: Props) {
   return (
-    <div class="text-[0.625rem] my-8 ml-4">
+    <div class="my-8 ml-4 text-2.5">
       <p>以下の内容で{props.msg}します。</p>
       <p>よろしければ「{props.msg}する」ボタンを押してください。</p>
     </div>

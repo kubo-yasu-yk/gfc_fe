@@ -1,6 +1,6 @@
 //ブランド詳細のブランド画像に関するコンポーネント
 //todo:swiperの部分をコンポーネント化する
-import { FavoriteNum } from "../../components/common/favorite/Favorite.tsx";
+import { FavoriteNum } from "../../components/common/Favorite.tsx";
 import { Component } from "preact";
 
 // deno-lint-ignore no-var no-explicit-any
@@ -35,9 +35,9 @@ export default class BrandPhoto extends Component {
   render() {
     return (
       <>
-        <div class="relative h-[19rem] mt-8 border flex items-center">
-          <div class="h-[17rem] swiper-container overflow-hidden">
-            <div class="swiper-wrapper h-full">
+        <div class="relative h-72 mt-8 border flex items-center">
+          <div class="h-64 overflow-hidden swiper-container">
+            <div class="h-full swiper-wrapper">
               {imgs.map((img) => (
                 <img
                   src={img}

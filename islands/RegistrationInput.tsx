@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { BrownHeader } from "../components/common/header/Header.tsx";
+import { BrownHeader } from "../components/common/Header.tsx";
 import { Title } from "../components/common/screen-title/Title.tsx";
 import { StepBar } from "../components/registration/StepBar.tsx";
 import { Permission } from "../components/registration/Permission.tsx";
@@ -105,7 +105,7 @@ export default function islands() {
           />
           <div class="flex">
             <Input placeholder="0000000" klass="ml-8 mr-2 w-24" />
-            <FreeBrownButton name="住所検索" klass="h-10 w-24" />
+            <FreeBrownButton name="住所検索" klass="h-10 w-24 text-xs rounded" />
           </div>
           <SubLeading title="都道府県" mandatory={true} />
           <Input placeholder="都道府県" klass="w-72 ml-8" />

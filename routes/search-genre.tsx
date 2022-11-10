@@ -1,5 +1,18 @@
+import { Head } from "$fresh/runtime.ts";
 import SearchGenre from "../islands/SearchGenre.tsx";
 
 export default function routes() {
-  return <SearchGenre />;
+  return (
+    <>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+        />
+        <link href="/style.css" rel="stylesheet" />
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js" />
+      </Head>
+      <SearchGenre />
+    </>
+  );
 }

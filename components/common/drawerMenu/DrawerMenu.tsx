@@ -1,4 +1,4 @@
-import { DrawerMenuHeader } from "../header/Header.tsx";
+import { DrawerMenuHeader } from "../Header.tsx";
 import { BrownButton, WhiteButton } from "../Button.tsx";
 import { Link, LinkList } from "./Link.tsx";
 
@@ -48,7 +48,7 @@ export function DrawerMenu(props: Props) {
           <LinkList linkList={linkList2} />
           <LinkList linkList={linkList3} />
           <LinkList linkList={linkList4} />
-          <p class="text-center pb-8 pt-[6rem] text-brown text-2.5">
+          <p class="text-center pb-8 pt-24 text-brown text-2.5">
             @Insyoku Franchise.com 2022 All Rights Reserved
           </p>
         </div>
@@ -72,7 +72,7 @@ export function LoginDrawerMenu(props: Props) {
           <LinkList linkList={linkList2} />
           <LinkList linkList={linkList3} />
           <LinkList linkList={linkList4} />
-          <WhiteButton name="ログアウト" klass="mt-10 mb-[6rem]" />
+          <WhiteButton name="ログアウト" klass="mt-10 mb-24" />
           <p class="text-center pb-8 text-brown text-2.5">
             @Insyoku Franchise.com 2022 All Rights Reserved
           </p>

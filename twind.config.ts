@@ -4,17 +4,18 @@ export default {
   selfURL: import.meta.url,
   theme: {
     textColor: {
+      red: "#FF7171",
+      blue: "#0085FF",
       brown: "#947771",
       white: "#ffffff",
-      red: "#FF7171",
-      lightGray: "#D6D6D6",
       gray: "#5F5F5F",
-      blue: "#0085FF",
+      lightGray: "#EBEBEB",
     },
     backgroundColor: {
       brown: "#947771",
       white: "#ffffff",
-      gray: "#EBEBEB",
+      gray: "#5F5F5F",
+      lightgray: "#EBEBEB",
       lightBrown: "rgb(149,119,113,0.1)",
       lightRed: "rgb(255,212,203,0.2)",
     },
@@ -24,6 +25,7 @@ export default {
         brown: "#947771",
         lightBrown: "rgb(149,119,113,0.1)",
         lightGray: "#D6D6D6",
+        orange: "#FF6B00",
       },
       fontSize: {
         2.5: "0.625rem",

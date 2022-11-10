@@ -1,7 +1,7 @@
-import { Banner } from "../feature/Feature.tsx";
-import { SearchBox } from "../input/SearchBox.tsx";
-import { RightArrowLinkList, WLinkList } from "../others/LinkList.tsx";
-import { SNSAccount } from "../others/SNSAccount.tsx";
+import { Banner } from "./Feature.tsx";
+import { SearchBox } from "./input/SearchBox.tsx";
+import { RightArrowLinkList, WLinkList } from "./others/LinkList.tsx";
+import { SNSAccount } from "./others/SNSAccount.tsx";
 
 //通常のフッターを挿入する時に使用する
 export function Footer() {
@@ -20,7 +20,7 @@ export function Footer() {
           </li>
         ))}
       </ul>
-      <p class="text-center pt-4 pb-8  text-2.5">
+      <p class="text-center pt-4 pb-8 text-2.5">
         @Insyoku Franchise.com 2022 All Rights Reserved
       </p>
     </footer>
@@ -29,26 +29,32 @@ export function Footer() {
 
 //長いフッターを挿入する時に使用する
 export function LongFooter() {
-  const wLinkList = [
-    [{ name: "トップページへ", link: "/" }, { name: "マイページへ", link: "/mypage" }],
-    [{ name: "特集ページ一覧", link: "" }, { name: "新着ブランド一覧", link: "" }],
-    [{ name: "NEWS一覧", link: "" }, { name: "お問い合わせ", link: "" }],
-  ];
-
-  const banners = ["", "", ""]; //バナーを3つ出すために空の配列を作成している
-
   const linkList = [
     { name: "ジャンルから探す", link: "", border: true },
     { name: "お気に入りブランドから探す", link: "/mypage/favorite", border: true },
     { name: "閲覧履歴から探す", link: "/mypage/browsing-history", border: true },
     { name: "ランキングから探す", link: "" },
   ];
+
+  const bannerList = [
+    "/image/feature/banner1.jpg",
+    "/image/feature/banner2.jpg",
+    "/image/feature/banner3.jpg",
+    "/image/feature/banner4.jpg",
+  ];
+
+  const wLinkList = [
+    [{ name: "トップページへ", link: "/" }, { name: "マイページへ", link: "/mypage" }],
+    [{ name: "特集ページ一覧", link: "" }, { name: "新着ブランド一覧", link: "" }],
+    [{ name: "NEWS一覧", link: "" }, { name: "お問い合わせ", link: "" }],
+  ];
+
   return (
     <>
-      <div class="bg-[rgb(149,119,113,0.1)] pt-2 pb-5 mb-12">
+      <div class="pt-2 pb-5 mb-12 bg-lightBrown">
         <SearchBox />
         <RightArrowLinkList linkList={linkList} />
-        <Banner banners={banners} />
+        <Banner bannerList={bannerList} />
       </div>
       <WLinkList WlinkList={wLinkList} />
       <SNSAccount />

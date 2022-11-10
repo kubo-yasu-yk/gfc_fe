@@ -1,4 +1,3 @@
-import { Head } from "$fresh/runtime.ts";
 import { useState } from "preact/hooks";
 import { Freeword } from "../components/Freeword.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
@@ -37,9 +36,6 @@ export default function islands() {
 
   return (
     <div>
-      <Head>
-        <link href="/style.css" rel="stylesheet" />
-      </Head>
       {visibleNarrowDown || visibleMenu ? null : (
         <Freeword
           open={visibleMenu}

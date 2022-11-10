@@ -16,7 +16,7 @@ export function Link(props: Props) {
       <img
         src="/icon/common/arrow/grayRight.png"
         alt="右矢印アイコン"
-        class="h-3 w-3 mr-4"
+        class="h-2 w-2 mr-4"
       />
     </a>
   );
@@ -25,7 +25,7 @@ export function Link(props: Props) {
 export function LinkList(props: Props) {
   return (
     <>
-      <div class="h-3 bg-lightBrown" />
+      <div class="h-2 bg-lightBrown" />
       {props.linkList?.map((link) => (
         <a
           href={`${link.link}`}
@@ -37,7 +37,7 @@ export function LinkList(props: Props) {
           <img
             src="/icon/common/arrow/grayRight.png"
             alt="右矢印アイコン"
-            class="h-3 w-3 mr-4"
+            class="h-2 w-2 mr-4"
           />
         </a>
       ))}

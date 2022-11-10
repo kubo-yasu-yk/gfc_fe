@@ -1,14 +1,12 @@
 //特集ページを出すときに使うコンポーネント
-//todo:リファクタリング
+//todo:ScrollFeature2のリファクタリング
 
 import { tw } from "twind";
 
 interface Props {
-  featureList?: { src?: string }[];
-  features?: { bgColor?: string; introContent?: string }[];
-  banners?: string[];
-  bgColor?: string;
-  introContent?: string;
+  featureList?: { src?: string; content?: string }[];
+  bannerList?: string[];
+  bgColor?: string; //ScrollFeature2のリファクタリングに消す
 }
 
 //swiper.jsに対応した特集ページ作成時に使用（例：トップページのメインバナー）
@@ -34,16 +32,15 @@ export function ScrollFeature(props: Props) {
     <div
       class={`flex w-full overflow-x-auto pr-4 ${tw`(hidden-scrollbar)`}`}
     >
-      {props.features?.map((feature) => (
+      {props.featureList?.map((feature) => (
         <div>
-          <div class="w-[10rem] ml-5 mb-4 text-[0.625rem] ">
-            <div
-              class={`h-[10rem] flex items-center border rounded mb-2 text-center bg-[${feature.bgColor}]`}
-            >
-              <p class="text-white mx-auto">特集ページ</p>
-            </div>
+          <div class="w-40 ml-4 text-2.5">
+            <img
+              src={feature.src}
+              class="h-40 flex items-center border rounded mb-2 text-center"
+            />
             <p class="my-1">
-              {feature.introContent}
+              {feature.content}
             </p>
           </div>
         </div>
@@ -56,10 +53,8 @@ export function ScrollFeature(props: Props) {
 export function Banner(props: Props) {
   return (
     <>
-      {props.banners?.map(() => (
-        <div class="mx-5 mt-1 h-20 border content-center flex items-center">
-          <p class="mx-auto text-xs">バナー</p>
-        </div>
+      {props.bannerList?.map((banner) => (
+        <img src={banner} class="mt-1 w-full h-20 object-cover" />
       ))}
     </>
   );
@@ -68,8 +63,8 @@ export function Banner(props: Props) {
 //特集の横スクロールを出したい時に使う
 export function ScrollFeature2(props: Props) {
   return (
-    <div>
-      <div class="ml-4 w-40 text-2.5">
+    <div class="first:ml-4 pr-4">
+      <div class="w-40 text-2.5">
         <div
           class={`flex items-center border rounded mb-2 text-center h-40 bg-[${props.bgColor}]`}
         >

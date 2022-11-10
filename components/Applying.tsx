@@ -1,22 +1,18 @@
 //申請中ブランド一覧画面の要素をまとめたコンポーネント
 
-import { LoginHeader } from "../components/common/header/Header.tsx";
+import { LoginHeader } from "../components/common/Header.tsx";
 import { Title } from "../components/common/screen-title/Title.tsx";
 import { SearchBox } from "../components/common/input/SearchBox.tsx";
 import { BgLeading } from "../components/common/others/Leading.tsx";
-import {
-  RadioButton,
-  WhiteButton,
-} from "../components/common/button/Button.tsx";
-import { ApplyBrand } from "../components/common/brand/Brand.tsx";
-import { Footer } from "../components/common/footer/Footer.tsx";
+import { RadioButton, WhiteButton } from "../components/common/Button.tsx";
+import { ApplyBrand } from "../components/common/Brand.tsx";
+import { Footer } from "../components/common/Footer.tsx";
 
 interface Props {
   open: boolean;
   onClick: (e: Event) => void;
 }
 
-//todo:mapでbrandを回す
 export function Applying(props: Props) {
   const buttonList = [
     { name: "status", label: "すべて", checked: true },
@@ -42,20 +38,18 @@ export function Applying(props: Props) {
   }];
 
   return (
-    <div
-      class={`${props.open ? "fixed w-full" : ""}`}
-    >
+    <div class={`${props.open ? "fixed w-full" : ""}`}>
       <LoginHeader onClick={props.onClick} />
-      <Title title="申請中ブランド一覧" />
-      <SearchBox />
-      <div class="h-4" />
-      <RadioButton buttonList={buttonList} />
-      <BgLeading title="2022年10月25日" xs={true} />
-      <ApplyBrand applyingList={applyingList} />
-
-      <BgLeading title="2022年10月25日" xs={true} />
-      <ApplyBrand applyingList={applyingList} />
-      <WhiteButton name="申請中のブランドをもっと見る" />
+      <main>
+        <Title title="申請中ブランド一覧" />
+        <SearchBox />
+        <RadioButton buttonList={buttonList} klass="my-4" />
+        <BgLeading title="2022年10月25日" />
+        <ApplyBrand applyingList={applyingList} />
+        <BgLeading title="2022年10月25日" />
+        <ApplyBrand applyingList={applyingList} />
+        <WhiteButton name="申請中のブランドをもっと見る" arrow="down" klass="mt-4" />
+      </main>
       <Footer />
     </div>
   );
