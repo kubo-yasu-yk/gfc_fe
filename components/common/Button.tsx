@@ -1,5 +1,3 @@
-//todo:buttonの高さやマージンの設定ができるようにする
-
 import { useState } from "preact/hooks";
 
 interface Props {

@@ -1,5 +1,4 @@
 //お気に入り・閲覧履歴・申請中ブランド・契約中ブランドのアイコンが横並びになっている
-//todo:お気に入りのlink修正
 
 export function FourIcons() {
   const icons = [

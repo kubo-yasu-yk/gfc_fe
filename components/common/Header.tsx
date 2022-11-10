@@ -1,5 +1,4 @@
 //ヘッダー挿入時に使用するコンポーネント
-//todo:トップページ以外のヘッダーを格納
 
 import { SearchBox } from "./input/SearchBox.tsx";
 

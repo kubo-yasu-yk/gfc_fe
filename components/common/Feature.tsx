@@ -1,11 +1,12 @@
 //特集ページを出すときに使うコンポーネント
-//todo:リファクタリング
+//todo:ScrollFeature2のリファクタリング
 
 import { tw } from "twind";
 
 interface Props {
   featureList?: { src?: string; content?: string }[];
   bannerList?: string[];
+  bgColor?: string; //ScrollFeature2のリファクタリングに消す
 }
 
 //swiper.jsに対応した特集ページ作成時に使用（例：トップページのメインバナー）

@@ -29,7 +29,7 @@ export default function islands() {
           <>
             <BgLeading title={info.title} />
             {info.input instanceof Array
-              ? info.input.map((input) => <p class="ml-8 my-2">{input}</p>) //todo:マージンの修正
+              ? info.input.map((input) => <p class="ml-8 my-2">{input}</p>)
               : <p class="ml-8 mt-2 mb-4">{info.input}</p>}
           </>
         ))}

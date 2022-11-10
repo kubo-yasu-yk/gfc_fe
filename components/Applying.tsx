@@ -13,7 +13,6 @@ interface Props {
   onClick: (e: Event) => void;
 }
 
-//todo:mapでbrandを回す
 export function Applying(props: Props) {
   const buttonList = [
     { name: "status", label: "すべて", checked: true },
