@@ -1,5 +1,5 @@
 import { BrownButton, FreeBrownButton, FreeWhiteButton } from "./Button.tsx";
-import { Favorite } from "../Favorite.tsx";
+import { Favorite } from "./Favorite.tsx";
 import { ScrollBrandPhotos } from "./scroll/Scroll.tsx";
 
 interface Props {
@@ -39,7 +39,7 @@ export function FavBrand(props: Props) {
           <FreeBrownButton
             name="申請する"
             link="brand/application/confirmation"
-            klass="h-6 w-11/12 text-2.5"
+            klass="h-6 w-11/12 text-2.5 rounded"
           />
         </div>
       </div>
@@ -116,9 +116,9 @@ export function ResultBrand(props: Props) {
     <div>
       {props.brandList?.map((list) => (
         <div class="first:border-t border-b">
-          <div class="mx-5 pt-3 flex">
-            <div class="flex-1 text-[0.625rem]">
-              <p class="text-[0.875rem]">{list.name}</p>
+          <div class="mx-4 pt-2 flex items-center">
+            <div class="flex-1 text-2.5">
+              <p class="text-xs">{list.name}</p>
               <p class="my-1">ジャンル : {list.genre}</p>
               <p>価格帯 : {list.price}</p>
             </div>
@@ -129,8 +129,8 @@ export function ResultBrand(props: Props) {
             name="ブランド詳細ページへ"
             link="/brand/brand-detail"
             arrow="right"
+            klass="mb-4"
           />
-          <div class="h-5" />
         </div>
       ))}
     </div>
@@ -159,7 +159,7 @@ export function TripleBrand(props: Props) {
               <FreeBrownButton
                 name="申請する"
                 link="/brand/application/confirmation"
-                klass="h-6 w-20"
+                klass="h-6 w-20 rounded"
               />
               <img
                 src="/icon/common/four-icons/favorite-brown.png"
@@ -204,7 +204,7 @@ export function FavTripleBrand(props: Props) {
                 <FreeBrownButton
                   name="申請する"
                   link="/brand/application/confirmation"
-                  klass="h-6 w-5/6 mx-auto my-2"
+                  klass="h-6 w-5/6 mx-auto my-2 rounded"
                 />
               )}
             {props.visited
@@ -213,7 +213,7 @@ export function FavTripleBrand(props: Props) {
                   <FreeBrownButton
                     name="申請する"
                     link="/brand/application/confirmation"
-                    klass="h-6 w-20"
+                    klass="h-6 w-20 rounded"
                   />
                   <img
                     src="/icon/common/four-icons/favorite-brown.png"
@@ -274,7 +274,7 @@ export function ApplyBrand(props: Props) {
                 link={brand.status == 0 || brand.status == 1
                   ? "/brand/cancel/confirmation"
                   : "/brand/cancel-contract/confirmation"}
-                klass="w-72 h-6 text-xs mb-2"
+                klass="w-72 h-6 text-xs mb-2 rounded"
               />
             )
             : null}

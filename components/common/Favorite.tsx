@@ -7,7 +7,7 @@ interface Props {
 //丸枠で囲まれたお気に入りアイコン
 export function Favorite(props: Props) {
   return (
-    <div class="w-10 h-10 rounded-full border border-[#947771] p-[0.625rem]">
+    <div class="w-10 h-10 rounded-full border p-2.5 border-brown">
       <img
         src="/icon/common/four-icons/favorite-brown.png"
         alt="お気に入りアイコン"

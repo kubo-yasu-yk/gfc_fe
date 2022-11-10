@@ -30,32 +30,28 @@ export function NarrowDown(props: Props) {
                 {list.name == "キーワード" || list.name == "季節" || list.name == "価格帯"
                   ? (
                     <>
-                      <p
-                        class={`w-[5rem] ${
-                          list.name == "価格帯" ? "shrink" : null
-                        }`}
-                      >
+                      <p class={`w-20 ${list.name == "価格帯" ? "shrink" : null}`}>
                         {list.name}
                       </p>
-                      {list.name == "キーワード" ? <Input w23={true} /> : null}
+                      {list.name == "キーワード" ? <Input klass="w-2/3" /> : null}
                       {list.name == "季節"
                         ? (
-                          <div class="h-12 flex items-center">
+                          <div class="flex items-center">
                             <Checkbox msg="春" checked={true} klass="mr-2" />
                             <Checkbox
                               msg="夏"
                               checked={true}
-                              klass="ml-3 mr-2"
+                              klass="ml-4 mr-2"
                             />
                             <Checkbox
                               msg="秋"
                               checked={true}
-                              klass="ml-3 mr-2"
+                              klass="ml-4 mr-2"
                             />
                             <Checkbox
                               msg="冬"
                               checked={true}
-                              klass="ml-3 mr-2"
+                              klass="ml-4 mr-2"
                             />
                           </div>
                         )

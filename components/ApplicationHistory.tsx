@@ -62,7 +62,7 @@ export function ApplicationHistory(props: Props) {
           <FreeWhiteButton
             name="絞り込む"
             onClickButton={props.onClickButton}
-            klass="h-10 w-1/2 mr-2 text-xs"
+            klass="h-10 w-1/2 mr-2 text-xs rounded"
           />
           <AccodionButton
             name="表示順"

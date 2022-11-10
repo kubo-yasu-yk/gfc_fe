@@ -10,9 +10,9 @@ interface Props {
 export function ScrollBrandPhotos(props: Props) {
   return (
     <div class={`flex w-full overflow-x-auto ${tw`(hidden-scrollbar)`}`}>
-      <div class="m-3 flex">
+      <div class="m-4 flex">
         {props.imgs?.map((img) => (
-          <div class="w-[6rem] h-[6rem] mr-2 last:mr-0 border flex items-center">
+          <div class="h-24 w-24 mr-2 last:mr-0 flex items-center">
             <img
               src={img}
               class="w-full mx-auto"

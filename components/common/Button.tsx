@@ -134,12 +134,12 @@ export function BlackButton(props: Props) {
   );
 }
 
-//height,width,font-sizeをklassで任意の値に指定する茶色枠・白色背景のボタン
+//height,width,font-size,roundedをklassで任意の値に指定する茶色枠・白色背景のボタン
 export function FreeWhiteButton(props: Props) {
   return (
     <a
       href={props.link}
-      class={`mx-auto flex items-center bg-white border rounded
+      class={`mx-auto flex items-center bg-white border
             text-center text-brown border-brown ${
         props.klass ? props.klass : null
       }`}
@@ -150,12 +150,12 @@ export function FreeWhiteButton(props: Props) {
   );
 }
 
-//height,width,font-sizeをklassで任意の値に指定する茶色背景のボタン
+//height,width,font-size,roundedをklassで任意の値に指定する茶色背景のボタン
 export function FreeBrownButton(props: Props) {
   return (
     <a
       href={props.link}
-      class={`flex items-center rounded text-center text-white bg-brown ${
+      class={`flex items-center text-center text-white bg-brown ${
         props.klass ? props.klass : null
       }`}
     >
@@ -194,36 +194,6 @@ export function GrayButton(props: Props) {
         )
         : null}
       {props.arrow == "left" ? <div class="w-6" /> : null}
-    </a>
-  );
-}
-
-//丸い茶色枠・白色背景のボタン（w-1/3）
-export function RoundedWhiteButton(props: Props) {
-  return (
-    <button class="w-1/3 h-9 rounded-full border border-[#947771] bg-white text-xs text-brown">
-      {props.name}
-    </button>
-  );
-}
-
-//丸い茶色背景のボタン（w-2/3）
-export function RoundedBrowwnButton(props: Props) {
-  return (
-    <button class="w-2/3 h-9 rounded-full text-xs text-white bg-brown">
-      {props.name}
-    </button>
-  );
-}
-
-//茶色背景ボタン（w-[6rem],h-6）
-export function H6BrownButton(props: Props) {
-  return (
-    <a
-      href={props.link}
-      class="h-6 w-[5.5rem] text-white rounded flex items-center bg-brown"
-    >
-      <p class="mx-auto">{props.name}</p>
     </a>
   );
 }
