@@ -6,7 +6,7 @@ import { Footer } from "../components/common/Footer.tsx";
 
 const msg = ["契約が完了しました。", "引き続き飲食フランチャイズ.comのご利用を", "よろしくお願いいたします。"];
 
-export default function routes() {
+export default function islands() {
   return (
     <>
       <BrownHeader />

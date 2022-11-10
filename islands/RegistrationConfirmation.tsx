@@ -6,7 +6,7 @@ import { BgLeading } from "../components/common/others/Leading.tsx";
 import { BrownButton } from "../components/common/Button.tsx";
 import { WhiteButton } from "../components/common/Button.tsx";
 
-export default function routes() {
+export default function islands() {
   const inputInfo = [
     { title: "会員種別", input: "個人" },
     { title: "氏名", input: "佐々木　小次郎" },

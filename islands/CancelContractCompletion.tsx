@@ -6,7 +6,7 @@ import { Footer } from "../components/common/Footer.tsx";
 
 const msg = ["解約申請を受け付けました。", "解約までしばらくお待ちください。"];
 
-export default function routes() {
+export default function islands() {
   return (
     <>
       <BrownHeader />

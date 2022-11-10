@@ -6,7 +6,7 @@ import { Footer } from "../components/common/Footer.tsx";
 
 const msg = ["申請を受け付けました。", "契約許可が出るまでしばらくお待ちください。"];
 
-export default function routes() {
+export default function islands() {
   return (
     <>
       <BrownHeader />

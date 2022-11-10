@@ -6,7 +6,7 @@ import { BrownButton } from "../components/common/Button.tsx";
 import { WhiteButton } from "../components/common/Button.tsx";
 import { Footer } from "../components/common/Footer.tsx";
 
-export default function routes() {
+export default function islands() {
   return (
     <>
       <BrownHeader />

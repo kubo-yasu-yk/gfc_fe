@@ -5,7 +5,7 @@ import { ConfirmMsg } from "../components/common/others/ConfirmMsg.tsx";
 import { BgLeading } from "../components/common/others/Leading.tsx";
 import { BrownButton, WhiteButton } from "../components/common/Button.tsx";
 
-export default function routes() {
+export default function islands() {
   const inputInfo = [
     { title: "会員種別", input: "法人" },
     { title: "会社名", input: "株式会社リクルート" },
