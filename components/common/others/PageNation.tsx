@@ -6,7 +6,7 @@ interface Props {
 //ページネーションを使用するときに使うコンポーネント
 export function PageNation(props: Props) {
   return (
-    <div class="h-10 flex items-center text-center px-4 my-10 border-y">
+    <div class="h-10 flex items-center text-center px-4 mt-10 border-y">
       <a href="">
         <img
           src="/icon/common/arrow/grayLeft.png"

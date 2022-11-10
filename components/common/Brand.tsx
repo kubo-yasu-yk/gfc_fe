@@ -92,7 +92,7 @@ export function BrandList(props: Props) {
   return (
     <>
       {props.brandList?.map((brand) => (
-        <div class="mx-4 mb-2">
+        <div class="mx-4 mt-2">
           <a
             href="/brand/brand-detail"
             class="h-24 border rounded flex"

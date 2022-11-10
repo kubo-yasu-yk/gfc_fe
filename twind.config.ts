@@ -25,6 +25,7 @@ export default {
         brown: "#947771",
         lightBrown: "rgb(149,119,113,0.1)",
         lightGray: "#D6D6D6",
+        orange: "#FF6B00",
       },
       fontSize: {
         2.5: "0.625rem",

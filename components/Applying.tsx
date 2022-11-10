@@ -49,7 +49,7 @@ export function Applying(props: Props) {
         <ApplyBrand applyingList={applyingList} />
         <BgLeading title="2022年10月25日" />
         <ApplyBrand applyingList={applyingList} />
-        <WhiteButton name="申請中のブランドをもっと見る" klass="mt-10" />
+        <WhiteButton name="申請中のブランドをもっと見る" arrow="down" klass="mt-4" />
       </main>
       <Footer />
     </div>

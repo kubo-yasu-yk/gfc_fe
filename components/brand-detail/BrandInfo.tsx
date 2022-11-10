@@ -1,5 +1,3 @@
-//todo:未着手
-
 import { tw } from "twind";
 import { Tab } from "./Tab.tsx";
 
@@ -21,19 +19,19 @@ export function BrandInfo(props: Props) {
   ];
   return (
     <>
-      <div class="mt-3 mb-10">
+      <div class="mt-2">
         <div class="mx-4 flex items-center">
           <img
             src="/icon/common/others/at.png"
             alt="会社情報アイコン"
             class="h-4 w-4 mr-1"
           />
-          <p class="text-[0.625rem] text-lightGray">{props.company}</p>
+          <p class="text-2.5">{props.company}</p>
         </div>
-        <p class="text-sm ml-4 my-3">{props.brandName}</p>
+        <p class="text-sm ml-4 mt-2">{props.brandName}</p>
         <Tab />
         {BrandInfo.map((brand) => (
-          <div class="text-[0.625rem] flex border-b mt-4 first:mt-0 mx-8 pb-2 pl-4">
+          <div class="flex border-b mt-4 first:mt-0 mx-8 pb-2 px-2 text-2.5">
             <p class={`w-20 ${tw`(shrink)`}`}>{brand.name}</p>
             <p>{brand.content}</p>
           </div>

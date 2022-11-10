@@ -6,7 +6,7 @@ interface Props {
   klass?: string;
   name?: string;
   link?: string;
-  arrow?: "left" | "right"; //矢印を出したいときに使う
+  arrow?: "left" | "right" | "down"; //矢印を出したいときに使う
   list?: string[];
   buttonList?: {
     name: string;
@@ -37,12 +37,23 @@ export function WhiteButton(props: Props) {
           />
         )
         : null}
-      {props.arrow == "right" ? <div class="w-6" /> : null}
+      {props.arrow == "right" || props.arrow == "down"
+        ? <div class="w-6" />
+        : null}
       <p class="flex-1">{props.name}</p>
       {props.arrow == "right"
         ? (
           <img
             src="/icon/common/arrow/brownRight.png"
+            alt="茶色の右矢印"
+            class="h-2 w-2 mr-4"
+          />
+        )
+        : null}
+      {props.arrow == "down"
+        ? (
+          <img
+            src="/icon/common/arrow/brownDown.png"
             alt="茶色の右矢印"
             class="h-2 w-2 mr-4"
           />
