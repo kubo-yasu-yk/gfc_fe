@@ -15,6 +15,7 @@ export interface brandDetail {
   area: string;
   items: string;
   profile: string;
+  imgs: string[];
 }
 
 const brandDataList = [{
@@ -199,6 +200,14 @@ const brandDataList4 = {
   area: "全国",
   items: "のり弁当、唐揚げ弁当など",
   profile: "和食から洋食まで幅広いお弁当を取り扱っています。お弁当キットがあるので、そちらをレンジで温めるとすぐに配達が可能です。",
+  imgs: [
+    "/icon/brand-detail/brandPhoto0.png",
+    "/icon/brand-detail/brandPhoto1.jpeg",
+    "/icon/brand-detail/brandPhoto2.jpeg",
+    "/icon/brand-detail/brandPhoto3.jpeg",
+    "/icon/brand-detail/brandPhoto4.jpeg",
+    "/icon/brand-detail/brandPhoto5.jpeg",
+  ],
 };
 
 export interface BrandData {

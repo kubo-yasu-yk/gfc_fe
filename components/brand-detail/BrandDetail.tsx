@@ -24,7 +24,7 @@ export function BrandDetail(props: Props) {
     >
       <LoginHeader onClick={props.onClick} />
       <main>
-        <BrandPhoto />
+        <BrandPhoto data={data.brandDataList4} />
         <BrandInfo data={data.brandDataList4} />
         <BrownButton
           name="申請手続きへ"
