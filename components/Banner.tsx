@@ -7,7 +7,7 @@ import { SwiperFeature } from "../components/common/Feature.tsx";
 declare var Swiper: any;
 
 interface Props {
-  banners: { src: string }[];
+  bannerList: string[];
 }
 
 export default class SwipeBanners extends Component<Props> {
@@ -41,7 +41,7 @@ export default class SwipeBanners extends Component<Props> {
       <>
         <div class="swiper-container overflow-hidden">
           <div class="swiper-wrapper">
-            <SwiperFeature featureList={this.props.banners} />
+            <SwiperFeature bannerList={this.props.bannerList} />
           </div>
           <div class="swiper-pagination" />
         </div>

@@ -3,7 +3,7 @@ import { tw } from "twind";
 
 interface Props {
   imgs?: string[];
-  brandList?: { name: string; genre: string; src: string }[];
+  brandList?: { name?: string; genre?: string; src?: string }[];
 }
 
 //ブランドの写真をスクロール表示させたい時に使用

@@ -13,10 +13,10 @@ interface Props {
 export function SwiperFeature(props: Props) {
   return (
     <>
-      {props.featureList?.map((feature) => (
+      {props.bannerList?.map((banner) => (
         <div class="rounded-lg text-center flex text-center swiper-slide">
           <img
-            src={feature.src}
+            src={banner}
             alt="メインバナー"
             class="h-40 text-white mx-auto text-2.5"
           />

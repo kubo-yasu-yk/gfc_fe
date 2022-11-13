@@ -1,8 +1,13 @@
 import { useState } from "preact/hooks";
+import { BrandData } from "../shared/server/brand.ts";
 import { Mypage } from "../components/Mypage.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
-export default function islands() {
+interface Props {
+  data: BrandData;
+}
+
+export default function islands(props: Props) {
   const [open, setOpen] = useState(false);
   const [visibleMenu, setVisibleMenu] = useState(false);
 
@@ -19,7 +24,7 @@ export default function islands() {
   };
   return (
     <div>
-      <Mypage open={visibleMenu} onClick={toggleFunction} />
+      <Mypage open={visibleMenu} data={props.data} onClick={toggleFunction} />
       {visibleMenu ? <DrawerMenu open={open} onClick={toggleFunction} /> : null}
     </div>
   );

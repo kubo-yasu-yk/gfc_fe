@@ -1,10 +1,10 @@
 import { useState } from "preact/hooks";
-import { TopInfo } from "../shared/sever/top.ts";
+import { AllData } from "../routes/index.tsx";
 import { Top } from "../components/index/Top.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
 interface Props {
-  info: TopInfo;
+  data: AllData;
 }
 
 export default function islands(props: Props) {
@@ -24,7 +24,7 @@ export default function islands(props: Props) {
   };
   return (
     <div>
-      <Top open={drawerMenu} info={props.info} onClick={toggleFunction} />
+      <Top open={drawerMenu} data={props.data} onClick={toggleFunction} />
       {drawerMenu ? <DrawerMenu open={open} onClick={toggleFunction} /> : null}
     </div>
   );

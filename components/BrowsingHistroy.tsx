@@ -1,4 +1,6 @@
 //閲覧履歴の要素をまとめたコンポーネント
+
+import { BrandData } from "../shared/server/brand.ts";
 import { LoginHeader } from "../components/common//Header.tsx";
 import { Title } from "../components/common//screen-title/Title.tsx";
 import { SearchBox } from "../components/common//input/SearchBox.tsx";
@@ -10,24 +12,12 @@ import { Footer } from "../components/common//Footer.tsx";
 
 interface Props {
   open: boolean;
+  data: BrandData;
   onClick: (e: Event) => void;
 }
 
 export function BrowsingHistory(props: Props) {
-  const visitedBrandList = [{
-    name: "花村屋拉麺",
-    genre: "ラーメン",
-    src: "/image/brandLogo/logo1.jpg",
-  }, {
-    name: "花村屋拉麺",
-    genre: "ラーメン",
-    src: "/image/brandLogo/logo1.jpg",
-  }, {
-    name: "花村屋拉麺",
-    genre: "ラーメン",
-    src: "/image/brandLogo/logo1.jpg",
-  }];
-
+  const data = props.data;
   const brands = ["", "", "", "", ""]; //5行分出すために空の配列を作成している
 
   return (
@@ -40,7 +30,7 @@ export function BrowsingHistory(props: Props) {
         <SearchBox />
         <ResultNumber displayNumStart={16} displayNumEnd={30} totalNum={45} />
         <div class="border border-t">
-          {brands.map(() => <TripleBrand brandList={visitedBrandList} />)}
+          {brands.map(() => <TripleBrand brandList={data.brandDataList} />)}
         </div>
         <PageNation displayNumStart={2} displayNumEnd={3} />
         <WhiteButton name="もっとブランドを探す" link="/" klass="mt-4" />

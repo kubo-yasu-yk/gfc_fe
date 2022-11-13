@@ -1,4 +1,6 @@
 //お気に入りの要素をまとめたコンポーネント
+
+import { BrandData } from "../shared/server/brand.ts";
 import { useState } from "preact/hooks";
 import { LoginHeader } from "../components/common/Header.tsx";
 import { Title } from "../components/common/screen-title/Title.tsx";
@@ -10,8 +12,9 @@ import { WhiteButton } from "../components/common/Button.tsx";
 import { Footer } from "../components/common/Footer.tsx";
 
 interface Props {
-  open?: boolean;
-  onClick?: (e: Event) => void;
+  open: boolean;
+  data: BrandData;
+  onClick: (e: Event) => void;
 }
 
 export function Favorite(props: Props) {
@@ -27,21 +30,7 @@ export function Favorite(props: Props) {
       setName("キャンセル");
     }
   };
-
-  const favoriteBrandList = [{
-    name: "花村屋拉麺",
-    genre: "ラーメン",
-    src: "/image/brandLogo/logo1.jpg",
-  }, {
-    name: "花村屋拉麺",
-    genre: "ラーメン",
-    src: "/image/brandLogo/logo1.jpg",
-  }, {
-    name: "花村屋拉麺",
-    genre: "ラーメン",
-    src: "/image/brandLogo/logo1.jpg",
-  }];
-
+  const data = props.data;
   const brands = ["", "", "", "", ""]; //5行分出すために空の配列を作成している
 
   return (
@@ -61,7 +50,7 @@ export function Favorite(props: Props) {
         />
         <div class="border border-t">
           {brands.map(() => (
-            <FavTripleBrand brandList={favoriteBrandList} dastBox={dastBox} />
+            <FavTripleBrand brandList={data.brandDataList} dastBox={dastBox} />
           ))}
         </div>
         <PageNation displayNumStart={2} displayNumEnd={3} />
