@@ -210,11 +210,45 @@ const brandDataList4 = {
   ],
 };
 
+const brandRanking = [
+  {
+    src: "/image/brandLogo/logo1.jpg",
+    name: "花村屋拉麺",
+    genre: "ラーメン",
+    num: 1000,
+  },
+  {
+    src: "/image/brandLogo/logo1.jpg",
+    name: "花村屋拉麺",
+    genre: "ラーメン",
+    num: 900,
+  },
+  {
+    src: "/image/brandLogo/logo1.jpg",
+    name: "花村屋拉麺",
+    genre: "ラーメン",
+    num: 800,
+  },
+  {
+    src: "/image/brandLogo/logo1.jpg",
+    name: "花村屋拉麺",
+    genre: "ラーメン",
+    num: 700,
+  },
+  {
+    src: "/image/brandLogo/logo1.jpg",
+    name: "花村屋拉麺",
+    genre: "ラーメン",
+    num: 600,
+  },
+];
+
 export interface BrandData {
   brandDataList: brand[];
   brandDataList2: brand[];
   brandDataList3: brand[];
   brandDataList4: brandDetail;
+  brandRanking: brand[];
 }
 
 export function getBrandData() {
@@ -223,5 +257,6 @@ export function getBrandData() {
     brandDataList2: brandDataList2,
     brandDataList3: brandDataList3,
     brandDataList4: brandDataList4,
+    brandRanking: brandRanking,
   };
 }
