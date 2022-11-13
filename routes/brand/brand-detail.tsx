@@ -1,12 +1,13 @@
 import { BrandData, getBrandData } from "../../shared/server/brand.ts";
 import { FeatureData, getFeatureData } from "../../shared/server/feature.ts";
+import { BannerData, getBannerData } from "../../shared/server/banner.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
 import BrandDetail from "../../islands/BrandDetail.tsx";
 
-export type BrandDetailData = FeatureData & BrandData;
+export type AllData = FeatureData & BrandData & BannerData;
 
-export default function routes({ data }: PageProps<BrandDetailData>) {
+export default function routes({ data }: PageProps<AllData>) {
   return (
     <>
       <Head>
@@ -22,10 +23,11 @@ export default function routes({ data }: PageProps<BrandDetailData>) {
   );
 }
 
-export const handler: Handlers<BrandDetailData> = {
+export const handler: Handlers<AllData> = {
   GET(_, ctx) {
     const brandData = getBrandData();
     const featureData = getFeatureData();
-    return ctx.render({ ...brandData, ...featureData });
+    const bannerData = getBannerData();
+    return ctx.render({ ...brandData, ...featureData, ...bannerData });
   },
 };

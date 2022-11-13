@@ -1,6 +1,6 @@
 //フリーワード検索画面の要素をまとめたコンポーネント
 
-import { BrandData } from "../shared/server/brand.ts";
+import { AllData } from "../routes/search-genre.tsx";
 import { SearchBoxHeader } from "../components/common/Header.tsx";
 import { ResultNumber } from "../components/common/others/ResultNumber.tsx";
 import { ResultBrand } from "../components/common/Brand.tsx";
@@ -14,7 +14,7 @@ import { LongFooter } from "../components/common/Footer.tsx";
 interface Props {
   open: boolean;
   display: boolean;
-  data: BrandData;
+  data: AllData;
   onClick: (e: Event) => void;
   onClickButton: (e: Event) => void;
   Accodion?: (e: Event) => void;
@@ -44,7 +44,7 @@ export function Freeword(props: Props) {
         <ResultBrand brandList={data.brandDataList3} />
         <PageNation displayNumStart={2} displayNumEnd={28} />
       </main>
-      <LongFooter />
+      <LongFooter data={data.bannerList} />
     </div>
   );
 }

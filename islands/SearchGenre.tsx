@@ -1,11 +1,11 @@
 import { useState } from "preact/hooks";
-import { BrandData } from "../shared/server/brand.ts";
+import { AllData } from "../routes/search-genre.tsx";
 import { SearchGenre } from "../components/SearchGenre.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 import { NarrowDown } from "../components/common/narrow-down/NarrowDown.tsx";
 
 interface Props {
-  data: BrandData;
+  data: AllData;
 }
 
 export default function islands(props: Props) {

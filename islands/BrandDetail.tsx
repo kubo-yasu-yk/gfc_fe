@@ -1,10 +1,10 @@
-import { BrandDetailData } from "../routes/brand/brand-detail.tsx";
+import { AllData } from "../routes/brand/brand-detail.tsx";
 import { useState } from "preact/hooks";
 import { BrandDetail } from "../components/brand-detail/BrandDetail.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
 interface Props {
-  data: BrandDetailData;
+  data: AllData;
 }
 
 export default function islands(props: Props) {

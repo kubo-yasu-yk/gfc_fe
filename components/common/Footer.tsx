@@ -3,6 +3,10 @@ import { SearchBox } from "./input/SearchBox.tsx";
 import { RightArrowLinkList, WLinkList } from "./others/LinkList.tsx";
 import { SNSAccount } from "./others/SNSAccount.tsx";
 
+interface Props {
+  data: string[];
+}
+
 //通常のフッターを挿入する時に使用する
 export function Footer() {
   const contents = [
@@ -28,19 +32,13 @@ export function Footer() {
 }
 
 //長いフッターを挿入する時に使用する
-export function LongFooter() {
+export function LongFooter(props: Props) {
+  const data = props.data;
   const linkList = [
     { name: "ジャンルから探す", link: "", border: true },
     { name: "お気に入りブランドから探す", link: "/mypage/favorite", border: true },
     { name: "閲覧履歴から探す", link: "/mypage/browsing-history", border: true },
     { name: "ランキングから探す", link: "" },
-  ];
-
-  const bannerList = [
-    "/image/feature/banner1.jpg",
-    "/image/feature/banner2.jpg",
-    "/image/feature/banner3.jpg",
-    "/image/feature/banner4.jpg",
   ];
 
   const wLinkList = [
@@ -54,7 +52,7 @@ export function LongFooter() {
       <div class="pt-2 pb-5 mb-12 bg-lightBrown">
         <SearchBox />
         <RightArrowLinkList linkList={linkList} />
-        <Banner bannerList={bannerList} />
+        <Banner bannerList={data} />
       </div>
       <WLinkList WlinkList={wLinkList} />
       <SNSAccount />

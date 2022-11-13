@@ -1,6 +1,6 @@
 //ブランド詳細画面の要素をまとめたコンポーネント
 
-import { BrandDetailData } from "../../routes/brand/brand-detail.tsx";
+import { AllData } from "../../routes/brand/brand-detail.tsx";
 import { LoginHeader } from "../common/Header.tsx";
 import BrandPhoto from "../../components/brand-detail/BrandPhoto.tsx";
 import { BrownButton, WhiteButton } from "../common/Button.tsx";
@@ -12,7 +12,7 @@ import { LongFooter } from "../common/Footer.tsx";
 
 interface Props {
   open: boolean;
-  data: BrandDetailData;
+  data: AllData;
   onClick: (e: Event) => void;
 }
 
@@ -41,7 +41,7 @@ export function BrandDetail(props: Props) {
           klass="mt-4 mb-12"
         />
       </main>
-      <LongFooter />
+      <LongFooter data={data.bannerList} />
     </div>
   );
 }
