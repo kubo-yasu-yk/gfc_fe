@@ -1,6 +1,6 @@
 import { Head } from "$fresh/runtime.ts";
 import Index from "../islands/index.tsx";
-import { getTopInfo, TopInfo } from "../shared/sever/top.ts";
+import { getTopInfo, TopInfo } from "../shared/server/top.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
 
 export default function routes({ data }: PageProps<TopInfo>) {

@@ -1,9 +1,13 @@
-import { Head } from "$fresh/runtime.ts";
+import { BrandDetailData } from "../routes/brand/brand-detail.tsx";
 import { useState } from "preact/hooks";
 import { BrandDetail } from "../components/brand-detail/BrandDetail.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 
-export default function islands() {
+interface Props {
+  data: BrandDetailData;
+}
+
+export default function islands(props: Props) {
   const [open, setOpen] = useState(false);
   const [visibleMenu, setVisibleMenu] = useState(false);
 
@@ -20,7 +24,11 @@ export default function islands() {
   };
   return (
     <div>
-      <BrandDetail open={visibleMenu} onClick={toggleFunction} />
+      <BrandDetail
+        open={visibleMenu}
+        data={props.data}
+        onClick={toggleFunction}
+      />
       {visibleMenu ? <DrawerMenu open={open} onClick={toggleFunction} /> : null}
     </div>
   );

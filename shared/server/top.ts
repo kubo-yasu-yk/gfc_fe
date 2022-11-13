@@ -80,11 +80,7 @@ const allGenres = [
 
 const recentGenres = [
   { name: "洋食", src: "/image/genre/western.jpeg", link: "/search-genre" },
-  {
-    name: "焼肉",
-    src: "/image/genre/grilled-meat.jpg",
-    link: "/search-genre",
-  },
+  { name: "焼肉", src: "/image/genre/grilled-meat.jpg", link: "/search-genre" },
   {
     name: "ファーストフード",
     src: "/image/genre/fast-food.jpeg",

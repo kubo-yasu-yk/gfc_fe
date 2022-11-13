@@ -1,5 +1,6 @@
 //ジャンル検索の要素をまとめたコンポーネント
 
+import { BrandData } from "../shared/server/brand.ts";
 import { SearchBoxHeader } from "../components/common/Header.tsx";
 import { ResultNumber } from "../components/common/others/ResultNumber.tsx";
 import { ResultBrand } from "../components/common/Brand.tsx";
@@ -13,65 +14,16 @@ import { LongFooter } from "../components/common/Footer.tsx";
 interface Props {
   open: boolean;
   display: boolean;
+  data: BrandData;
   onClick: (e: Event) => void;
   onClickButton: (e: Event) => void;
   Accodion?: (e: Event) => void;
 }
 
-const brandList = [{
-  name: "オリジン弁当",
-  genre: "和食、洋食、中華",
-  price: "500円 〜 2,000円",
-}, {
-  name: "オリジン弁当",
-  genre: "和食、洋食、中華",
-  price: "500円 〜 2,000円",
-}, {
-  name: "オリジン弁当",
-  genre: "和食、洋食、中華",
-  price: "500円 〜 2,000円",
-}, {
-  name: "オリジン弁当",
-  genre: "和食、洋食、中華",
-  price: "500円 〜 2,000円",
-}, {
-  name: "オリジン弁当",
-  genre: "和食、洋食、中華",
-  price: "500円 〜 2,000円",
-}, {
-  name: "オリジン弁当",
-  genre: "和食、洋食、中華",
-  price: "500円 〜 2,000円",
-}, {
-  name: "オリジン弁当",
-  genre: "和食、洋食、中華",
-  price: "500円 〜 2,000円",
-}, {
-  name: "オリジン弁当",
-  genre: "和食、洋食、中華",
-  price: "500円 〜 2,000円",
-}, {
-  name: "オリジン弁当",
-  genre: "和食、洋食、中華",
-  price: "500円 〜 2,000円",
-}, {
-  name: "オリジン弁当",
-  genre: "和食、洋食、中華",
-  price: "500円 〜 2,000円",
-}];
-
-const imgs = [
-  "/icon/brand-detail/brandPhoto0.png",
-  "/icon/brand-detail/brandPhoto1.jpeg",
-  "/icon/brand-detail/brandPhoto2.jpeg",
-  "/icon/brand-detail/brandPhoto3.jpeg",
-  "/icon/brand-detail/brandPhoto4.jpeg",
-  "/icon/brand-detail/brandPhoto5.jpeg",
-];
-
 const sortOrderList = ["おすすめ", "人気順", "新着順", "価格帯（安い）", "価格帯（高い）"];
 
 export function SearchGenre(props: Props) {
+  const data = props.data;
   return (
     <div class={`${props.display || props.open ? "fixed w-full" : ""}`}>
       <SearchBoxHeader onClick={props.onClick} />
@@ -94,8 +46,8 @@ export function SearchGenre(props: Props) {
             Accodion={props.Accodion}
           />
         </div>
-        <ResultBrand brandList={brandList} imgs={imgs} />
-        <PageNation displayNumStart={2} displayNumEnd={28} />
+        <ResultBrand brandList={data.brandDataList3} />
+        <PageNation displayNumStart={2} displayNumEnd={28} klass="mb-10" />
       </main>
       <LongFooter />
     </div>

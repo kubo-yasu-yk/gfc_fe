@@ -10,14 +10,15 @@ interface Props {
   contractNum?: number; //契約数を表示したい時に使う
   status?: number; //ブランドの申請ステータスを取得したい時に使う
   brandList?: {
+    status?: number;
     src?: string;
     name?: string;
     genre?: string;
     price?: string;
     content?: string;
     num?: number;
+    imgs?: string[];
   }[];
-  applyingList?: { status: number; name: string; genre: string; src: string }[];
   imgs?: string[];
   dastBox?: boolean; //FavTripleBrand関数で削除ボタンに切り替える時に使う
   visited?: boolean; //TripleBrand関数で閲覧履歴画面の表示に使う
@@ -124,7 +125,7 @@ export function ResultBrand(props: Props) {
             </div>
             <Favorite />
           </div>
-          <ScrollBrandPhotos imgs={props.imgs} />
+          <ScrollBrandPhotos imgs={list.imgs} />
           <BrownButton
             name="ブランド詳細ページへ"
             link="/brand/brand-detail"
@@ -242,7 +243,7 @@ export function ApplyBrand(props: Props) {
 
   return (
     <>
-      {props.applyingList?.map((brand) => (
+      {props.brandList?.map((brand) => (
         <div class="border m-4 rounded">
           <a href="/brand/brand-detail" class="flex my-4 mx-4">
             <img
@@ -254,7 +255,8 @@ export function ApplyBrand(props: Props) {
               <p class="text-sm">{brand.name}</p>
               <p class="my-1 ml-4">ジャンル：{brand.genre}</p>
               <p class="ml-4">
-                ステータス：{statusList[brand.status].status}
+                ステータス：{statusList[brand.status!].status}
+                {/*todo:何で！マークが必要なのか聞く*/}
               </p>
             </div>
           </a>

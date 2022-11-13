@@ -1,8 +1,9 @@
 //マイページトップの要素をまとめたコンポーネント
 
+import { BrandData } from "../shared/server/brand.ts";
 import { LoginHeader } from "./common/Header.tsx";
 import { Title } from "./common/screen-title/Title.tsx";
-import { BlackButton, BrownButton, WhiteButton } from "./common/Button.tsx";
+import { BlackButton } from "./common/Button.tsx";
 import { Leading } from "./common/others/Leading.tsx";
 import { ScrollFavBrand } from "./common/scroll/Scroll.tsx";
 import { BorderLinkList } from "./common/others/LinkList.tsx";
@@ -13,37 +14,12 @@ import { Footer } from "./common/Footer.tsx";
 
 interface Props {
   open: boolean;
+  data: BrandData;
   onClick: (e: Event) => void;
 }
 
 export function Mypage(props: Props) {
-  const visitedBrandList = [{
-    name: "ガスト",
-    src: "/image/brandLogo/logo1.jpg",
-    content: "ガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここガストの説明はここ",
-  }, {
-    name: "ガスト",
-    src: "/image/brandLogo/logo1.jpg",
-    content: "ガストの説明はここガストの説明はここガストの説明はここ",
-  }, {
-    name: "ガスト",
-    src: "/image/brandLogo/logo1.jpg",
-    content: "ガストの説明はここガストの説明はここ",
-  }];
-
-  const favBrandList = [{
-    genre: "洋食",
-    name: "ガスト",
-    src: "/image/brandLogo/logo1.jpg",
-  }, {
-    genre: "洋食",
-    name: "ガスト",
-    src: "/image/brandLogo/logo1.jpg",
-  }, {
-    genre: "洋食",
-    name: "ガスト",
-    src: "/image/brandLogo/logo1.jpg",
-  }];
+  const data = props.data;
 
   const settingList = [
     { name: "会員情報の確認・変更", src: "/icon/mypage/human.png", alt: "人型アイコン" },
@@ -84,14 +60,14 @@ export function Mypage(props: Props) {
           linkName="すべて見る"
           link="/mypage/favorite"
         />
-        <ScrollFavBrand brandList={favBrandList} />
+        <ScrollFavBrand brandList={data.brandDataList} />
         <Leading
           title="最近チェックしたブランド"
           more={true}
           linkName="すべて見る"
           link="/mypage/browsing-history"
         />
-        <BrandList brandList={visitedBrandList} />
+        <BrandList brandList={data.brandDataList} />
         <Leading title="登録内容の確認・修正" />
         <BorderLinkList linkList={settingList} />
         <div class="mx-4 flex mx-auto mt-2 justify-end">

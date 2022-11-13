@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { TopInfo } from "../shared/sever/top.ts";
+import { TopInfo } from "../shared/server/top.ts";
 import { Top } from "../components/index/Top.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 

@@ -1,5 +1,6 @@
 //申請中ブランド一覧画面の要素をまとめたコンポーネント
 
+import { BrandData } from "../shared/server/brand.ts";
 import { LoginHeader } from "../components/common/Header.tsx";
 import { Title } from "../components/common/screen-title/Title.tsx";
 import { SearchBox } from "../components/common/input/SearchBox.tsx";
@@ -10,32 +11,17 @@ import { Footer } from "../components/common/Footer.tsx";
 
 interface Props {
   open: boolean;
+  data: BrandData;
   onClick: (e: Event) => void;
 }
 
 export function Applying(props: Props) {
+  const data = props.data;
   const buttonList = [
     { name: "status", label: "すべて", checked: true },
     { name: "status", label: "申請中" },
     { name: "status", label: "契約可能" },
   ];
-
-  const applyingList = [{
-    status: 0,
-    name: "マクドナルド",
-    genre: "ファーストフード",
-    src: "/icon/browsingHistory/mac.png",
-  }, {
-    status: 1,
-    name: "マクドナルド",
-    genre: "ファーストフード",
-    src: "/icon/browsingHistory/mac.png",
-  }, {
-    status: 2,
-    name: "マクドナルド",
-    genre: "ファーストフード",
-    src: "/icon/browsingHistory/mac.png",
-  }];
 
   return (
     <div class={`${props.open ? "fixed w-full" : ""}`}>
@@ -45,9 +31,9 @@ export function Applying(props: Props) {
         <SearchBox />
         <RadioButton buttonList={buttonList} klass="my-4" />
         <BgLeading title="2022年10月25日" />
-        <ApplyBrand applyingList={applyingList} />
+        <ApplyBrand brandList={data.brandDataList} />
         <BgLeading title="2022年10月25日" />
-        <ApplyBrand applyingList={applyingList} />
+        <ApplyBrand brandList={data.brandDataList} />
         <WhiteButton name="申請中のブランドをもっと見る" arrow="down" klass="mt-4" />
       </main>
       <Footer />

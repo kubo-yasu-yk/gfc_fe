@@ -1,9 +1,14 @@
 import { useState } from "preact/hooks";
+import { BrandData } from "../shared/server/brand.ts";
 import { Freeword } from "../components/Freeword.tsx";
 import { DrawerMenu } from "../components/common/drawerMenu/DrawerMenu.tsx";
 import { NarrowDown } from "../components/common/narrow-down/NarrowDown.tsx";
 
-export default function islands() {
+interface Props {
+  data: BrandData;
+}
+
+export default function islands(props: Props) {
   const [open, setOpen] = useState(false);
   const [visibleMenu, setVisibleMenu] = useState(false);
   const [display, setDisplay] = useState(false);
@@ -40,6 +45,7 @@ export default function islands() {
         <Freeword
           open={visibleMenu}
           display={visibleNarrowDown}
+          data={props.data}
           onClick={DrawerToggleFunction}
           onClickButton={NarrowToggleFunction}
         />

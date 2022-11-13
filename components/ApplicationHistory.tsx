@@ -1,5 +1,6 @@
 //申請中履歴一覧画面の要素をまとめたコンポーネント
 
+import { BrandData } from "../shared/server/brand.ts";
 import { LoginHeader } from "../components/common/Header.tsx";
 import { Title } from "../components/common/screen-title/Title.tsx";
 import { SearchBox } from "../components/common/input/SearchBox.tsx";
@@ -15,6 +16,7 @@ import { Footer } from "../components/common/Footer.tsx";
 interface Props {
   open: boolean;
   display: boolean;
+  data: BrandData;
   onClick: (e: Event) => void;
   onClickButton: (e: Event) => void;
   Accodion?: (e: Event) => void;
@@ -22,34 +24,7 @@ interface Props {
 
 export function ApplicationHistory(props: Props) {
   const sortOrderList = ["申請日順（新しい順）", "申請日順（古い順）"];
-
-  const applyingList = [{
-    status: 0,
-    name: "花丸屋拉麺",
-    genre: "ラーメン",
-    src: "/image/brandLogo/logo1.jpg",
-  }, {
-    status: 1,
-    name: "花丸屋拉麺",
-    genre: "ラーメン",
-    src: "/image/brandLogo/logo1.jpg",
-  }, {
-    status: 2,
-    name: "花丸屋拉麺",
-    genre: "ラーメン",
-    src: "/image/brandLogo/logo1.jpg",
-  }, {
-    status: 3,
-    name: "花丸屋拉麺",
-    genre: "ラーメン",
-    src: "/image/brandLogo/logo1.jpg",
-  }, {
-    status: 4,
-    name: "花丸屋拉麺",
-    genre: "ラーメン",
-    src: "/image/brandLogo/logo1.jpg",
-  }];
-
+  const data = props.data;
   return (
     <div
       class={`${props.display || props.open ? "fixed w-full" : ""}`}
@@ -71,9 +46,9 @@ export function ApplicationHistory(props: Props) {
           />
         </div>
         <BgLeading title="2022年10月25日" />
-        <ApplyBrand applyingList={applyingList} />
+        <ApplyBrand brandList={data.brandDataList2} />
         <BgLeading title="2022年10月2日" />
-        <ApplyBrand applyingList={applyingList} />
+        <ApplyBrand brandList={data.brandDataList2} />
         <WhiteButton name="申請中のブランドをもっと見る" arrow="down" />
       </main>
       <Footer />
