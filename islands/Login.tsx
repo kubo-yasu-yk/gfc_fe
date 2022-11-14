@@ -1,7 +1,5 @@
-import { Button } from "../components/login/Button.tsx";
-import { InputMail } from "../components/login/InputMail.tsx";
-import { InputPassword } from "../components/login/InputPassword.tsx";
 import { useState } from "preact/hooks";
+import { Login } from "../components/Login.tsx";
 
 export default function islands() {
   const [mail, setMail] = useState("");
@@ -17,45 +15,5 @@ export default function islands() {
     return !mail || !password;
   };
 
-  return (
-    <>
-      <p class="text-[12px] text-[#5F5F5F] font-bold ml-6 mt-6">
-        メールアドレス
-      </p>
-      <p class="text-[10px] text-[#FF0000] font-bold ml-6 mt-2">
-        {!mail ? "メールアドレスが入力されていません。" : null}
-      </p>
-      <InputMail
-        placeholder="insyoku.franchise@insyoku.co.jp"
-        width="20rem"
-        value={mail}
-        onInput={onInputMail}
-      />
-
-      <p class="text-[12px] text-[#5F5F5F] font-bold ml-6 mt-3">
-        パスワード
-      </p>
-
-      <p class="text-[10px] text-[#FF0000] font-bold ml-6 mt-2">
-        {!password ? "パスワードが入力されていません。" : null}
-      </p>
-
-      <InputPassword
-        placeholder="半角英数字の6~20文字"
-        width="20rem"
-        value={password}
-        onInput={onInputPassword}
-      />
-
-      <p class="text-[10px] text-[#947771] text-right mr-4 mb-8 font-bold">
-        パスワードを表示する
-      </p>
-
-      <Button
-        contents="ログイン"
-        disabled={isDisabled()}
-        onClick={(e) => console.log(e)}
-      />
-    </>
-  );
+  return <Login />;
 }

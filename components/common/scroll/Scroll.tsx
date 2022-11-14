@@ -28,7 +28,7 @@ export function ScrollBrandPhotos(props: Props) {
 export function ScrollFavBrand(props: Props) {
   return (
     <div class={`flex w-full overflow-x-auto ${tw`(hidden-scrollbar)`}`}>
-      <div class="mr-2 flex">
+      <div class="pr-2 flex">
         {props.brandList?.map((brand) => (
           <FavBrand
             src={brand.src}

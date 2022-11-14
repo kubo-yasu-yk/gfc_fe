@@ -1,5 +1,4 @@
 //SNSアイコンを出すときに使うコンポーネント
-//todo:linkの設定
 
 export function SNSAccount() {
   const icons = [

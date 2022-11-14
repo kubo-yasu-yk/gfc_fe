@@ -14,7 +14,7 @@ export function SearchBox() {
         type="text"
         onChange={(e) => location.href = "/freeword/" + e.target.value}
         placeholder="ブランドを検索する"
-        class={`h-10 bg-white rounded-full w-full pl-10 text-xs border border-brown ${tw`(outline-hidden brown-placeholder)`} `}
+        class={`h-10 bg-white rounded-full w-full pl-10 text-xs border border-brown ${tw`(brown-placeholder)`} `}
       />
     </div>
   );

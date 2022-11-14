@@ -9,7 +9,11 @@ html {
   display: none;
 }
 
-.outline-hidden {
+::placeholder {
+  font-size: 0.625rem;
+}
+
+:focus {
   outline: none;
 }
 

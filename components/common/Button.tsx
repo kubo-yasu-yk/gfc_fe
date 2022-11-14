@@ -14,6 +14,8 @@ interface Props {
   }[];
   onClickButton?: (e: Event) => void;
   Accodion?: (e: Event) => void;
+  disabled?: boolean;
+  onClick?: (e: Event) => void;
 }
 
 //一番よく使う茶色枠・白色背景のボタン
@@ -170,6 +172,8 @@ export function GrayButton(props: Props) {
       class={`h-10 w-72 mx-auto flex items-center rounded text-center text-white text-xs bg-[#EBEBEB] ${
         props.klass ? props.klass : null
       }`}
+      disabled={props.disabled}
+      onClick={props.onClick}
     >
       {props.arrow == "left"
         ? (
@@ -256,11 +260,11 @@ export function RadioButton(props: Props) {
   return (
     <div class={`flex ${props.klass ? props.klass : null}`}>
       {props.buttonList?.map((button) => (
-        <label class="flex text-xs items-center ml-8">
+        <label class="flex items-center ml-8 text-2.5">
           <input
             type="radio"
             name={button.name}
-            class="w-4 h-4 rounded-full
+            class="w-3 h-3 rounded-full
                   border mr-1 accent-brown"
             required
             checked={button.checked}

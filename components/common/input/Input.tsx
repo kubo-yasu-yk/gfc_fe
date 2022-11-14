@@ -4,16 +4,18 @@ interface Props {
   checked?: boolean; //チェックボックスのチェック有無
   klass?: string;
   inputList?: string[];
+  value?: string;
+  onInput?: (e: Event) => void;
 }
 
 //通常の入力ボタン
 export function Input(props: Props) {
   return (
     <input
-      class={`pl-2 h-10 rounded border border-lightGray ${
-        props.klass ? props.klass : null
-      }`}
+      class={`pl-2 h-10 rounded border ${props.klass ? props.klass : null}`}
       placeholder={props.placeholder}
+      value={props.value}
+      onInput={props.onInput}
     />
   );
 }
@@ -25,7 +27,7 @@ export function WInput(props: Props) {
       {props.inputList?.map((input) => (
         <input
           placeholder={input}
-          class={`mr-2 pl-2 w-32 h-10 rounded border border-lightGray ${
+          class={`mr-2 pl-2 w-32 h-10 rounded border ${
             props.klass ? props.klass : null
           }`}
         />
@@ -39,7 +41,7 @@ export function HiddenInput(props: Props) {
   return (
     <div class={`h-10 relative ${props.klass ? props.klass : null}`}>
       <input
-        class="pl-2 w-72 h-10 rounded border-lightGray border"
+        class="pl-2 w-72 h-10 rounded border"
         placeholder={props.placeholder}
       />
       <img
