@@ -14,8 +14,6 @@ interface Props {
   }[];
   onClickButton?: (e: Event) => void;
   Accodion?: (e: Event) => void;
-  disabled?: boolean;
-  onClick?: (e: Event) => void;
 }
 
 //一番よく使う茶色枠・白色背景のボタン
@@ -172,8 +170,8 @@ export function GrayButton(props: Props) {
       class={`h-10 w-72 mx-auto flex items-center rounded text-center text-white text-xs bg-[#EBEBEB] ${
         props.klass ? props.klass : null
       }`}
-      disabled={props.disabled}
-      onClick={props.onClick}
+      disabled
+      onClick={props.onClickButton}
     >
       {props.arrow == "left"
         ? (

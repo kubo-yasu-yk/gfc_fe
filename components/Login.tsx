@@ -7,6 +7,7 @@ import { GrayButton } from "../components/common/Button.tsx";
 import { Footer } from "../components/common/Footer.tsx";
 
 interface Props {
+  onInputMail?: (e: Event) => void;
 }
 
 export function Login(props: Props) {
@@ -19,35 +20,21 @@ export function Login(props: Props) {
           <p class="text-xs mt-8">
             メールアドレス
           </p>
-          <p class="mt-1 text-2.5 text-red">
-            {!mail ? "メールアドレスが入力されていません。" : null}
-          </p>
           <Input
+            onInput={props.onInputMail}
             klass="w-full my-1 mb-8"
             placeholder="insyoku.franchise@insyoku.co.jp"
-            value={mail}
-            onInput={onInputMail}
           />
           <p class="text-xs">
             パスワード
           </p>
-          <p class="mt-1 text-2.5 text-red">
-            {!password ? "パスワードが入力されていません。" : null}
-          </p>
           <Input
             klass="w-full my-1"
             placeholder="半角英数字の6~20文字"
-            value={password}
-            onInput={onInputPassword}
           />
-          <p class="text-right text-2.5">
-            パスワードを表示する
-          </p>
           <GrayButton
             name="ログイン"
             klass="mt-8 mb-4"
-            disabled={isDisabled()}
-            onClick={(e) => console.log(e)}
           />
           <a href="/registration/input" class="text-center text-2.5">
             <p>初めてのご利用の方（新規会員登録）</p>

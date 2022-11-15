@@ -1,10 +1,12 @@
+import { useState } from "preact/hooks";
+
 interface Props {
   placeholder?: string;
   msg?: string; //チェックボックス横の文字列
   checked?: boolean; //チェックボックスのチェック有無
   klass?: string;
+  krass?: string; //klassを使った親要素を持つ子要素に任意のclassを指定したいときに使用
   inputList?: string[];
-  value?: string;
   onInput?: (e: Event) => void;
 }
 
@@ -14,7 +16,6 @@ export function Input(props: Props) {
     <input
       class={`pl-2 h-10 rounded border ${props.klass ? props.klass : null}`}
       placeholder={props.placeholder}
-      value={props.value}
       onInput={props.onInput}
     />
   );
@@ -38,16 +39,35 @@ export function WInput(props: Props) {
 
 //パスワードなど入力内容を非表示にしたい時に使う
 export function HiddenInput(props: Props) {
+  const [hidden, setHidden] = useState(true);
+  const OpenPassFunction = () => {
+    if (hidden) {
+      setHidden(false);
+    } else {
+      setHidden(true);
+    }
+  };
   return (
-    <div class={`h-10 relative ${props.klass ? props.klass : null}`}>
+    <div
+      class={`h-10 relative ${props.klass ? props.klass : null}`}
+      onInput={props.onInput}
+    >
       <input
-        class="pl-2 w-72 h-10 rounded border"
+        type={`${hidden ? "password" : "text"}`}
+        class={`pl-2 h-10 w-full rounded border absolute ${
+          props.krass ? props.krass : null
+        }`}
         placeholder={props.placeholder}
       />
       <img
-        src="/icon/common/input/display.png"
+        src={`${
+          hidden
+            ? "/icon/common/input/open.png"
+            : "/icon/common/input/close.png"
+        }`}
         alt="目のアイコン"
         class="h-4 w-4 absolute right-2 top-3"
+        onClick={OpenPassFunction}
       />
     </div>
   );
