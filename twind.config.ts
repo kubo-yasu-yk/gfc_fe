@@ -12,6 +12,7 @@ export default {
       lightGray: "#EBEBEB",
     },
     backgroundColor: {
+      red: "#FEDBDB", //ログイン画面のエラー時にinputタグにて使用
       brown: "#947771",
       white: "#ffffff",
       gray: "#5F5F5F",

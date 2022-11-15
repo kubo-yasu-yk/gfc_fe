@@ -33,7 +33,7 @@ export function ScrollFeature(props: Props) {
       class={`flex w-full overflow-x-auto pr-4 ${tw`(hidden-scrollbar)`}`}
     >
       {props.featureList?.map((feature) => (
-        <div>
+        <div class="last:pr-4">
           <div class="w-40 ml-4 text-2.5">
             <img
               src={feature.src}
