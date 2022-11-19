@@ -6,6 +6,7 @@ interface Props {
   link?: string;
   arrow?: "left" | "right" | "down"; //矢印を出したいときに使う
   list?: string[];
+  disabled?: boolean;
   buttonList?: {
     name: string;
     label: string;
@@ -162,6 +163,36 @@ export function FreeBrownButton(props: Props) {
   );
 }
 
+//bgをklassで任意の値に指定する茶色背景のボタン
+export function FreeButton(props: Props) {
+  const onClick = (e: Event) => {
+    if (!props.disabled) {
+      location.href = props.link!; //!をつけると強制的にそれをやる（!important的なやつ）
+    }
+  };
+  return (
+    <button
+      class={`h-10 w-72 mx-auto flex items-center rounded text-center text-white text-xs ${
+        props.klass ? props.klass : null
+      } ${props.disabled ? "bg-lightgray" : "bg-brown"}`}
+      disabled={props.disabled}
+      onClick={onClick}
+    >
+      {props.arrow == "right" ? <div class="w-6" /> : null}
+      <p class="flex-1">{props.name}</p>
+      {props.arrow == "right"
+        ? (
+          <img
+            src="/icon/common/arrow/whiteRight.png"
+            alt="白色の右矢印"
+            class="h-2 w-2 mr-4"
+          />
+        )
+        : null}
+    </button>
+  );
+}
+
 //灰色背景のボタン（disabledボタン）
 export function GrayButton(props: Props) {
   return (
@@ -170,8 +201,8 @@ export function GrayButton(props: Props) {
       class={`h-10 w-72 mx-auto flex items-center rounded text-center text-white text-xs bg-[#EBEBEB] ${
         props.klass ? props.klass : null
       }`}
-      disabled
-      onClick={props.onClickButton}
+      disabled={props.disabled}
+      // onClick={props.onClickButton}
     >
       {props.arrow == "left"
         ? (

@@ -2,7 +2,7 @@ import { useState } from "preact/hooks";
 import { BrownHeader } from "../components/common/Header.tsx";
 import { Title } from "../components/common/screen-title/Title.tsx";
 import { HiddenInput, Input } from "../components/common/input/Input.tsx";
-import { GrayButton } from "../components/common/Button.tsx";
+import { FreeButton } from "../components/common/Button.tsx";
 import { Footer } from "../components/common/Footer.tsx";
 import { Login } from "../components/Login.tsx";
 
@@ -115,11 +115,11 @@ export default function islands() {
             krass={pass.bg ? "bg-red" : ""}
             placeholder="半角英数字の6~20文字"
           />
-          <GrayButton
+          <FreeButton
             link="/"
             name="ログイン"
             klass="mt-10 mb-4"
-            onClickButton={disabled}
+            disabled={disabled()}
           />
           <a href="/registration/input" class="text-center text-2.5">
             <p>初めてのご利用の方（新規会員登録）</p>
