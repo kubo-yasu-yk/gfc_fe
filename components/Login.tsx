@@ -2,45 +2,57 @@
 
 import { BrownHeader } from "../components/common/Header.tsx";
 import { Title } from "../components/common/screen-title/Title.tsx";
-import { Input } from "../components/common/input/Input.tsx";
-import { GrayButton } from "../components/common/Button.tsx";
+import { HiddenInput, Input } from "../components/common/input/Input.tsx";
+import { FreeButton } from "../components/common/Button.tsx";
 import { Footer } from "../components/common/Footer.tsx";
 
 interface Props {
-  onInputMail?: (e: Event) => void;
+  mail: { value: string; error: string; dirty: boolean; bg: boolean };
+  pass: { value: string; error: string; dirty: boolean; bg: boolean };
+  onMail: (e: Event) => void;
+  onPass: (e: Event) => void;
+  disabled: boolean;
 }
 
 export function Login(props: Props) {
+  const mail = props.mail;
+  const pass = props.pass;
   return (
     <>
       <BrownHeader />
       <main>
         <Title title="ログイン" />
-        <div class="mx-8">
-          <p class="text-xs mt-8">
+        <div class="mx-8 text-2.5">
+          <p class="mt-8 text-2.5">
             メールアドレス
           </p>
+          <span class="my-1 text-2.5 text-red">{mail.error}</span>
           <Input
-            onInput={props.onInputMail}
-            klass="w-full my-1 mb-8"
+            onInput={props.onMail}
+            klass={`w-full my-1 mb-4 ${mail.bg ? "bg-red" : null}`}
             placeholder="insyoku.franchise@insyoku.co.jp"
           />
-          <p class="text-xs">
+          <p class="text-2.5">
             パスワード
           </p>
-          <Input
+          <span class="my-1 text-2.5 text-red">{pass.error}</span>
+          <HiddenInput
+            onInput={props.onPass}
             klass="w-full my-1"
+            krass={pass.bg ? "bg-red" : ""}
             placeholder="半角英数字の6~20文字"
           />
-          <GrayButton
+          <FreeButton
+            link="/"
             name="ログイン"
-            klass="mt-8 mb-4"
+            klass="mt-10 mb-4"
+            disabled={props.disabled}
           />
           <a href="/registration/input" class="text-center text-2.5">
             <p>初めてのご利用の方（新規会員登録）</p>
           </a>
         </div>
-        <Forget msg="メールアドレスをお忘れですか？" klass="mt-8 mb-2" />
+        <Forget msg="メールアドレスをお忘れですか？" klass="mt-10 mb-2" />
         <Forget msg="パスワードをお忘れですか？" />
       </main>
       <Footer />

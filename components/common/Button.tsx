@@ -163,7 +163,7 @@ export function FreeBrownButton(props: Props) {
   );
 }
 
-//bgをklassで任意の値に指定する茶色背景のボタン
+//bgをklassで任意の値に指定するボタン
 export function FreeButton(props: Props) {
   const onClick = (e: Event) => {
     if (!props.disabled) {
@@ -190,42 +190,6 @@ export function FreeButton(props: Props) {
         )
         : null}
     </button>
-  );
-}
-
-//灰色背景のボタン（disabledボタン）
-export function GrayButton(props: Props) {
-  return (
-    <a
-      href={props.link}
-      class={`h-10 w-72 mx-auto flex items-center rounded text-center text-white text-xs bg-[#EBEBEB] ${
-        props.klass ? props.klass : null
-      }`}
-      disabled={props.disabled}
-      // onClick={props.onClickButton}
-    >
-      {props.arrow == "left"
-        ? (
-          <img
-            src="/icon/common/arrow/whiteLeft.png"
-            alt="茶色の左矢印"
-            class="h-2 w-2 ml-4"
-          />
-        )
-        : null}
-      {props.arrow == "right" ? <div class="w-6" /> : null}
-      <p class="flex-1">{props.name}</p>
-      {props.arrow == "right"
-        ? (
-          <img
-            src="/icon/common/arrow/whiteRight.png"
-            alt="白色の右矢印"
-            class="h-2 w-2 mr-4"
-          />
-        )
-        : null}
-      {props.arrow == "left" ? <div class="w-6" /> : null}
-    </a>
   );
 }
 
