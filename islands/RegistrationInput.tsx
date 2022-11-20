@@ -6,7 +6,7 @@ import { Permission } from "../components/registration/Permission.tsx";
 import { BgLeading, SubLeading } from "../components/common/others/Leading.tsx";
 import {
   FreeBrownButton,
-  GrayButton,
+  FreeButton,
   RadioButton,
 } from "../components/common/Button.tsx";
 import {
@@ -150,7 +150,7 @@ export default function islands() {
           </div>
         </div>
         <Permission />
-        <GrayButton
+        <FreeButton
           name="確認画面へ"
           arrow="right"
           link="/registration/confirmation"
