@@ -167,7 +167,11 @@ export function FreeBrownButton(props: Props) {
 export function FreeButton(props: Props) {
   const onClick = (e: Event) => {
     if (!props.disabled) {
-      location.href = props.link!; //!をつけると強制的にそれをやる（!important的なやつ）
+      if (!props.onClickButton) {
+        location.href = props.link!; //!をつけると強制的にそれをやる（!important的なやつ）
+      } else {
+        props.onClickButton(e);
+      }
     }
   };
   return (

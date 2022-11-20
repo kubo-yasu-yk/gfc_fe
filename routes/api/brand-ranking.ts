@@ -5,6 +5,7 @@ export const handler: Handlers = {
     return Response.json(brandRanking);
   },
 };
+
 const brandRanking = [
   {
     src: "/image/brandLogo/logo1.jpg",

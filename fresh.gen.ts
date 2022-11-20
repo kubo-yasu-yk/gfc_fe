@@ -5,30 +5,31 @@
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/[name].tsx";
 import * as $1 from "./routes/api/brand-ranking.ts";
-import * as $2 from "./routes/brand/application/completion.tsx";
-import * as $3 from "./routes/brand/application/confirmation.tsx";
-import * as $4 from "./routes/brand/brand-detail.tsx";
-import * as $5 from "./routes/brand/cancel-contract/completion.tsx";
-import * as $6 from "./routes/brand/cancel-contract/confirmation.tsx";
-import * as $7 from "./routes/brand/cancel/completion.tsx";
-import * as $8 from "./routes/brand/cancel/confirmation.tsx";
-import * as $9 from "./routes/brand/contract/completion.tsx";
-import * as $10 from "./routes/brand/contract/confirmation.tsx";
-import * as $11 from "./routes/freeword.tsx";
-import * as $12 from "./routes/freeword/[word].tsx";
-import * as $13 from "./routes/index.tsx";
-import * as $14 from "./routes/login.tsx";
-import * as $15 from "./routes/mypage/application-history.tsx";
-import * as $16 from "./routes/mypage/applying.tsx";
-import * as $17 from "./routes/mypage/browsing-history.tsx";
-import * as $18 from "./routes/mypage/favorite.tsx";
-import * as $19 from "./routes/mypage/index.tsx";
-import * as $20 from "./routes/mypage/under-contract.tsx";
-import * as $21 from "./routes/registration/completion.tsx";
-import * as $22 from "./routes/registration/confirmation-company.tsx";
-import * as $23 from "./routes/registration/confirmation.tsx";
-import * as $24 from "./routes/registration/input.tsx";
-import * as $25 from "./routes/search-genre.tsx";
+import * as $2 from "./routes/api/login.ts";
+import * as $3 from "./routes/brand/application/completion.tsx";
+import * as $4 from "./routes/brand/application/confirmation.tsx";
+import * as $5 from "./routes/brand/brand-detail.tsx";
+import * as $6 from "./routes/brand/cancel-contract/completion.tsx";
+import * as $7 from "./routes/brand/cancel-contract/confirmation.tsx";
+import * as $8 from "./routes/brand/cancel/completion.tsx";
+import * as $9 from "./routes/brand/cancel/confirmation.tsx";
+import * as $10 from "./routes/brand/contract/completion.tsx";
+import * as $11 from "./routes/brand/contract/confirmation.tsx";
+import * as $12 from "./routes/freeword.tsx";
+import * as $13 from "./routes/freeword/[word].tsx";
+import * as $14 from "./routes/index.tsx";
+import * as $15 from "./routes/login.tsx";
+import * as $16 from "./routes/mypage/application-history.tsx";
+import * as $17 from "./routes/mypage/applying.tsx";
+import * as $18 from "./routes/mypage/browsing-history.tsx";
+import * as $19 from "./routes/mypage/favorite.tsx";
+import * as $20 from "./routes/mypage/index.tsx";
+import * as $21 from "./routes/mypage/under-contract.tsx";
+import * as $22 from "./routes/registration/completion.tsx";
+import * as $23 from "./routes/registration/confirmation-company.tsx";
+import * as $24 from "./routes/registration/confirmation.tsx";
+import * as $25 from "./routes/registration/input.tsx";
+import * as $26 from "./routes/search-genre.tsx";
 import * as $$0 from "./islands/ApplicationCompletion.tsx";
 import * as $$1 from "./islands/ApplicationConfirmation.tsx";
 import * as $$2 from "./islands/ApplicationHistory.tsx";
@@ -57,30 +58,31 @@ const manifest = {
   routes: {
     "./routes/[name].tsx": $0,
     "./routes/api/brand-ranking.ts": $1,
-    "./routes/brand/application/completion.tsx": $2,
-    "./routes/brand/application/confirmation.tsx": $3,
-    "./routes/brand/brand-detail.tsx": $4,
-    "./routes/brand/cancel-contract/completion.tsx": $5,
-    "./routes/brand/cancel-contract/confirmation.tsx": $6,
-    "./routes/brand/cancel/completion.tsx": $7,
-    "./routes/brand/cancel/confirmation.tsx": $8,
-    "./routes/brand/contract/completion.tsx": $9,
-    "./routes/brand/contract/confirmation.tsx": $10,
-    "./routes/freeword.tsx": $11,
-    "./routes/freeword/[word].tsx": $12,
-    "./routes/index.tsx": $13,
-    "./routes/login.tsx": $14,
-    "./routes/mypage/application-history.tsx": $15,
-    "./routes/mypage/applying.tsx": $16,
-    "./routes/mypage/browsing-history.tsx": $17,
-    "./routes/mypage/favorite.tsx": $18,
-    "./routes/mypage/index.tsx": $19,
-    "./routes/mypage/under-contract.tsx": $20,
-    "./routes/registration/completion.tsx": $21,
-    "./routes/registration/confirmation-company.tsx": $22,
-    "./routes/registration/confirmation.tsx": $23,
-    "./routes/registration/input.tsx": $24,
-    "./routes/search-genre.tsx": $25,
+    "./routes/api/login.ts": $2,
+    "./routes/brand/application/completion.tsx": $3,
+    "./routes/brand/application/confirmation.tsx": $4,
+    "./routes/brand/brand-detail.tsx": $5,
+    "./routes/brand/cancel-contract/completion.tsx": $6,
+    "./routes/brand/cancel-contract/confirmation.tsx": $7,
+    "./routes/brand/cancel/completion.tsx": $8,
+    "./routes/brand/cancel/confirmation.tsx": $9,
+    "./routes/brand/contract/completion.tsx": $10,
+    "./routes/brand/contract/confirmation.tsx": $11,
+    "./routes/freeword.tsx": $12,
+    "./routes/freeword/[word].tsx": $13,
+    "./routes/index.tsx": $14,
+    "./routes/login.tsx": $15,
+    "./routes/mypage/application-history.tsx": $16,
+    "./routes/mypage/applying.tsx": $17,
+    "./routes/mypage/browsing-history.tsx": $18,
+    "./routes/mypage/favorite.tsx": $19,
+    "./routes/mypage/index.tsx": $20,
+    "./routes/mypage/under-contract.tsx": $21,
+    "./routes/registration/completion.tsx": $22,
+    "./routes/registration/confirmation-company.tsx": $23,
+    "./routes/registration/confirmation.tsx": $24,
+    "./routes/registration/input.tsx": $25,
+    "./routes/search-genre.tsx": $26,
   },
   islands: {
     "./islands/ApplicationCompletion.tsx": $$0,

@@ -14,7 +14,7 @@ const cancelInfo = [
 
 const applicantInfo = [
   { title: "会社名", info: "株式会社リクルート" },
-  { title: "担当者氏名", info: "佐々木　小次郎" },
+  { title: "担当者氏名", info: "佐々木 小次郎" },
   { title: "メールアドレス", info: "taylor.taylor@icloud.com" },
   { title: "電話番号", info: "000-0000-0000" },
 ];

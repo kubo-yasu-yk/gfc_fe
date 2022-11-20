@@ -11,6 +11,7 @@ interface Props {
   pass: { value: string; error: string; dirty: boolean; bg: boolean };
   onMail: (e: Event) => void;
   onPass: (e: Event) => void;
+  onLogin: (e: Event) => void;
   disabled: boolean;
 }
 
@@ -43,6 +44,7 @@ export function Login(props: Props) {
             placeholder="半角英数字の6~20文字"
           />
           <FreeButton
+            onClickButton={props.onLogin}
             link="/"
             name="ログイン"
             klass="mt-10 mb-4"

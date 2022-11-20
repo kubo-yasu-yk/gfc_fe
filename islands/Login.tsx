@@ -87,12 +87,25 @@ export default function islands() {
     return !valid;
   };
 
+  const onLogin = async (e: Event) => {
+    console.log(e);
+    const req = {
+      method: "post",
+      // headers: headers,
+      // mode: "cors" as RequestMode,
+      cache: "no-cache" as RequestCache,
+      body: JSON.stringify({ mail: mail.value, pass: pass.value }),
+    } as RequestInit;
+    const res = (await fetch("api/login", req));
+  };
+
   return (
     <Login
       mail={mail}
       pass={pass}
       onMail={onMail}
       onPass={onPass}
+      onLogin={onLogin}
       disabled={disabled()}
     />
   );
