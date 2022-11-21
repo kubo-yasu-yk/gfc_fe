@@ -5,7 +5,7 @@ import { StepBar } from "../components/registration/StepBar.tsx";
 import { Permission } from "../components/registration/Permission.tsx";
 import { BgLeading, SubLeading } from "../components/common/others/Leading.tsx";
 import {
-  FreeBrownButton,
+  Button,
   FreeButton,
   RadioButton,
 } from "../components/common/Button.tsx";
@@ -105,7 +105,12 @@ export default function islands() {
           />
           <div class="flex">
             <Input placeholder="0000000" klass="ml-8 mr-2 w-24" />
-            <FreeBrownButton name="住所検索" klass="h-10 w-24 text-xs rounded" />
+            <Button
+              brown={true}
+              no_mx_auto={true}
+              klass="h-10 w-24"
+              name="住所検索"
+            />
           </div>
           <SubLeading title="都道府県" mandatory={true} />
           <Input placeholder="都道府県" klass="w-72 ml-8" />
